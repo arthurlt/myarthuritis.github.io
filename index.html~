@@ -1,0 +1,131 @@
+<html>
+	<head>
+		<title>Arthur's (Mars11) Website</title>
+		<link rel="shortcut icon" href="http://dl.dropbox.com/u/16007317/Pictures/logo.ico" />
+        <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
+        <script type="text/javascript">
+        function startTime()
+            {
+            var today=new Date();
+            var h=today.getHours();
+            var m=today.getMinutes();
+            var d=today.getDate();
+            var x=today.getDay(weekday);
+            var y=today.getMonth(month);
+            var weekday=new Array(7);
+                weekday[0]="Sun";
+                weekday[1]="Mon";
+                weekday[2]="Tue";
+                weekday[3]="Wed";
+                weekday[4]="Thu";
+                weekday[5]="Fri";
+                weekday[6]="Sat";
+            var month=new Array(12)
+                month[0]="Jan";
+                month[1]="Feb";
+                month[2]="Mar";
+                month[3]="Apr";
+                month[4]="May";
+                month[5]="Jun";
+                month[6]="Jul";
+                month[7]="Aug";
+                month[8]="Sep";
+                month[9]="Oct";
+                month[10]="Nov";
+                month[11]="Dec";
+            m=checkTime(m);
+            document.getElementById('time').innerHTML=(weekday[x])+" "+(month[y])+" "+d+ " "+h+":"+m;
+            t=setTimeout('startTime()',1000);
+            }
+
+        function checkTime(i)
+            {
+            if (i<10)
+              {
+              i="0" + i;
+              }
+            return i;
+            }
+        </script>
+        <style type="text/css">
+        body {
+            margin:0px;
+            background:url('img/background.jpg') no-repeat center center fixed;
+            -webkit-background-size:cover;
+			-moz-background-size:cover;
+			-o-background-size:cover;
+			background-size:cover;}
+        div.panel {
+            height:28px;
+            background-color:rgba(0,0,0,0.7);}
+        div.time {
+            color:white;
+            font-size:12px;
+            height:22px;
+            font-family: 'Droid Sans', sans-serif;
+            display:inline-block;
+            padding-top:7px;
+            margin-left:48%;}
+        img.power {
+            display:inline-block;
+            float:right;
+            padding-top:3px;
+            padding-left:5px;
+            padding-right:5px;}
+        img.mail {
+            display:inline-block;
+            float:right;
+            padding-top:3px;
+            padding-left:5px;
+            padding-right:5px;}
+        img.high {
+            display:inline-block;
+            float:right;
+            padding-top:3px;
+            padding-left:5px;
+            padding-right:5px;}
+        img.avatar {
+            display:inline-block;
+            float:right;
+            height:18px;
+            width:18px;
+            padding-top:5px;
+            padding-left:5px;
+            padding-right:5px;}
+        img.wired {
+            display:inline-block;
+            float:right;
+            padding-top:3px;
+            padding-left:5px;
+            padding-right:5px;}
+        div.bottom {
+            padding-top:200px;}
+        div.dock {
+            border:1px solid rgba(255,255,255,0.5);
+            border-bottom-width3:0px;
+            margin-left:auto;
+            margin-right:auto;
+            border-top-left-radius:4px;
+            border-top-right-radius:4px;
+            width:45%;
+            height:64px;
+            background-color:rgba(0,0,0,0.7);}
+        </style>
+	</head>
+	<body onload="startTime()">
+    <div class="panel">
+    <div class="time">
+    <div id="time"></div>
+    </div>
+    <img class="power" src="/img/power.svg"/>
+    <img class="mail" src="/img/mail.svg"/>
+    <img class="high" src="/img/high.svg"/>
+    <img class="avatar" src="/img/avatar.svg"/>
+    <img class="wired" src="/img/wired.svg"/>
+    </div>
+    <div class="bottom">
+    <div class="dock">
+    </div>
+    </div>
+	</body>
+</html>
