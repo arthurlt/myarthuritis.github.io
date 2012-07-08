@@ -19,14 +19,31 @@ body {
 div.panel {
     height: 28px;
     background-color: rgba(0,0,0,0.7);}
+div.plusone {
+    display: inline-block;
+    padding: 4px 0px 0px 6px;
+    float: left;
+    width: 65px;}
+div.like {
+    display: inline-block;
+    padding: 4px 0px 0px 0px;
+    float: left;
+    width: 80px;}
+div.tweet {
+    display: inline-block;
+    padding: 4px 0px 0px 0px;
+    float: left;}
 div.time {
     color: white;
     font-size: 12px;
+    width: 90px;
     height: 22px;
     font-family: 'Droid Sans', sans-serif;
     display: inline-block;
     padding-top: 7px;
-    margin-left: 47%;}
+    position: fixed;
+    margin-left: -45px;
+    left: 50%;}
 img.power {
     display: inline-block;
     float: right;
