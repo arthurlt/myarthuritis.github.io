@@ -4,6 +4,7 @@
 HTML {
 	width: 100%;
 	height: 100%;
+    font-family: 'Droid Sans', sans-serif;
     background: url('img/background.jpg') no-repeat center center fixed;
     -webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -36,13 +37,12 @@ div.tweet {
 div.time {
     color: white;
     font-size: 12px;
-    width: 90px;
+    width: 92px;
     height: 22px;
-    font-family: 'Droid Sans', sans-serif;
     display: inline-block;
     padding-top: 7px;
     position: fixed;
-    margin-left: -45px;
+    margin-left: -46px;
     left: 50%;}
 img.power {
     display: inline-block;
@@ -50,7 +50,7 @@ img.power {
     padding-top: 3px;
     padding-left: 5px;
     padding-right: 5px;}
-a.mail {
+img.mail {
     display: inline-block;
     float: right;
     padding-top: 3px;
@@ -104,7 +104,8 @@ img.google {
     width: 48px;
     height: 48px;
     margin: -32px 0px 0px;
-    padding: 0px 5px;}
+    padding: 0px 5px;
+    float: left}
 img.twitter {
     width: 48px;
     height: 48px;
@@ -119,4 +120,4 @@ img.setting {
     width: 48px;
     height: 48px;
     margin: -32px 0px 0px;
-    padding: 0px 8px 0px 5px;}
+    padding: 0px 5px;}
