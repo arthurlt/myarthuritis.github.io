@@ -77,7 +77,7 @@ img.wired {
     padding-left: 5px;
     padding-right: 5px;}
 div.dock {
-    width: 244px;
+    width: auto;
     height: 17px;
     display: block;
     position: fixed;
@@ -88,17 +88,11 @@ div.dock {
     border-top-right-radius: 4px;
     border-bottom-width: 0px;
     border: 1px solid rgba(0,0,0,.37);
-    /* IE */
     background-image: -ms-linear-gradient(top, rgb(255,255,255) 0%, rgb(235,235,235) 100%);
-    /* Firefox */ 
     background-image: -moz-linear-gradient(top, rgb(255,255,255) 0%, rgb(235,235,235) 100%);
-    /* Opera */ 
     background-image: -o-linear-gradient(top, rgb(255,255,255) 0%, rgb(235,235,235) 100%);
-    /* Safari/Chrome 10 */ 
     background-color: rgb(255,255,255);
-    /* Chrome 11+ */ 
     background-image: -webkit-linear-gradient(top, rgb(255,255,255) 0%, rgb(235,235,235) 100%);
-    /* W3C */ 
     background-image: linear-gradient(to bottom, rgb(255,255,255) 0%, rgb(235,235,235) 100%);}
 img.google {
     width: 48px;
