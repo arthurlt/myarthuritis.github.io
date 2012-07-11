@@ -1,2 +1,1 @@
-mars11.github.com
-=================
+This is Mars11's (Arthur Tucker's) website. If you take anything make sure it's accredited to me, and the elementary (http://elementaryos.org/) team.
