@@ -13,6 +13,18 @@
           })();
         </script>
         <script type="text/javascript">
+        function toggle5(showHideDiv, switchImgTag) {
+            var ele = document.getElementById(showHideDiv);
+            var imageEle = document.getElementById(switchImgTag);
+                if(ele.style.display == "block") {
+                        ele.style.display = "none";
+	                    imageEle.innerHTML = '<img src="/wp-includes/images/plus.png">';
+                }
+                else {
+                        ele.style.display = "block";
+                        imageEle.innerHTML = '<img src="/wp-includes/images/minus.png">';
+                }
+        }
         function startTime()
             {
             var today = new Date();
@@ -87,25 +99,25 @@
         </script>
 	</head>
 	<body onload="startTime()">
-    <div id="fb-root"></div>
+    <!--<div id="fb-root"></div>
     <script>(function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s); js.id = id;
       js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
       fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>
+    }(document, 'script', 'facebook-jssdk'));</script>-->
     <div class="panel">
         <div class="social">
             <div class="plusone">
                 <!-- Place this tag where you want the +1 button to render -->
-                <div class="g-plusone" data-size="medium" data-href="http://mars11.com/"></div>
+                <div class="g-plusone" data-size="medium" data-annotation="none"></div>
             </div>
-            <div class="like">
+            <!--<div class="like">
                 <div class="fb-like" data-href="http://mars11.com" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
-            </div>
+            </div>-->
                 <div class="tweet">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://mars11.com" data-text="This looks like @elementary OS Luna!">Tweet</a>
+                <a href="https://twitter.com/share" class="twitter-share-button" data-text="This looks like @elementary OS Luna!" data-count="none">Tweet</a>
                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
             </div>
         </div>

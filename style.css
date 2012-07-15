@@ -23,12 +23,12 @@ div.plusone {
     display: inline-block;
     padding: 4px 0px 0px 6px;
     float: left;
-    width: 65px;}
-div.like {
+    width: 40px;}
+/*div.like {
     display: inline-block;
     padding: 4px 0px 0px 0px;
     float: left;
-    width: 80px;}
+    width: 80px;}*/
 div.tweet {
     display: inline-block;
     padding: 4px 0px 0px 0px;
