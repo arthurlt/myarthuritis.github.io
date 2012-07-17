@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 	<head>
 		<title>Home (Work In Progress)</title>
-		<link rel="shortcut icon" href="favicon.ico" />
+		<link rel="shortcut icon" href="http://mars11.com/favicon.ico" />
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
         <link href='style.css' rel='stylesheet' type='text/css'>
         <!-- Place this render call where appropriate -->
@@ -61,10 +61,18 @@
         </div>
     </div>
     <div class="dock">
-        <a href="http://goo.gl/Vmzz9" target="blank"><img class="google" src="img/dock/google.svg"/></a>
-        <a href="http://goo.gl/MTuZG" target="blank"><img class="twitter" src="img/dock/twitter.svg"/></a>
-        <img class="dev" src="img/dock/dev.svg"/>
-        <img class="setting" src="img/dock/setting.svg"/>
+        <a href="http://goo.gl/Vmzz9" target="blank">
+            <img class="google" src="img/dock/google.svg"/>
+        </a>
+        <a href="http://goo.gl/MTuZG" target="blank">
+            <img class="twitter" src="img/dock/twitter.svg"/>
+        </a>
+        <a href="#" onclick="r.begin('/dev'); return false;">
+            <img class="dev" src="img/dock/dev.svg"/>
+        </a>
+        <a href="#" onclick="r.begin('/about'); return false;">
+            <img class="setting" src="img/dock/setting.svg"/>
+        </a>
     </div>
 	</body>
 </html>
