@@ -118,8 +118,33 @@ div.expand {
     background: url('img/window/maximize-normal.svg');}
 div.expand:hover {
     background: url('img/window/maximize-hover.svg');}
-div.dock {
+div.dock-popup {
+    width: 244px;
+    height: 17px;
+    display: block;
+    position: fixed;
+    bottom: 69px;
+    margin-left: -6px;}
+div.item-popup {
     width: auto;
+    height: 13px;
+    float: left;
+    color: white;
+    padding: 7px 5px 6px 5px;
+    font-size: 8pt;
+    border-radius: 6px;
+    display: none;
+    background-color: rgba(0,0,0,.85);}
+#google {
+    margin-left: 0px}
+#twitter {
+    margin-left: 60px}
+#dev {
+    margin-left: 110px}
+#about {
+    margin-left: 195px}
+div.dock {
+    width: 244px;
     height: 17px;
     display: block;
     position: fixed;

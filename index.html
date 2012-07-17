@@ -16,63 +16,69 @@
         <script type="text/javascript" src="js/analytics.js"></script>
 	</head>
 	<body onload="startTime()">
-    <!--<div id="fb-root"></div>
-    <script>(function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
-      fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));</script>-->
-    <div class="panel">
-        <div class="social">
-            <div class="plusone">
-                <!-- Place this tag where you want the +1 button to render -->
-                <div class="g-plusone" data-size="medium" data-annotation="none"></div>
+        <!--<div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "http://connect.facebook.net/en_US/all.js#xfbml=1";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>-->
+        <div class="panel">
+            <div class="social">
+                <div class="plusone">
+                    <!-- Place this tag where you want the +1 button to render -->
+                    <div class="g-plusone" data-size="medium" data-annotation="none"></div>
+                </div>
+                <!--<div class="like">
+                    <div class="fb-like" data-href="http://mars11.com" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
+                </div>-->
+                    <div class="tweet">
+                    <a href="https://twitter.com/share" class="twitter-share-button" data-text="This looks like @elementary OS Luna!" data-count="none">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+                </div>
             </div>
-            <!--<div class="like">
-                <div class="fb-like" data-href="http://mars11.com" data-send="false" data-layout="button_count" data-width="90" data-show-faces="false"></div>
-            </div>-->
-                <div class="tweet">
-                <a href="https://twitter.com/share" class="twitter-share-button" data-text="This looks like @elementary OS Luna!" data-count="none">Tweet</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+            <div class="time">
+                <div id="time"></div>
             </div>
-        </div>
-        <div class="time">
-            <div id="time"></div>
-        </div>
-        <div class="panelicon">
-            <img class="power" src="img/panel/power.svg"/>
-            <a href="mailto:arthurlt@gmail.com"><img class="mail" src="img/panel/mail.svg"/></a>
-            <img class="high" src="img/panel/high.svg"/>
-            <img class="avatar" src="img/panel/avatar.svg"/>
-            <img class="wired" src="img/panel/wired.svg"/>
-        </div>
-    </div>
-    <div class="window">
-        <div class="close"></div>
-        <div class="title">
-            <p>Window Title</p>
-        </div>
-        <div class="expand"></div>
-        <div class="lower-window">
-            <div class="content">
+            <div class="panelicon">
+                <img class="power" src="img/panel/power.svg"/>
+                <a href="mailto:arthurlt@gmail.com"><img class="mail" src="img/panel/mail.svg"/></a>
+                <img class="high" src="img/panel/high.svg"/>
+                <img class="avatar" src="img/panel/avatar.svg"/>
+                <img class="wired" src="img/panel/wired.svg"/>
             </div>
         </div>
-    </div>
-    <div class="dock">
-        <a href="http://goo.gl/Vmzz9" target="blank">
-            <img class="google" src="img/dock/google.svg"/>
-        </a>
-        <a href="http://goo.gl/MTuZG" target="blank">
-            <img class="twitter" src="img/dock/twitter.svg"/>
-        </a>
-        <a href="#" onclick="r.begin('/dev'); return false;">
-            <img class="dev" src="img/dock/dev.svg"/>
-        </a>
-        <a href="#" onclick="r.begin('/about'); return false;">
-            <img class="setting" src="img/dock/setting.svg"/>
-        </a>
-    </div>
+        <div class="window">
+            <div class="close"></div>
+            <div class="title">
+                <p>Window Title</p>
+            </div>
+            <div class="expand"></div>
+            <div class="lower-window">
+                <div class="content">
+                </div>
+            </div>
+        </div>
+        <div class="dock">
+            <div class="dock-popup">
+            <div class="item-popup" id="google"><p>My Google+</p></div>
+            <div class="item-popup" id="twitter">My Twitter</div>
+            <div class="item-popup" id="dev">Developement</div>
+            <div class="item-popup" id="about">About</div>
+            </div>
+            <a href="http://goo.gl/Vmzz9" target="blank">
+                <img class="google" src="img/dock/google.svg" onmouseover="document.getElementById('google').style.display = 'block';" onmouseout="document.getElementById('google').style.display = 'none';"/>
+            </a>
+            <a href="http://goo.gl/MTuZG" target="blank">
+                <img class="twitter" src="img/dock/twitter.svg" onmouseover="document.getElementById('twitter').style.display = 'block';" onmouseout="document.getElementById('twitter').style.display = 'none';"/>
+            </a>
+            <a href="#" onclick="r.begin('/dev'); return false;">
+                <img class="dev" src="img/dock/dev.svg" onmouseover="document.getElementById('dev').style.display = 'block';" onmouseout="document.getElementById('dev').style.display = 'none';"/>
+            </a>
+            <a href="#" onclick="r.begin('/about'); return false;">
+                <img class="setting" src="img/dock/setting.svg" onmouseover="document.getElementById('about').style.display = 'block';" onmouseout="document.getElementById('about').style.display = 'none';"/>
+            </a>
+        </div>
 	</body>
 </html>

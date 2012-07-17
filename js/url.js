@@ -26,7 +26,7 @@ function $(o) { return document.getElementById(o); }
 function Roller() {
   this.url_ = '';
 
-  this.currentState_ = "/rollstate/".split("");
+  this.currentState_ = "/".split("");
   this.startState_ = [];
 
   this.endState_ = [];
