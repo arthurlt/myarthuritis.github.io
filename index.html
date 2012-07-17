@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-	<head>
-		<title>Home (Work In Progress)</title>
-		<link rel="shortcut icon" href="http://mars11.com/favicon.ico" />
+    <head>
+        <title>Home (Work In Progress)</title>
+        <link rel="shortcut icon" href="http://mars11.com/favicon.ico" />
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
         <link href='style.css' rel='stylesheet' type='text/css'>
         <!-- Place this render call where appropriate -->
@@ -41,22 +41,30 @@
             <div class="time">
                 <div id="time"></div>
             </div>
-            <div class="panelicon">
-                <img class="power" src="img/panel/power.svg"/>
-                <a href="mailto:arthurlt@gmail.com"><img class="mail" src="img/panel/mail.svg"/></a>
-                <img class="high" src="img/panel/high.svg"/>
-                <img class="avatar" src="img/panel/avatar.svg"/>
-                <img class="wired" src="img/panel/wired.svg"/>
+            <div class="panelicons">
+                <img class="panelicons" src="img/panel/power.svg"/>
+                <a href="mailto:arthurlt@gmail.com" target="blank">
+                    <img class="panelicons" src="img/panel/mail.svg"/>
+                </a>
+                <img class="panelicons" src="img/panel/high.svg"/>
+                <img class="panelicons" id="avatar" src="img/panel/avatar.svg"/>
+                <img class="panelicons" src="img/panel/wired.svg"/>
+                <a href="http://db.tt/FFgst2x" target="blank">
+                    <img class="panelicons" id="dropbox" src="img/panel/dropbox.png"/>
+                </a>
             </div>
         </div>
         <div class="window">
-            <div class="close"></div>
-            <div class="title">
-                <p>Window Title</p>
+            <div class="titlebar">
+                <div class="close"></div>
+                <div class="title">
+                    <p>Window Title</p>
+                </div>
+                <div class="expand"></div>
             </div>
-            <div class="expand"></div>
             <div class="lower-window">
                 <div class="content">
+                    <img width="128px" height="128px" src="img/content/logo.png">
                 </div>
             </div>
         </div>
@@ -80,5 +88,5 @@
                 <img class="setting" src="img/dock/setting.svg" onmouseover="document.getElementById('about').style.display = 'block';" onmouseout="document.getElementById('about').style.display = 'none';"/>
             </a>
         </div>
-	</body>
+    </body>
 </html>
