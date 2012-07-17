@@ -5,98 +5,15 @@
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
         <link href='style.css' rel='stylesheet' type='text/css'>
         <!-- Place this render call where appropriate -->
-        <script type="text/javascript">
-          (function() {
-            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-            po.src = 'https://apis.google.com/js/plusone.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-          })();
-        </script>
-        <script type="text/javascript">
-        function toggle5(showHideDiv, switchImgTag) {
-            var ele = document.getElementById(showHideDiv);
-            var imageEle = document.getElementById(switchImgTag);
-                if(ele.style.display == "block") {
-                        ele.style.display = "none";
-	                    imageEle.innerHTML = '<img src="/wp-includes/images/plus.png">';
-                }
-                else {
-                        ele.style.display = "block";
-                        imageEle.innerHTML = '<img src="/wp-includes/images/minus.png">';
-                }
-        }
-        function startTime()
-            {
-            var today = new Date();
-            var hour = today.getHours();
-            var minute = today.getMinutes();
-            var date = today.getDate();
-            var day = today.getDay();
-            var thismonth = today.getMonth();
-            var weekday = new Array(7);
-                weekday[0]="Sun";
-                weekday[1]="Mon";
-                weekday[2]="Tue";
-                weekday[3]="Wed";
-                weekday[4]="Thu";
-                weekday[5]="Fri";
-                weekday[6]="Sat";
-            var month = new Array(13)
-                month[0]="Jan";
-                month[1]="Feb";
-                month[2]="Mar";
-                month[3]="Apr";
-                month[4]="May";
-                month[5]="Jun";
-                month[6]="Jul";
-                month[7]="Aug";
-                month[8]="Sep";
-                month[9]="Oct";
-                month[10]="Nov";
-                month[11]="Dec";
-                month[12]="test";
-            minute = checkMinute(minute);
-            hour = checkHour(hour);
-            document.getElementById('time').innerHTML=(weekday[day])+" "+(month[thismonth])+"  "+date+" "+hour+":"+minute;
-            t = setTimeout('startTime()',1000);
-            }
-
-        function checkMinute(m)
-            {
-            if (m<10)
-                {
-                m="0" + m;
-                }
-            return m;
-            }
-
-        function checkHour(h)
-            {
-            if (h<10)
-                {
-                h="0" + h;
-                }
-            return h;
-            }
-            
-        </script>
+        <script type="text/javascript" src="js/plusone.js"></script>
+        <script type="text/javascript" src="js/time.js"></script>
+        <script type="text/javascript" src="js/url.js"></script>
         <!--[if IE]>
         <script type="text/javascript">
         window.location = "ie";
         </script>
         <![endif]-->
-        <script type="text/javascript">
-
-          var _gaq = _gaq || [];
-          _gaq.push(['_setAccount', 'UA-26082926-3']);
-          _gaq.push(['_trackPageview']);
-
-          (function() {
-            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-          })();
-        </script>
+        <script type="text/javascript" src="js/analytics.js"></script>
 	</head>
 	<body onload="startTime()">
     <!--<div id="fb-root"></div>
@@ -142,8 +59,14 @@
     <div class="dock">
         <a href="http://goo.gl/Vmzz9" target="blank"><img class="google" src="img/dock/google.svg"/></a>
         <a href="http://goo.gl/MTuZG" target="blank"><img class="twitter" src="img/dock/twitter.svg"/></a>
-        <img class="dev" src="img/dock/dev.svg"/>
-        <img class="setting" src="img/dock/setting.svg"/>
+        <div class="dock-icons">
+            <a href="http://mars11.com/dev/">
+                <img class="dev" src="img/dock/dev.svg"/>
+            </a>
+        </div>
+        <div class="dock-icons">
+            <img class="setting" src="img/dock/setting.svg"/>
+        </div>
     </div>
 	</body>
 </html>

@@ -36,7 +36,7 @@ div.tweet {
     float: left;}
 div.time {
     color: white;
-    font-size: 12px;
+    font-size: 9pt;
     width: auto;
     height: 22px;
     display: inline-block;
@@ -106,7 +106,7 @@ div.close:hover {
 div.title {
     margin: 5px 0px 0px 0px;
     color: #636363;
-    font-size: 12px;
+    font-size: 9pt;
     display: inline-block;
     text-shadow:0px 1px white;}
 div.expand {

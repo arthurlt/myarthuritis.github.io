@@ -118,6 +118,7 @@ div.expand {
     background: url('img/window/maximize-normal.svg');}
 div.expand:hover {
     background: url('img/window/maximize-hover.svg');}
+
 div.dock {
     width: auto;
     height: 17px;
