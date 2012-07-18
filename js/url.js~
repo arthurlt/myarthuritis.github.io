@@ -1,2 +1,2 @@
-var stateObj = { index: "dev" };
+var stateObj = { /: "dev" };
 history.pushState(stateObj, "page 2", "dev.html");

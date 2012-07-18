@@ -97,15 +97,27 @@ div.title {
     font-size: 9pt;
     display: inline-block;
     text-shadow:0px 1px white;}
-div.expand {
+div.fullscreen {
     width: 18px;
     height: 16px;
     margin: 4px 7px 0px 0px;
     float: right;
     display: inline-block;
     background: url('img/window/maximize-normal.svg');}
-div.expand:hover {
+div.fullscreen:hover {
     background: url('img/window/maximize-hover.svg');}
+div.fullscreen:-moz-full-screen {
+    background: url('img/window/unmaximize-normal.svg');}
+div.fullscreen:-webkit-full-screen {
+    background: url('img/window/unmaximize-normal.svg');}
+div.fullscreen:fullscreen {
+    background: url('img/window/unmaximize-normal.svg');}
+div.fullscreen:hover:-moz-full-screen {
+    background: url('img/window/unmaximize-hover.svg');}
+div.fullscreen:hover:-webkit-full-screen {
+    background: url('img/window/unmaximize-hover.svg');}
+div.fullscreen:hover:fullscreen {
+    background: url('img/window/unmaximize-hover.svg');}
 div.lower-window {
     width: 746px;
     height: 424px;

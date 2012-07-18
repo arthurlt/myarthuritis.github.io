@@ -10,6 +10,7 @@
         <script type="text/javascript" src="js/url.js"></script>
         <script type="text/javascript" src="js/showhide.js"></script>
         <script type="text/javascript" src="js/mobile.js"></script>
+        <script type="text/javascript" src="js/fullscreen.js"></script>
         <!--[if IE]>
         <script type="text/javascript">
         window.location = "ie";
@@ -51,11 +52,11 @@
                 <div class="title">
                     <p>Window Title</p>
                 </div>
-                <div class="expand"></div>
+                <div class="fullscreen" onclick="toggleFullScreen();"></div>
             </div>
             <div class="lower-window">
                 <div class="content">
-                    <img width="256px" height="256px" style="margin: 85px 0px;" src="img/content/logo.png">
+                    <img width="256px" height="256px" style="margin: 85px 0px;" src="content/img/logo.png">
                 </div>
             </div>
         </div>
@@ -65,7 +66,7 @@
                 <div class="title">
                     <p>Development</p>
                 </div>
-                <div class="expand"></div>
+                <div class="fullscreen" onclick="toggleFullScreen();"></div>
             </div>
             <div class="lower-window">
                 <div class="content">
@@ -88,7 +89,7 @@
                 <div class="title">
                     <p>About</p>
                 </div>
-                <div class="expand"></div>
+                <div class="fullscreen" onclick="toggleFullScreen();"></div>
             </div>
             <div class="lower-window">
                 <div class="content">
