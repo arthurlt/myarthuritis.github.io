@@ -1,3 +1,4 @@
+//I have no idea, most of this was copied. :P
 Function.prototype.bind = function(thisObj, var_args) {
   if (typeof(this) != "function") {
     throw new Error("Bind must be called as a method of a function object.");
