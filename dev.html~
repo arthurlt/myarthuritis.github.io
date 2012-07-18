@@ -54,26 +54,17 @@
                 </a>
             </div>
         </div>
-        <div class="window" id="aboutwindow">
+        <div class="window" id="secondary">
             <div class="titlebar">
                 <div class="close"></div>
                 <div class="title">
-                    <p>About</p>
+                    <p>Dev</p>
                 </div>
                 <div class="expand"></div>
             </div>
             <div class="lower-window">
                 <div class="content">
                     <img width="256px" height="256px" style="margin: 85px 0px;" src="img/content/logo.png">
-                    <div class="donate">
-                        <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                        <input type="hidden" name="cmd" value="_s-xclick">
-                        <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----MIIHDgYJKoZIhvcNAQcEoIIG/zCCBvsCAQExggEwMIIBLAIBADCBlDCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb20CAQAwDQYJKoZIhvcNAQEBBQAEgYBEMmq8tFyS5qytk4ntQ7kFwR4Rk2LPW5GPy2/lfrhI/NuDIOUVxfJvNnbxc124Z8eb2pPzaQxYRUBX+Fj63p08z1cy88K2EJ4SFAidSn11SEdkmyaKvHvHu38pPE8C9cec1agwdB0jfcgSdIyDtpGWsMynvEop4HBD7Nk/IwUMCzELMAkGBSsOAwIaBQAwgYsGCSqGSIb3DQEHATAUBggqhkiG9w0DBwQIoGnr9c+C08aAaJEhJ2rnY3mCB9NcRufGAXkIne+Xd385huTA3wYkt4ejrsnF3e3mSIHnSGhl8wGqv9lgvkceWW0CK/pdCyE+eGOZ60krXxr3Yp2wOouZJeXokC9I2IpurOk+aZI0yzAqTVPHdgHzhewEoIIDhzCCA4MwggLsoAMCAQICAQAwDQYJKoZIhvcNAQEFBQAwgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMB4XDTA0MDIxMzEwMTMxNVoXDTM1MDIxMzEwMTMxNVowgY4xCzAJBgNVBAYTAlVTMQswCQYDVQQIEwJDQTEWMBQGA1UEBxMNTW91bnRhaW4gVmlldzEUMBIGA1UEChMLUGF5UGFsIEluYy4xEzARBgNVBAsUCmxpdmVfY2VydHMxETAPBgNVBAMUCGxpdmVfYXBpMRwwGgYJKoZIhvcNAQkBFg1yZUBwYXlwYWwuY29tMIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDBR07d/ETMS1ycjtkpkvjXZe9k+6CieLuLsPumsJ7QC1odNz3sJiCbs2wC0nLE0uLGaEtXynIgRqIddYCHx88pb5HTXv4SZeuv0Rqq4+axW9PLAAATU8w04qqjaSXgbGLP3NmohqM6bV9kZZwZLR/klDaQGo1u9uDb9lr4Yn+rBQIDAQABo4HuMIHrMB0GA1UdDgQWBBSWn3y7xm8XvVk/UtcKG+wQ1mSUazCBuwYDVR0jBIGzMIGwgBSWn3y7xm8XvVk/UtcKG+wQ1mSUa6GBlKSBkTCBjjELMAkGA1UEBhMCVVMxCzAJBgNVBAgTAkNBMRYwFAYDVQQHEw1Nb3VudGFpbiBWaWV3MRQwEgYDVQQKEwtQYXlQYWwgSW5jLjETMBEGA1UECxQKbGl2ZV9jZXJ0czERMA8GA1UEAxQIbGl2ZV9hcGkxHDAaBgkqhkiG9w0BCQEWDXJlQHBheXBhbC5jb22CAQAwDAYDVR0TBAUwAwEB/zANBgkqhkiG9w0BAQUFAAOBgQCBXzpWmoBa5e9fo6ujionW1hUhPkOBakTr3YCDjbYfvJEiv/2P+IobhOGJr85+XHhN0v4gUkEDI8r2/rNk1m0GA8HKddvTjyGw/XqXa+LSTlDYkqI8OwR8GEYj4efEtcRpRYBxV8KxAW93YDWzFGvruKnnLbDAF6VR5w/cCMn5hzGCAZowggGWAgEBMIGUMIGOMQswCQYDVQQGEwJVUzELMAkGA1UECBMCQ0ExFjAUBgNVBAcTDU1vdW50YWluIFZpZXcxFDASBgNVBAoTC1BheVBhbCBJbmMuMRMwEQYDVQQLFApsaXZlX2NlcnRzMREwDwYDVQQDFAhsaXZlX2FwaTEcMBoGCSqGSIb3DQEJARYNcmVAcGF5cGFsLmNvbQIBADAJBgUrDgMCGgUAoF0wGAYJKoZIhvcNAQkDMQsGCSqGSIb3DQEHATAcBgkqhkiG9w0BCQUxDxcNMTIwNzE4MDIyNDQ3WjAjBgkqhkiG9w0BCQQxFgQUasYCGtuc5WjggSQ1VWIn465++FkwDQYJKoZIhvcNAQEBBQAEgYCGi1N1ms3l3v28yyrXM23HajuPHJOcImm7ICxXlGBqUjTIRj5KBT5HfLJUCm6oC/8js62VB3QVeJMIvR5yeNB7dj2o9yH27p6i3RfXY7QLyoDZDuYeCvIV84Y+8hMwxuOoRtKyVMRZpylBcaq1YLseUHP36LFckWruFqnX5xgT4w==-----END PKCS7-----
-                        ">
-                        <input type="image" src="http://mars11.com/img/content/logo.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-                        </form>
-                    </div>
                 </div>
             </div>
         </div>
@@ -90,11 +81,11 @@
             <a href="http://goo.gl/MTuZG" target="blank">
                 <img class="twitter" src="img/dock/twitter.svg" onmouseover="document.getElementById('twitter').style.display = 'block';" onmouseout="document.getElementById('twitter').style.display = 'none';"/>
             </a>
-            <!--onclick="r.begin('/dev'); return false;"-->
+            <!-- onclick="r.begin('/dev'); return false;"-->
             <a href="dev">
                 <img class="dev" src="img/dock/dev.svg" onmouseover="document.getElementById('dev').style.display = 'block';" onmouseout="document.getElementById('dev').style.display = 'none';"/>
             </a>
-            <!--onclick="r.begin('/about'); return false;"-->
+            <!-- onclick="r.begin('/about'); return false;"-->
             <a href="about">
                 <img class="setting" src="img/dock/setting.svg" onmouseover="document.getElementById('about').style.display = 'block';" onmouseout="document.getElementById('about').style.display = 'none';"/>
             </a>
