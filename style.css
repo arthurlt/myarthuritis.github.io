@@ -56,6 +56,10 @@ img.panelicons {
     height: 16px;
     width: 16px;
     margin: 3px 2px 2px 2px;}
+#main {
+    visibility: hidden;}
+#secondary {
+    visibility: visible;}
 div.window {
     height: 450px;
     width: 750px;

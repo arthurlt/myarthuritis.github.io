@@ -54,7 +54,7 @@
                 </a>
             </div>
         </div>
-        <div class="window">
+        <div class="window" id="main">
             <div class="titlebar">
                 <div class="close"></div>
                 <div class="title">
@@ -81,10 +81,10 @@
             <a href="http://goo.gl/MTuZG" target="blank">
                 <img class="twitter" src="img/dock/twitter.svg" onmouseover="document.getElementById('twitter').style.display = 'block';" onmouseout="document.getElementById('twitter').style.display = 'none';"/>
             </a>
-            <a href="#" onclick="r.begin('/dev'); return false;">
+            <a href="dev" onclick="r.begin('/dev'); return false;">
                 <img class="dev" src="img/dock/dev.svg" onmouseover="document.getElementById('dev').style.display = 'block';" onmouseout="document.getElementById('dev').style.display = 'none';"/>
             </a>
-            <a href="#" onclick="r.begin('/about'); return false;">
+            <a href="about" onclick="r.begin('/about'); return false;">
                 <img class="setting" src="img/dock/setting.svg" onmouseover="document.getElementById('about').style.display = 'block';" onmouseout="document.getElementById('about').style.display = 'none';"/>
             </a>
         </div>
