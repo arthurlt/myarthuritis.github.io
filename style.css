@@ -20,7 +20,8 @@ body {
     min-width: 840px;}
 div.panel {
     height: 28px;
-    background-color: rgba(0,0,0,0.7);}
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1;}
 div.plusone {
     display: inline-block;
     padding: 4px 0px 0px 6px;
@@ -173,7 +174,7 @@ img.dev {
     height: 48px;
     margin: -32px 0px 0px;
     padding: 0px 5px;}
-img.setting {
+img.about {
     width: 48px;
     height: 48px;
     margin: -32px 0px 0px;
