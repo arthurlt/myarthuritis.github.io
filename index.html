@@ -11,14 +11,24 @@
         <script type="text/javascript" src="js/showhide.js"></script>
         <script type="text/javascript" src="js/mobile.js"></script>
         <script type="text/javascript" src="js/fullscreen.js"></script>
+        <script type="text/javascript" src="js/img.js"></script>
+        <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
+        <script type="text/javascript"
+            src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
+        <script type="text/javascript">
+            $(function() {
+            $( ".window" ).draggable( { scroll: false, zIndex: -1} );
+            });
+        </script>
         <!--[if IE]>
         <script type="text/javascript">
         window.location = "ie";
         </script>
         <![endif]-->
         <script type="text/javascript" src="js/analytics.js"></script>
-	</head>
-	<body onload="startTime()">
+    </head>
+    <body onload="startTime()">
         <div class="panel">
             <div class="social">
                 <div class="plusone">
@@ -52,7 +62,8 @@
                 <div class="title">
                     <p>Window Title</p>
                 </div>
-                <div class="fullscreen" onclick="toggleFullScreen();"></div>
+                <div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
+                onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
             </div>
             <div class="lower-window">
                 <div class="content">
@@ -66,7 +77,8 @@
                 <div class="title">
                     <p>Development</p>
                 </div>
-                <div class="fullscreen" onclick="toggleFullScreen();"></div>
+                <div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
+                onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
             </div>
             <div class="lower-window">
                 <div class="content">
@@ -89,7 +101,8 @@
                 <div class="title">
                     <p>About</p>
                 </div>
-                <div class="fullscreen" onclick="toggleFullScreen();"></div>
+                <div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
+                onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
             </div>
             <div class="lower-window">
                 <div class="content">
