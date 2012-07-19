@@ -53,12 +53,14 @@ img.panelicons {
     height: 16px;
     width: 16px;
     margin: 3px 2px 2px 2px;}
-#mainwindow {
+/*#mainwindow {
+    display: none;}
+#browserwindow {
     display: none;}
 #devwindow {
     display: none;}
 #aboutwindow {
-    display: none;}
+    display: none;}*/
 div.window {
     height: 450px;
     width: 750px;
@@ -74,7 +76,8 @@ div.window {
     background-image: -webkit-linear-gradient(top, #E6E6E6 0%, #DEDEDE 100%);
     background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #E6E6E6), color-stop(1, #DEDEDE));
     background-image: linear-gradient(to bottom, #E6E6E6 0%, #DEDEDE 100%);
-    box-shadow: 0px 0px 75px black;}
+    box-shadow: 0px 0px 75px black;
+    display: none;}
 div.titlebar {
     width: 100%;
     height: 23px;
@@ -109,13 +112,18 @@ div.maximize:hover {
     background: url('img/window/unmaximize-normal.svg');}
 :fullscreen #maximize {
     background: url('img/window/unmaximize-normal.svg');}
-div.lower-window {
+div.lower-window {https://mobile.twitter.com/Arthur_Mars11
     width: 746px;
     height: 424px;
     border-left: 2px solid #DEDEDE;
     border-right: 2px solid #DEDEDE;
     border-bottom: 2px solid #DEDEDE;
     background-color: white;}
+iframe {
+    width: 746px;
+    height: 424px;}
+div.donate {
+    display: none;}
 div.dock-popup {
     width: 244px;
     height: 17px;

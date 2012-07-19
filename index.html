@@ -71,6 +71,36 @@
                 </div>
             </div>
         </div>
+        <div class="window" id="googlewindow">
+            <div class="titlebar">
+                <div class="close" onclick="document.getElementById('googlewindow').style.display = 'none'; mainurl();"></div>
+                <div class="title">
+                    <p>iFrame Browser - Google+</p>
+                </div>
+                <div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
+                onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
+            </div>
+            <div class="lower-window">
+                <div class="content">
+                    <img width="256px" height="256px" style="margin: 85px 0px;" src="content/img/logo.png">
+                </div>
+            </div>
+        </div>
+        <div class="window" id="twitterwindow">
+            <div class="titlebar">
+                <div class="close" onclick="document.getElementById('twitterwindow').style.display = 'none'; mainurl();"></div>
+                <div class="title">
+                    <p>iFrame Browser - Twitter</p>
+                </div>
+                <div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
+                onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
+            </div>
+            <div class="lower-window">
+                <div class="content">
+                    <iframe frameborder="0" src="http://www.google.com"></iframe>
+                </div>
+            </div>
+        </div>
         <div class="window" id="devwindow">
             <div class="titlebar">
                 <div class="close" onclick="document.getElementById('devwindow').style.display = 'none'; mainurl();"></div>
@@ -126,12 +156,8 @@
             <div class="item-popup" id="dev">Developement</div>
             <div class="item-popup" id="about">About</div>
             </div>
-            <a href="http://goo.gl/Vmzz9" target="blank">
-                <img class="google" src="img/dock/google.svg" onmouseover="document.getElementById('google').style.display = 'block';" onmouseout="document.getElementById('google').style.display = 'none';"/>
-            </a>
-            <a href="http://goo.gl/MTuZG" target="blank">
-                <img class="twitter" src="img/dock/twitter.svg" onmouseover="document.getElementById('twitter').style.display = 'block';" onmouseout="document.getElementById('twitter').style.display = 'none';"/>
-            </a>
+            <img class="google" src="img/dock/google.svg" onmouseover="document.getElementById('google').style.display = 'block';" onmouseout="document.getElementById('google').style.display = 'none';" onclick="toggle_visibility('googlewindow'); devurl();"/>
+            <img class="twitter" src="img/dock/twitter.svg" onmouseover="document.getElementById('twitter').style.display = 'block';" onmouseout="document.getElementById('twitter').style.display = 'none';" onclick="toggle_visibility('twitterwindow'); devurl();"/>
             <!--onclick="r.begin('/dev'); return false;"-->
             <img class="dev" src="img/dock/dev.svg" onmouseover="document.getElementById('dev').style.display = 'block';" onmouseout="document.getElementById('dev').style.display = 'none';"
 onclick="toggle_visibility('devwindow'); devurl();"/>
