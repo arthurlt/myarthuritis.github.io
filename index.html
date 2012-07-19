@@ -4,7 +4,6 @@
         <link rel="shortcut icon" href="http://mars11.com/favicon.ico" />
         <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
         <link href='style.css' rel='stylesheet' type='text/css'>
-        <!-- Place this render call where appropriate -->
         <script type="text/javascript" src="js/plusone.js"></script>
         <script type="text/javascript" src="js/time.js"></script>
         <script type="text/javascript" src="js/url.js"></script>
@@ -71,7 +70,8 @@
                 </div>
             </div>
         </div>
-        <div class="window" id="googlewindow">
+<!--Google+ along with Twitter don't allow iFrames.-->
+        <!--<div class="window" id="googlewindow">
             <div class="titlebar">
                 <div class="close" onclick="document.getElementById('googlewindow').style.display = 'none'; mainurl();"></div>
                 <div class="title">
@@ -100,7 +100,7 @@
                     <iframe frameborder="0" src="http://mobile.twitter.com/Arthur_Mars11/"></iframe>
                 </div>
             </div>
-        </div>
+        </div>-->
         <div class="window" id="devwindow">
             <div class="titlebar">
                 <div class="close" onclick="document.getElementById('devwindow').style.display = 'none'; mainurl();"></div>
@@ -156,8 +156,12 @@
             <div class="item-popup" id="dev">Developement</div>
             <div class="item-popup" id="about">About</div>
             </div>
-            <img class="google" src="img/dock/google.svg" onmouseover="document.getElementById('google').style.display = 'block';" onmouseout="document.getElementById('google').style.display = 'none';" onclick="toggle_visibility('googlewindow'); devurl();"/>
-            <img class="twitter" src="img/dock/twitter.svg" onmouseover="document.getElementById('twitter').style.display = 'block';" onmouseout="document.getElementById('twitter').style.display = 'none';" onclick="toggle_visibility('twitterwindow'); devurl();"/>
+            <a href="google+.html" target="blank"/>
+                <img class="google" src="img/dock/google.svg" onmouseover="document.getElementById('google').style.display = 'block';" onmouseout="document.getElementById('google').style.display = 'none';"/>
+            </a>
+            <a href="twitter.html" target="blank"/>
+                <img class="twitter" src="img/dock/twitter.svg" onmouseover="document.getElementById('twitter').style.display = 'block';" onmouseout="document.getElementById('twitter').style.display = 'none';"/>
+            </a>
             <!--onclick="r.begin('/dev'); return false;"-->
             <img class="dev" src="img/dock/dev.svg" onmouseover="document.getElementById('dev').style.display = 'block';" onmouseout="document.getElementById('dev').style.display = 'none';"
 onclick="toggle_visibility('devwindow'); devurl();"/>
