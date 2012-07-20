@@ -59,7 +59,6 @@
         </div>
         <div id="jsdebug"></div>
         <div class="window" id="mainwindow">
-            <div class="windowshadow"></div>
             <div class="titlebar">
                 <div class="close" onclick="document.getElementById('mainwindow').style.display = 'none'; mainurl();"></div>
                 <div class="title">
@@ -69,13 +68,12 @@
                 onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
             </div>
             <div class="lower-window">
-                <div class="content">
+                <div class="content" style="text-align: center;">
                     <img width="256px" height="256px" style="margin: 85px 0px;" src="content/img/logo.svg">
                 </div>
             </div>
         </div>
         <div class="window" id="devwindow">
-            <div class="windowshadow"></div>
             <div class="titlebar">
                 <div class="close" onclick="document.getElementById('devwindow').style.display = 'none'; mainurl();"></div>
                 <div class="title">
@@ -113,7 +111,6 @@
             </div>
         </div>
         <div class="window" id="aboutwindow">
-            <div class="windowshadow"></div>
             <div class="titlebar">
                 <div class="close" onclick="document.getElementById('aboutwindow').style.display = 'none'; mainurl();"></div>
                 <div class="title">
@@ -181,21 +178,27 @@ onclick="toggle_visibility('aboutwindow'); abouturl();"/>
         </script>
         <script type="text/javascript">
             function jsDebug() {
-            var awm = document.getElementById("aboutwindow");
-            var dwm = document.getElementById("devwindow");
-            var mwm = document.getElementById("mainwindow");
-            var aboutleft = awm.style.left;
-            var devleft = dwm.style.left;
-            var mainleft = mwm.style.left;
-            var abouttop = awm.style.top;
-            var devtop = dwm.style.top;
-            var maintop = mwm.style.top;
-            var shadowblur = '60px';
-            var shadowspread = '5px';
-            var shadowcolor = 'rgba(50,50,50,.5)';
-            dwm.style.boxShadow=devleft+" "+devtop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;
-            document.getElementById('jsdebug').innerHTML=aboutleft+" "+abouttop+" "+devleft+" "+devtop+" "+mainleft+" "+maintop;
-            setTimeout('jsDebug()',1);}
+                var awm = document.getElementById("aboutwindow");
+                var dwm = document.getElementById("devwindow");
+                var mwm = document.getElementById("mainwindow");
+                var aboutleft = awm.style.left;
+                var devleft = dwm.style.left;
+                var mainleft = mwm.style.left;
+                var abouttop = awm.style.top;
+                var devtop = dwm.style.top;
+                var maintop = mwm.style.top;
+                var shadowblur = '60px';
+                var shadowspread = '5px';
+                var shadowcolor = 'rgba(50,50,50,.5)';
+                if (mainleft > "0") {
+                    mwm.style.boxShadow=mainleft+" "+maintop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;}
+                //else if (devleft > "0") {
+                //    dwm.style.boxShadow=devleft+" "+devtop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;}
+                //else if (aboutleft > "0") {
+                //    awm.style.boxShadow=aboutleft+" "+abouttop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;}
+                document.getElementById('jsdebug').innerHTML=aboutleft+" "+abouttop+" "+devleft+" "+devtop+" "+mainleft+" "+maintop;
+                setTimeout('jsDebug()',1);
+            }
         </script>
     </body>
 </html>
