@@ -30,7 +30,7 @@
         <![endif]-->
         <script type="text/javascript" src="js/analytics.js"></script>
     </head>
-    <body onload="startTime(); jsDebug();">
+    <body onload="startTime(); shadowMove();">
         <div class="panel">
             <div class="social">
                 <div class="plusone">
@@ -177,27 +177,29 @@ onclick="toggle_visibility('aboutwindow'); abouturl();"/>
                 mw.style.display = 'none';}
         </script>
         <script type="text/javascript">
-            function jsDebug() {
+            function shadowMove() {
                 var awm = document.getElementById("aboutwindow");
                 var dwm = document.getElementById("devwindow");
                 var mwm = document.getElementById("mainwindow");
-                var aboutleft = awm.style.left;
-                var devleft = dwm.style.left;
-                var mainleft = mwm.style.left;
-                var abouttop = awm.style.top;
-                var devtop = dwm.style.top;
-                var maintop = mwm.style.top;
+                var aboutleft = parseFloat(awm.style.left);
+                var devleft = parseFloat(dwm.style.left);
+                var mainleft = parseFloat(mwm.style.left);
+                var abouttop = parseFloat(awm.style.top);
+                var devtop = parseFloat(dwm.style.top);
+                var maintop = parseFloat(mwm.style.top);
                 var shadowblur = '60px';
                 var shadowspread = '5px';
                 var shadowcolor = 'rgba(50,50,50,.5)';
+                var mainshadowh = -((mainleft - 375)/10);
+                var mainshadowv = -((maintop + 22)/10);
                 if (mainleft > "0") {
-                    mwm.style.boxShadow=mainleft+" "+maintop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;}
+                    mwm.style.boxShadow=mainshadowh+"px "+mainshadowv+"px "+shadowblur+" "+shadowspread+" "+shadowcolor;}
                 //else if (devleft > "0") {
                 //    dwm.style.boxShadow=devleft+" "+devtop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;}
                 //else if (aboutleft > "0") {
                 //    awm.style.boxShadow=aboutleft+" "+abouttop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;}
                 document.getElementById('jsdebug').innerHTML=aboutleft+" "+abouttop+" "+devleft+" "+devtop+" "+mainleft+" "+maintop;
-                setTimeout('jsDebug()',1);
+                setTimeout('shadowMove()',1);
             }
         </script>
     </body>
