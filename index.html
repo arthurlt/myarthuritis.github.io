@@ -17,7 +17,7 @@
             src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
         <script type="text/javascript">
             $(function() {
-            $( ".window" ).draggable( { scroll: false, zIndex: -1} );
+            $( ".window" ).draggable( { scroll: false, zIndex: -1, handle: ".titlebar", distance: 10 } );
             });
         </script>
         <!--[if IE]>
