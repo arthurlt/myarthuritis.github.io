@@ -104,24 +104,41 @@ div.maximize:hover {
     background: url('img/window/unmaximize-normal.svg');}
 :fullscreen #maximize {
     background: url('img/window/unmaximize-normal.svg');}
-div.lower-window {https://mobile.twitter.com/Arthur_Mars11
+div.lower-window {
     width: 746px;
     height: 424px;
     border-left: 2px solid #DEDEDE;
     border-right: 2px solid #DEDEDE;
     border-bottom: 2px solid #DEDEDE;
-    background-color: white;}
+    background-color: white;
+    cursor:auto;}
 div.content {
     width: 600px;
     height: 424px;
     display: inline-block;
     float: left;
+    text-align: left;
     x-background-color: black;}
+p.head {
+    margin-left: 12px;
+    margin-top: 12px;
+    font-size: 14pt;}
+p.list {
+    margin-left: 20px;
+    margin-top: 6px;
+    font-size: 10pt;
+    color: rgb(150,150,150);}
+a {
+    color: rgb(150,150,150);
+    cursor: pointer;}
+a:visited {
+    color: rgb(100,100,100);}
 div.sidebar {
-    width: 146px;
+    width: 145px;
     height: 424px;
     display: inline-block;
     float: right;
+    border-left: 1px solid gray;
     x-background-color: blue;}
 div.donate {
     display: none;}
