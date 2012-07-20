@@ -8,7 +8,7 @@ function toggle_visibility(id) {
     else if (e == d) {
         a.style.display = "none";}
     else {
-        e.style.display = "none";}
+          e.style.display = "none";}
 //toggling window open
     if (e.style.display == 'block') {
         e.style.display = 'none';}

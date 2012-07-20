@@ -1,6 +1,9 @@
 function mainurl() {
-    history.pushState("/");}
+    var stateObj = { url: "#" };
+    history.pushState(stateObj, "page 1", "#");}
 function devurl() {
-    history.pushState("dev");}
+    var stateObj = { index: "#dev" };
+    history.pushState(stateObj, "page 2", "#dev");}
 function abouturl() {
-    history.pushState("about");}
+    var stateObj = { foo: "#about" };
+    history.pushState(stateObj, "page 3", "#about");}

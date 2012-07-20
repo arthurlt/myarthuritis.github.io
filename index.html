@@ -31,7 +31,6 @@
         <div class="panel">
             <div class="social">
                 <div class="plusone">
-                    <!-- Place this tag where you want the +1 button to render -->
                     <div class="g-plusone" data-size="medium" data-annotation="none"></div>
                 </div>
                     <div class="tweet">
@@ -59,7 +58,7 @@
             <div class="titlebar">
                 <div class="close" onclick="document.getElementById('mainwindow').style.display = 'none'; mainurl();"></div>
                 <div class="title">
-                    <p>Window Title</p>
+                    <p>Welcome!</p>
                 </div>
                 <div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
                 onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
@@ -70,37 +69,6 @@
                 </div>
             </div>
         </div>
-<!--Google+ along with Twitter don't allow iFrames.-->
-        <!--<div class="window" id="googlewindow">
-            <div class="titlebar">
-                <div class="close" onclick="document.getElementById('googlewindow').style.display = 'none'; mainurl();"></div>
-                <div class="title">
-                    <p>iFrame Browser - Google+</p>
-                </div>
-                <div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
-                onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
-            </div>
-            <div class="lower-window">
-                <div class="content">
-                    <iframe frameborder="0" src="https://plus.google.com/app/plus/mp/300/#~loop:view=profile&a=g%3A111629734323967418199/"></iframe>
-                </div>
-            </div>
-        </div>
-        <div class="window" id="twitterwindow">
-            <div class="titlebar">
-                <div class="close" onclick="document.getElementById('twitterwindow').style.display = 'none'; mainurl();"></div>
-                <div class="title">
-                    <p>iFrame Browser - Twitter</p>
-                </div>
-                <div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
-                onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
-            </div>
-            <div class="lower-window">
-                <div class="content">
-                    <iframe frameborder="0" src="http://mobile.twitter.com/Arthur_Mars11/"></iframe>
-                </div>
-            </div>
-        </div>-->
         <div class="window" id="devwindow">
             <div class="titlebar">
                 <div class="close" onclick="document.getElementById('devwindow').style.display = 'none'; mainurl();"></div>
@@ -169,5 +137,19 @@ onclick="toggle_visibility('devwindow'); devurl();"/>
             <img class="about" src="img/dock/setting.svg" onmouseover="document.getElementById('about').style.display = 'block';" onmouseout="document.getElementById('about').style.display = 'none';"
 onclick="toggle_visibility('aboutwindow'); abouturl();"/>
         </div>
+        <script type="text/javascript">
+            var urlhash = window.location.hash;
+            var aw = document.getElementById("aboutwindow");
+            var dw = document.getElementById("devwindow");
+            var mw = document.getElementById("mainwindow");
+            if (urlhash == '#dev') {
+                dw.style.display = "block";}
+            else if (urlhash == '#about') {
+                aw.style.display = 'block';}
+            else if (urlhash == '#main') {
+                mw.style.display = 'block';}
+            else {
+                mw.style.display = 'none';}
+        </script>
     </body>
 </html>
