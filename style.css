@@ -53,14 +53,6 @@ img.panelicons {
     height: 16px;
     width: 16px;
     margin: 3px 2px 2px 2px;}
-/*#mainwindow {
-    display: none;}
-#browserwindow {
-    display: none;}
-#devwindow {
-    display: none;}
-#aboutwindow {
-    display: none;}*/
 div.window {
     height: 450px;
     width: 750px;
@@ -119,9 +111,18 @@ div.lower-window {https://mobile.twitter.com/Arthur_Mars11
     border-right: 2px solid #DEDEDE;
     border-bottom: 2px solid #DEDEDE;
     background-color: white;}
-iframe {
-    width: 746px;
-    height: 424px;}
+div.content {
+    width: 600px;
+    height: 424px;
+    display: inline-block;
+    float: left;
+    x-background-color: black;}
+div.sidebar {
+    width: 146px;
+    height: 424px;
+    display: inline-block;
+    float: right;
+    x-background-color: blue;}
 div.donate {
     display: none;}
 div.dock-popup {
