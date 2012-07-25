@@ -69,7 +69,7 @@
             </div>
             <div class="lower-window">
                 <div class="content" style="text-align: center;">
-                    <img width="256px" height="256px" style="margin: 85px 0px;" src="content/img/logo.svg">
+                    <img width="256px" height="256px" style="margin: 85px 0px;" src="content/img/logo.png">
                 </div>
             </div>
         </div>
@@ -95,7 +95,7 @@
                         <p class="list">- <a href="content/scripts/black_screen_fix_2.8.4.sh" target="blank">Minecraft Black Screen Fixer</a></p>
                 </div>
                 <div class="sidebar">
-                    <img width="128px" height="128px" src="content/img/logo.svg"> 
+                    <img width="128px" height="128px" src="content/img/logo.png"> 
                     <div class="donate">
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
                         <input type="hidden" name="cmd" value="_donations">
@@ -127,7 +127,7 @@
                     <p class="content">Since I'm only 15 I can't quite get a job yet, so any donations are extremely helpful, thank you.</p>
                 </div>
                 <div class="sidebar">
-                    <img width="128px" height="128px" src="content/img/logo.svg">
+                    <img width="128px" height="128px" src="content/img/logo.png">
                     <div class="donate">
                         <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
                         <input type="hidden" name="cmd" value="_donations">
