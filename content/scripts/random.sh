@@ -1,6 +1,6 @@
-#/bin/sh
+#/bin/bash
 echo "-----------------------------------------------------------------"
-echo "                                    Random Fun Facts Script (0.2)"
+echo "                                    Random Fun Facts Script (0.3)"
 echo "                             Created by Mars11 "http.//mars11.com/
 echo "-----------------------------------------------------------------"
 echo " How many facts do you want?"
