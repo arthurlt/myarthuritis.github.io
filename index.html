@@ -194,13 +194,17 @@ onclick="toggle_visibility('aboutwindow'); abouturl();"/>
                 var shadowcolor = 'rgba(50,50,50,.5)';
                 var mainshadowh = -((mainleft - 375)/10);
                 var mainshadowv = -((maintop + 22)/5);
+                var devshadowh = -((devleft - 375)/10);
+                var devshadowv = -((devtop + 22)/5);
+                var aboutshadowh = -((aboutleft - 375)/10);
+                var aboutshadowv = -((abouttop + 22)/5);
                 if (mainleft > "0") {
                     mwm.style.boxShadow=mainshadowh+"px "+mainshadowv+"px "+shadowblur+" "+shadowspread+" "+shadowcolor;}
-                //else if (devleft > "0") {
+                //if (devleft > "0") {
                 //    dwm.style.boxShadow=devleft+" "+devtop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;}
-                //else if (aboutleft > "0") {
+                //if (aboutleft > "0") {
                 //    awm.style.boxShadow=aboutleft+" "+abouttop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;}
-                document.getElementById('jsdebug').innerHTML=aboutleft+" "+abouttop+" "+devleft+" "+devtop+" "+mainleft+" "+maintop;
+                //document.getElementById('jsdebug').innerHTML=aboutleft+" "+abouttop+" "+devleft+" "+devtop+" "+mainleft+" "+maintop;
                 setTimeout('shadowMove()',1);
             }
         </script>
