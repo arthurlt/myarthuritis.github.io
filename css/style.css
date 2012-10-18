@@ -1,0 +1,120 @@
+* {
+	cursor:default;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;}
+HTML {
+	width: 100%;
+	height: 100%;
+	font-family: 'Droid Sans', sans-serif;
+	background: url('img/background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	overflow: hidden;}
+body {
+	width: 100%;
+	height: 100%;
+	min-width: 840px;}
+div.panel {
+	height: 28px;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 999;}
+div.plusone {
+	display: inline-block;
+	padding: 4px 0px 0px 6px;
+	float: left;
+	width: 40px;}
+div.tweet {
+	display: inline-block;
+	padding: 4px 0px 0px 0px;
+	float: left;}
+div.time {
+	color: white;
+	font-size: 9pt;
+	width: auto;
+	height: 22px;
+	display: inline-block;
+	padding-top: 7px;
+	position: absolute;
+	margin-left: -46px;
+	left: 50%;}
+img.panelicons {
+	display: inline-block;
+	float: right;
+	padding: 3px 5px 5px 5px;}
+#avatar {
+	height: 18px;
+	width: 18px;
+	margin-top: 2px;}
+#jsdebug {
+	height: 32px;
+	width: 300px;
+	background-color: black;
+	color: white;
+	display: none;}
+div.dock-popup {
+	width: 244px;
+	height: 17px;
+	display: block;
+	position: fixed;
+	bottom: 69px;
+	margin-left: -6px;}
+div.item-popup {
+	width: auto;
+	height: 13px;
+	float: left;
+	color: white;
+	padding: 7px 5px 6px 5px;
+	font-size: 8pt;
+	border-radius: 6px;
+	display: none;
+	background-color: rgba(0,0,0,.85);}
+#google {
+	margin-left: 0px}
+#twitter {
+	margin-left: 60px}
+#dev {
+	margin-left: 110px}
+#about {
+	margin-left: 195px}
+div.dock {
+	width: 244px;
+	height: 17px;
+	display: block;
+	position: fixed;
+	bottom: 0px;
+	left: 50%;
+	margin-left: -122px;
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+	border-bottom-width: 0px;
+	border: 1px solid rgba(0,0,0,.37);
+	background-image: -moz-linear-gradient(top, rgb(255,255,255) 0%, rgb(235,235,235) 100%);
+	background-image: -o-linear-gradient(top, rgb(255,255,255) 0%, rgb(235,235,235) 100%);
+	background-color: rgb(255,255,255);
+	background-image: -webkit-linear-gradient(top, rgb(255,255,255) 0%, rgb(235,235,235) 100%);
+	background-image: linear-gradient(to bottom, rgb(255,255,255) 0%, rgb(235,235,235) 100%);}
+img.google {
+	width: 48px;
+	height: 48px;
+	margin: -32px 0px 0px;
+	padding: 0px 5px;
+	float: left}
+img.twitter {
+	width: 48px;
+	height: 48px;
+	margin: -32px 0px 0px;
+	padding: 0px 5px;}
+img.dev {
+	width: 48px;
+	height: 48px;
+	margin: -32px 0px 0px;
+	padding: 0px 5px;}
+img.about {
+	width: 48px;
+	height: 48px;
+	margin: -32px 0px 0px;
+	padding: 0px 5px;}

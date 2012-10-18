@@ -6,24 +6,9 @@
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple72.png">
 		<link rel="apple-touch-icon-precomposed" href="img/apple57.png">
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
-		<link href='style.css' rel='stylesheet' type='text/css'>
+		<link href='css/style.css' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" src="js/plusone.js"></script>
 		<script type="text/javascript" src="js/time.js"></script>
-		<script type="text/javascript" src="js/url.js"></script>
-		<script type="text/javascript" src="js/showhide.js"></script>
-		<script type="text/javascript" src="js/mobile.js"></script>
-		<script type="text/javascript" src="js/fullscreen.js"></script>
-		<script type="text/javascript" src="js/img.js"></script>
-		
-		<script type="text/javascript"
-			src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"></script>
-		<script type="text/javascript"
-			src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/jquery-ui.js"></script>
-		<script type="text/javascript">
-			$(function() {
-			$( ".window" ).draggable( { scroll: false, zIndex: -1, handle: ".titlebar", distance: 10 } );
-			});
-		</script>
 		<!--[if IE]>
 		<script type="text/javascript">
 		window.location = "ie";
@@ -31,7 +16,7 @@
 		<![endif]-->
 		<script type="text/javascript" src="js/analytics.js"></script>
 	</head>
-	<body onload="startTime(); shadowMove();">
+	<body onload="startTime();">
 		<div class="panel">
 			<div class="social">
 				<div class="plusone">
@@ -59,156 +44,5 @@
 			</div>
 		</div>
 		<div id="jsdebug"></div>
-		<div class="window" id="mainwindow">
-			<div class="titlebar">
-				<div class="close" onclick="document.getElementById('mainwindow').style.display = 'none'; mainurl();"></div>
-				<div class="title">
-					<p>Welcome!</p>
-				</div>
-				<div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
-				onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
-			</div>
-			<div class="lower-window">
-				<div class="content" style="text-align: center;">
-					<img width="256px" height="256px" style="margin: 85px 0px;" src="content/img/logo.png">
-				</div>
-			</div>
-		</div>
-		<div class="window" id="devwindow">
-			<div class="titlebar">
-				<div class="close" onclick="document.getElementById('devwindow').style.display = 'none'; mainurl();"></div>
-				<div class="title">
-					<p>Development</p>
-				</div>
-				<div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
-				onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
-			</div>
-			<div class="lower-window">
-				<div class="content">
-					<p class="head">Active Development</p>
-						<p class="list">- <a href="http://mars11.com/" target="blank">My Website (Here)</a></p>
-						<p class="list">- <a href="content/scripts/android_dev_install.sh" target="blank">Android Dev Tools Installer</a></p>
-						<p class="list">- Farm Wars (More info later)</p>
-					<p class="head">Bash Scripts</p>
-						<p class="list">- <a href="content/scripts/evermutt_install.sh" target="blank">Evermutt Installer</a></p>
-						<p class="list">- <a href="content/scripts/dvd_install.sh" target="blank">DVD Support Installer</a></p>
-						<p class="list">- <a href="content/scripts/java.sh" target="blank">Java Installer</a></p>
-						<p class="list">- <a href="content/scripts/black_screen_fix_2.8.4.sh" target="blank">Minecraft Black Screen Fixer</a></p>
-						<p class="list">- <a href="content/scripts/random.sh" target="blank">Random Fun Facts Script</a></p>
-					<p class="head">Android Applications</p>
-						<p class="list">- <a href="http://play.google.com/store/apps/details?id=com.archerllc.funmeeting" target="blank">Fun Meeting</a> -For Archer LLC</p>
-				</div>
-				<div class="sidebar">
-					<img width="128px" height="128px" src="content/img/logo.png"> 
-					<div class="donate">
-						<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_donations">
-						<input type="hidden" name="business" value="arthurlt@gmail.com">
-						<input type="hidden" name="lc" value="US">
-						<input type="hidden" name="currency_code" value="USD">
-						<input type="hidden" name="bn" value="PP-DonationsBF:favicon.ico:NonHosted">
-						<input type="image" src="img/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="window" id="aboutwindow">
-			<div class="titlebar">
-				<div class="close" onclick="document.getElementById('aboutwindow').style.display = 'none'; mainurl();"></div>
-				<div class="title">
-					<p>About</p>
-				</div>
-				<div class="maximize" id="maximize" onmouseover="mouseOverImage();"   
-				onmouseout="mouseOutImage();" onclick="toggleFullScreen();"></div>
-			</div>
-			<div class="lower-window">
-				<div class="content">
-					<p class="content">I'm a 15-year-old high school student and developer. I work on the elementary project as a web developer, fix up other's computers, phones, and tablets in my free time, and will occasionally write Android Applications.</p>
-					<p class="content">I created this website for fun, it's a rewrite of the <a href="http://elementaryos.org" target="blank">elementary OS</a> Luna desktop in HTML5/CSS3 and a little bit of Javascript with jquery. I'll be working on this on and off for quite a while, improving it and squashing bugs.</p>
-					<p class="content">I'm on a a <a href="http://www.usfirst.org/" target="blank">FIRST</a> Robotics Team. We placed third in the Regionals last year and we're aiming even higher this year. Go <a href="http://www.teamimplosion.com/" target="blank">TEAM IMPLOSION!</a></p>
-					<p class="content">Any donations are very much appreciated.</p>
-				</div>
-				<div class="sidebar">
-					<img width="128px" height="128px" src="content/img/logo.png">
-					<div class="donate">
-						<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_donations">
-						<input type="hidden" name="business" value="arthurlt@gmail.com">
-						<input type="hidden" name="lc" value="US">
-						<input type="hidden" name="currency_code" value="USD">
-						<input type="hidden" name="bn" value="PP-DonationsBF:favicon.ico:NonHosted">
-						<input type="image" src="img/donate.png" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-						<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-						</form>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="dock">
-			<div class="dock-popup">
-			<div class="item-popup" id="google"><p>My Google+</p></div>
-			<div class="item-popup" id="twitter">My Twitter</div>
-			<div class="item-popup" id="dev">Developement</div>
-			<div class="item-popup" id="about">About</div>
-			</div>
-			<a href="google+.html" target="blank"/>
-				<img class="google" src="img/dock/google.svg" onmouseover="document.getElementById('google').style.display = 'block';" onmouseout="document.getElementById('google').style.display = 'none';"/>
-			</a>
-			<a href="twitter.html" target="blank"/>
-				<img class="twitter" src="img/dock/twitter.svg" onmouseover="document.getElementById('twitter').style.display = 'block';" onmouseout="document.getElementById('twitter').style.display = 'none';"/>
-			</a>
-			<!--onclick="r.begin('/dev'); return false;"-->
-			<img class="dev" src="img/dock/dev.svg" onmouseover="document.getElementById('dev').style.display = 'block';" onmouseout="document.getElementById('dev').style.display = 'none';"
-onclick="toggle_visibility('devwindow'); devurl();"/>
-			<!--onclick="r.begin('/about'); return false;"-->
-			<img class="about" src="img/dock/setting.svg" onmouseover="document.getElementById('about').style.display = 'block';" onmouseout="document.getElementById('about').style.display = 'none';"
-onclick="toggle_visibility('aboutwindow'); abouturl();"/>
-		</div>
-		<script type="text/javascript">
-			var urlhash = window.location.hash;
-			var aw = document.getElementById("aboutwindow");
-			var dw = document.getElementById("devwindow");
-			var mw = document.getElementById("mainwindow");
-			if (urlhash == '#dev') {
-				dw.style.display = "block";}
-			else if (urlhash == '#about') {
-				aw.style.display = 'block';}
-			else if (urlhash == '#main') {
-				mw.style.display = 'block';}
-			else {
-				mw.style.display = 'none';}
-		</script>
-		<script type="text/javascript">
-			function shadowMove() {
-				var awm = document.getElementById("aboutwindow");
-				var dwm = document.getElementById("devwindow");
-				var mwm = document.getElementById("mainwindow");
-				var aboutleft = parseFloat(awm.style.left);
-				var devleft = parseFloat(dwm.style.left);
-				var mainleft = parseFloat(mwm.style.left);
-				var abouttop = parseFloat(awm.style.top);
-				var devtop = parseFloat(dwm.style.top);
-				var maintop = parseFloat(mwm.style.top);
-				var shadowblur = '60px';
-				var shadowspread = '5px';
-				var shadowcolor = 'rgba(50,50,50,.5)';
-				var mainshadowh = -((mainleft - 375)/10);
-				var mainshadowv = -((maintop + 22)/5);
-				var devshadowh = -((devleft - 375)/10);
-				var devshadowv = -((devtop + 22)/5);
-				var aboutshadowh = -((aboutleft - 375)/10);
-				var aboutshadowv = -((abouttop + 22)/5);
-				if (mainleft > "0") {
-					mwm.style.boxShadow=mainshadowh+"px "+mainshadowv+"px "+shadowblur+" "+shadowspread+" "+shadowcolor;}
-				//if (devleft > "0") {
-				//	dwm.style.boxShadow=devleft+" "+devtop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;}
-				//if (aboutleft > "0") {
-				//	awm.style.boxShadow=aboutleft+" "+abouttop+" "+shadowblur+" "+shadowspread+" "+shadowcolor;}
-				//document.getElementById('jsdebug').innerHTML=aboutleft+" "+abouttop+" "+devleft+" "+devtop+" "+mainleft+" "+maintop;
-				setTimeout('shadowMove()',1);
-			}
-		</script>
 	</body>
 </html>
