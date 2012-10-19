@@ -74,8 +74,7 @@ img.panelicons {
 #hlogo {
 	display: none;}
 #jsdebug:before {
-	content: "jsdebug: ";
-	line-height: 28px;}
+	content: "jsdebug: ";}
 #jsdebug {
 	height: 28px;
 	width: 100%;
