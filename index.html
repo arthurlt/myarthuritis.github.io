@@ -1,36 +1,37 @@
 <!DOCTYPE html>
 	<head>
-		<title>Home</title>
+		<title>Arthur(Mars11)'s Website</title>
 		<link rel="shortcut icon" href="http://mars11.com/favicon.ico" />
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple114.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple72.png">
 		<link rel="apple-touch-icon-precomposed" href="img/apple57.png">
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
-		<link href='css/style.css' rel='stylesheet' type='text/css'>
+		<link href='style.css' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" src="js/tweet.js"></script>
 		<script type="text/javascript" src="js/plusone.js"></script>
 		<script type="text/javascript" src="js/time.js"></script>
-		<!--[if IE]>
-		<script type="text/javascript">
-		window.location = "ie";
-		</script>
-		<![endif]-->
 		<script type="text/javascript" src="js/analytics.js"></script>
+		<script type="text/javascript">
+			function dropDown() 
+			{
+			setTimeout("document.getElementById('panel').className = 'visible';",500);
+			}
+		</script>
 	</head>
-	<body onload="startTime();">
-		<div class="panel">
-			<div class="social">
-				<div class="plusone">
+	<body onload="startTime(); dropDown();">
+		<div id="panel">
+			<div id="social">
+				<div id="plusone">
 					<div class="g-plusone" data-size="medium" data-annotation="none"></div>
 				</div>
-					<div class="tweet">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-text="This looks like @elementary OS Luna!" data-count="none">Tweet</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					<div id="tweet">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
 				</div>
 			</div>
 			<div class="time">
 				<div id="time"></div>
 			</div>
-			<div class="panelicons">
+			<div id="panelicons">
 				<img class="panelicons" src="img/panel/power.svg"/>
 				<a href="mailto:arthurlt@gmail.com" target="blank">
 					<img class="panelicons" src="img/panel/mail.svg"/>
@@ -43,7 +44,12 @@
 				</a>
 			</div>
 		</div>
+		<div id="iewarning"><a href="http://www.browserchoice.eu/">You're using Microsoft Internet Explorer 9 or less, this site won't display correctly. Update or switch to a more standards complient browser.</a></div>
 		<div id="jsdebug"></div>
-		<p class="announce">We're undergoing some major changes, be back shortly</p>
+		<div id="main">
+		</div>
+		<!--[if IE]><script type="text/javascript">
+			document.getElementById('iewarning').style.display = "block";
+		</script><![endif]-->
 	</body>
 </html>

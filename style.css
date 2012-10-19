@@ -1,0 +1,78 @@
+* {
+	cursor:default;
+	margin: 0px;
+	padding: 0px;}
+HTML {
+	font-family: 'Droid Sans', sans-serif;
+	background: url('img/back.png');
+	min-width: 801px;
+	-webkit-user-select: none;
+	-moz-user-select: none;}
+body {
+	width: 100%;
+	height: 100%;}
+#panel {
+	position: absolute;
+	height: 28px;
+	width: 100%;
+	min-width: 801px;
+	top: -28px;
+	background-color: rgba(0,0,0,0.7);
+	z-index: 999;
+	transition: top 1s ease;
+	-moz-transition: top 1s ease;
+	-webkit-transition: top 1s ease-out;
+	-o-transition: top 1s ease;}
+#panel.visible {
+	top: 0;}
+#plusone {
+	display: inline-block;
+	padding: 4px 0px 0px 6px;
+	float: left;
+	width: 40px;}
+#tweet {
+	display: inline-block;
+	padding: 4px 0px 0px 0px;
+	float: left;}
+div.time {
+	color: white;
+	font-size: 9pt;
+	width: auto;
+	height: 22px;
+	display: inline-block;
+	padding-top: 7px;
+	position: absolute;
+	margin-left: -46px;
+	left: 50%;}
+#panelicons {}
+img.panelicons {
+	display: inline-block;
+	float: right;
+	padding: 3px 5px 5px 5px;}
+#avatar {
+	height: 18px;
+	width: 18px;
+	margin-top: 2px;}
+#iewarning {
+	height: 20px;
+	display: none;
+	background-color: red;
+	padding: 28px 0 0;
+	color: white;
+	text-align: center;
+	font-size: 11pt;}
+#iewarning a {
+	text-decoration: none;}
+#iewarning a:link {
+	color: white;}
+#iewarning a:visited {
+	color: white;}
+#iewarning a:hover {
+	text-decoration: underline;}
+#jsdebug {
+	height: 32px;
+	width: 300px;
+	background-color: black;
+	color: white;
+	display: none;}
+#main {}
