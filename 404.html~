@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+	<head>
+		<title>Arthur (Mars11)'s Website</title>
+		<link rel="shortcut icon" href="http://mars11.com/favicon.ico" />
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple72.png">
+		<link rel="apple-touch-icon-precomposed" href="img/apple57.png">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
+		<link href='style.css' rel='stylesheet' type='text/css'>
+	</head>
+	<body onload="startTime(); cssStart();">
+		<div id="panel">
+			<div id="social">
+				<div id="plusone">
+					<div class="g-plusone" data-size="medium" data-annotation="none"></div>
+				</div>
+					<div id="tweet">
+					<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
+				</div>
+			</div>
+			<div class="time">
+				<div id="time"></div>
+			</div>
+			<div id="panelicons">
+				<img class="panelicons" src="img/panel/power.svg"/>
+				<a href="mailto:arthurlt@gmail.com" target="blank">
+					<img class="panelicons" src="img/panel/mail.svg"/>
+				</a>
+				<img class="panelicons" src="img/panel/high.svg"/>
+				<img class="panelicons" id="avatar" src="img/panel/avatar.svg"/>
+				<img class="panelicons" src="img/panel/wired.svg"/>
+				<a href="http://db.tt/FFgst2x" target="blank">
+				<img class="panelicons" id="dropbox" src="img/panel/dropbox.svg"/>
+				</a>
+			</div>
+		</div>
+		<div id="iewarning"><a href="http://www.browserchoice.eu/">You're using Microsoft Internet Explorer 9 or less, this site won't display correctly. Update or switch to a more standards complient browser.</a></div>
+		<div id="jsdebug"></div>
+		<img id="hlogo" src="content/img/logo.png">
+		<div id="main">
+        	<p id="welcome">Hello! and thanks for stopping by. I'm currently rewriting the site to make it more practical and I should be done soon. Things may change or be unstable around here while I test new features. Thanks for your patience.</p>
+		</div>
+		<!--[if IE]><script type="text/javascript">
+			document.getElementById('iewarning').style.display = "block";
+		</script><![endif]-->
+		<script type="text/javascript">
+			function cssStart() 
+			{
+			document.getElementById('main').className = "full";
+			setTimeout("document.getElementById('panel').style.top = '0';",750);
+			}
+		</script>
+		<script type="text/javascript" src="js/tweet.js"></script>
+		<script type="text/javascript" src="js/plusone.js"></script>
+		<script type="text/javascript" src="js/analytics.js"></script>
+		<script type="text/javascript" src="js/time.js"></script>
+		<script type="text/javascript" src="js/nothing.js"></script>
+		<div id="hidden">
+			<audio id="chime" src="content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
+		</div>
+	</body>
+</html>
