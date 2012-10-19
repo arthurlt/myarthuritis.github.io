@@ -11,11 +11,8 @@
 		<script type="text/javascript" src="js/plusone.js"></script>
 		<script type="text/javascript" src="js/time.js"></script>
 		<script type="text/javascript" src="js/analytics.js"></script>
-		<script type="text/javascript">
-			setTimeout("document.getElementById('panel').className = 'visible';",500);
-		</script>
 	</head>
-	<body onload="startTime();">
+	<body onload="startTime(); cssStart();">
 		<div id="panel">
 			<div id="social">
 				<div id="plusone">
@@ -49,5 +46,12 @@
 		<!--[if IE]><script type="text/javascript">
 			document.getElementById('iewarning').style.display = "block";
 		</script><![endif]-->
+		<script type="text/javascript">
+			function cssStart() 
+			{
+			document.getElementById('main').className = "full";
+			setTimeout("document.getElementById('panel').style.top = '0';",750);
+			}
+		</script>
 	</body>
 </html>
