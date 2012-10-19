@@ -23,10 +23,10 @@ a img {
 	top: -28px;
 	background-color: rgba(0,0,0,0.7);
 	z-index: 999;
-	transition: top 1s ease;
-	-moz-transition: top 1s ease;
-	-webkit-transition: top 1s ease-out;
-	-o-transition: top 1s ease;}
+	transition: top .65s ease;
+	-moz-transition: top .65s ease;
+	-webkit-transition: top .65s ease-out;
+	-o-transition: top .65s ease;}
 #plusone {
 	display: inline-block;
 	padding: 4px 0px 0px 6px;
@@ -93,10 +93,10 @@ img.panelicons {
 	background-color: white;
 	border-radius: 6px;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
-	transform: scale(.001,.001);
-	-moz-transform: scale(.001,.001);
-	-webkit-transform: scale(.001,.001);
-	-o-transform: scale(.001,.001);
+	transform: scale(.5,.5);
+	-moz-transform: scale(.5,.5);
+	-webkit-transform: scale(.5,.5);
+	-o-transform: scale(.5,.5);
 	transition: all .5s ease;
 	-moz-transition: all .5s ease;
 	-webkit-transition: all .5s ease-out;
