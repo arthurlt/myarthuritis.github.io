@@ -16,7 +16,7 @@ a img {
 	border: none;}
 /*End*/
 #panel {
-	position: absolute;
+	position: fixed;
 	height: 28px;
 	width: 100%;
 	min-width: 801px;
@@ -71,6 +71,8 @@ img.panelicons {
 	color: white;}
 #iewarning a:hover {
 	text-decoration: underline;}
+#hlogo {
+	display: none;}
 #jsdebug {
 	height: 32px;
 	width: 300px;
@@ -78,10 +80,11 @@ img.panelicons {
 	color: white;
 	display: none;}
 #main {
+	/*height: 1000px;*/
 	width: 750px;
-	margin: 38px auto 0;
+	margin: 38px auto;
 	background-color: white;
-	border-radius: 10px;
+	border-radius: 6px;
 	box-shadow: 0 20px 40px rgba(0, 0, 0, .4);
 	transform: scale(.001,.001);
 	-moz-transform: scale(.001,.001);
