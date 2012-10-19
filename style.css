@@ -73,11 +73,19 @@ img.panelicons {
 	text-decoration: underline;}
 #hlogo {
 	display: none;}
+#jsdebug:before {
+	content: "jsdebug: ";
+	line-height: 28px;}
 #jsdebug {
-	height: 32px;
-	width: 300px;
-	background-color: black;
+	height: 28px;
+	width: 100%;
+	position: fixed;
+	top: 0;
+	padding: 0 0 0 110px;
+	line-height: 28px;
+	background-color: transparent;
 	color: white;
+	z-index: 1000;
 	display: none;}
 #main {
 	/*height: 1000px;*/
@@ -104,3 +112,5 @@ img.panelicons {
 	font-size: 24pt;
 	text-align: center;
 	text-shadow: 0 0 2px rgba(0,0,0,.4)}
+#hidden {
+	display: none;}

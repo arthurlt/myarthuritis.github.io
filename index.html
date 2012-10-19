@@ -1,16 +1,12 @@
 <!DOCTYPE html>
 	<head>
-		<title>Arthur(Mars11)'s Website</title>
+		<title>Arthur (Mars11)'s Website</title>
 		<link rel="shortcut icon" href="http://mars11.com/favicon.ico" />
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple114.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple72.png">
 		<link rel="apple-touch-icon-precomposed" href="img/apple57.png">
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
 		<link href='style.css' rel='stylesheet' type='text/css'>
-		<script type="text/javascript" src="js/tweet.js"></script>
-		<script type="text/javascript" src="js/plusone.js"></script>
-		<script type="text/javascript" src="js/time.js"></script>
-		<script type="text/javascript" src="js/analytics.js"></script>
 	</head>
 	<body onload="startTime(); cssStart();">
 		<div id="panel">
@@ -54,5 +50,13 @@
 			setTimeout("document.getElementById('panel').style.top = '0';",750);
 			}
 		</script>
+		<script type="text/javascript" src="js/tweet.js"></script>
+		<script type="text/javascript" src="js/plusone.js"></script>
+		<script type="text/javascript" src="js/analytics.js"></script>
+		<script type="text/javascript" src="js/time.js"></script>
+		<script type="text/javascript" src="js/nothing.js"></script>
+		<div id="hidden">
+			<audio id="chime" src="content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
+		</div>
 	</body>
 </html>

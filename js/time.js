@@ -31,7 +31,8 @@ function startTime()
 	minute = checkMinute(minute);
 	hour = checkHour(hour);
 	document.getElementById('time').innerHTML=(weekday[day])+" "+(month[thismonth])+"  "+date+" "+hour+":"+minute;
-	t = setTimeout('startTime()',1000);
+	hourChime(hour,minute);
+	setTimeout('startTime();',1000);
 	}
 
 function checkMinute(m)
@@ -51,4 +52,3 @@ function checkHour(h)
 		}
 	return h;
 	}
-	
