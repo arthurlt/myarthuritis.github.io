@@ -11,6 +11,10 @@ HTML {
 body {
 	width: 100%;
 	height: 100%;}
+/*Fix blue border around image links in IE*/
+a img {
+	border: none;}
+/*End*/
 #panel {
 	position: absolute;
 	height: 28px;
@@ -75,4 +79,14 @@ img.panelicons {
 	background-color: black;
 	color: white;
 	display: none;}
-#main {}
+#main {
+	width: 750px;
+	margin: 175px auto;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 20px 40px rgba(0, 0, 0, .4)}
+#welcome {
+	padding: 30px;
+	font-size: 24pt;
+	text-align: center;
+	text-shadow: 0 0 2px rgba(0,0,0,.4)}
