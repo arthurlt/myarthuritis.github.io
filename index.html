@@ -7,8 +7,6 @@
 		<link rel="apple-touch-icon-precomposed" href="img/apple57.png">
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700|Cabin:600|Pontano+Sans' rel='stylesheet' type='text/css'>
 		<link href='style.css' rel='stylesheet' type='text/css'>
-		<script type="text/javascript" async src="js/first.js"></script>
-		<script type="text/javascript" async src="js/third.js"></script>
 	</head>
 	<body onload="onLoad();" onkeydown="keyPress(event);">
 		<div id="panel">
@@ -43,8 +41,10 @@
 			document.getElementById('main').className = "full";
 			setTimeout("document.getElementById('panel').style.top = '0'; startTime();",750);
 		</script>
+		<script type="text/javascript" async src="js/first.js"></script>
+		<script type="text/javascript" async src="js/third.js"></script>
 		<div id="hidden">
-			<audio id="chime" src="content/audio/clock.wav" preload="none" autobuffer="false" onended="chimes++;"></audio>
+			<audio id="chime" src="content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
 			<img src="content/img/logo.png" height="0" width="0">
 		</div>
 	</body>
