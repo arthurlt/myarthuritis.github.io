@@ -1,5 +1,4 @@
-function startTime()
-	{
+function startTime() {
 	var today = new Date();
 	var hour = today.getHours();
 	var minute = today.getMinutes();
@@ -35,8 +34,7 @@ function startTime()
 	setTimeout('startTime();',1000);
 	}
 
-function checkMinute(m)
-	{
+function checkMinute(m){
 	if (m<10)
 		{
 		m="0" + m;
@@ -44,11 +42,12 @@ function checkMinute(m)
 	return m;
 	}
 
-function checkHour(h)
-	{
+function checkHour(h) {
 	if (h<10)
 		{
 		h="0" + h;
 		}
 	return h;
 	}
+	
+//keycodes d=38 alt=18

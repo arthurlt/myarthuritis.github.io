@@ -1,10 +1,8 @@
-//function startEE(hour,minute)
-//	{
+//function startEE(hour,minute) {
 //	setTimeout('hourChime(hour,minute);',60000);
 //	}
 var chimes = 0
-function hourChime(hour,minute)
-	{
+function hourChime(hour,minute) {
 	if (hour==00)
 	{
 	if (minute==00)
@@ -19,5 +17,5 @@ function hourChime(hour,minute)
 		chimes = 0
 		}
 	}
-	document.getElementById("jsdebug").innerHTML=chimes;
+	document.getElementById("jsdebug").innerHTML="chimed "+chimes+" times";
 	}

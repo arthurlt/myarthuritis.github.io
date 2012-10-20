@@ -8,7 +8,7 @@
 		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
 		<link href='style.css' rel='stylesheet' type='text/css'>
 	</head>
-	<body onload="startTime(); cssStart();">
+	<body onload="startTime(); cssStart();" onkeydown="keyPress(event);">
 		<div id="panel">
 			<div id="social">
 				<div id="plusone">
@@ -22,14 +22,14 @@
 				<div id="time"></div>
 			</div>
 			<div id="panelicons">
-				<img class="panelicons" src="img/panel/power.svg"/>
+				<img class="panelicons" src="img/panel/power.svg" onclick="history.back(-1)"/>
 				<a href="mailto:arthurlt@gmail.com" target="blank">
 					<img class="panelicons" src="img/panel/mail.svg"/>
 				</a>
-				<img class="panelicons" src="img/panel/high.svg"/>
+				<img class="panelicons" id="speaker" src="img/panel/high.svg" onclick="muteAudio()"/>
 				<img class="panelicons" id="avatar" src="img/panel/avatar.svg"/>
 				<img class="panelicons" src="img/panel/wired.svg"/>
-				<a href="http://db.tt/FFgst2x" target="blank">
+					<a href="http://db.tt/FFgst2x" target="blank">
 				<img class="panelicons" id="dropbox" src="img/panel/dropbox.svg"/>
 				</a>
 			</div>
@@ -45,16 +45,38 @@
 		</script><![endif]-->
 		<script type="text/javascript">
 			document.getElementById('main').className = "full";
-			function cssStart() 
-			{
+			function cssStart() {
 			document.getElementById('panel').style.top = '0';
 			}
+			function keyPress(e) {
+			var debugtog = document.getElementById('jsdebug')
+			if (debugtog.style.display == 'block') {
+				debugtog.style.display = 'none';
+			}
+			else {
+				debugtog.style.display = 'block';
+			}
+			}
+			var mutepressed = 0;
+			function muteAudio() {
+			if (mutepressed==0) {
+				document.getElementById('chime').muted = true;
+				document.getElementById("speaker").src="img/panel/mute-red.svg";
+				mutepressed=1;
+			}
+			else {
+				document.getElementById('chime').muted = false;
+				document.getElementById("speaker").src = "img/panel/high.svg";
+				mutepressed=0;
+			}
+			}
+			
 		</script>
-		<script type="text/javascript" src="js/tweet.js"></script>
-		<script type="text/javascript" src="js/plusone.js"></script>
-		<script type="text/javascript" src="js/analytics.js"></script>
-		<script type="text/javascript" src="js/time.js"></script>
-		<script type="text/javascript" src="js/nothing.js"></script>
+		<script type="text/javascript" async src="js/tweet.js"></script>
+		<script type="text/javascript" async src="js/plusone.js"></script>
+		<script type="text/javascript" async src="js/analytics.js"></script>
+		<script type="text/javascript" async src="js/time.js"></script>
+		<script type="text/javascript" async src="js/nothing.js"></script>
 		<div id="hidden">
 			<audio id="chime" src="content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
 		</div>
