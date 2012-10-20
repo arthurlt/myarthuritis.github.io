@@ -100,7 +100,7 @@ img.panelicons:active {
 	padding: 7px;}
 #network {}
 #dropbox {}
-#iewarning {
+#warning {
 	height: 20px;
 	display: none;
 	background-color: red;
@@ -108,13 +108,13 @@ img.panelicons:active {
 	color: white;
 	text-align: center;
 	font-size: 11pt;}
-#iewarning a {
+#warning a {
 	text-decoration: none;}
-#iewarning a:link {
+#warning a:link {
 	color: white;}
-#iewarning a:visited {
+#warning a:visited {
 	color: white;}
-#iewarning a:hover {
+#warning a:hover {
 	text-decoration: underline;}
 #main {
 	/*height: 1000px;*/
