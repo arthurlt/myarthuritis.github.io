@@ -3,7 +3,7 @@
 	margin: 0;
 	padding: 0;}
 HTML {
-	font-family: 'Droid Sans', sans-serif;
+	font-family: 'Pontano Sans', sans-serif;
 	background: url('img/back.png');
 	min-width: 801px;}
 a {
@@ -13,10 +13,11 @@ a img {
 	border: none;}
 /*End*/
 #panel {
-	position: fixed;
+	font-family: 'Droid Sans', sans-serif;
 	height: 28px;
 	width: 100%;
 	min-width: 801px;
+	position: fixed;
 	top: -28px;
 	line-height: 28px;
 	color: white;
@@ -31,23 +32,17 @@ a img {
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;}
-#social {
+#name {
 	height: 28px;
-	position: absolute;}
-#plusone {
-	display: inline-block;
-	padding: 4px 0 0 6px;
-	float: left;
-	width: 40px;}
-#tweet {
-	display: inline-block;
-	padding: 4px 0 0 0px;
-	float: left;}
+	position: absolute;
+	font-size: 9pt;
+	padding: 0 10px;}
 #jsdebug:before {
 	content: "jsdebug: ";}
 #jsdebug {
 	height: 28px;
 	position: absolute;
+	font-size: 9pt;
 	left: 110px;
 	display: none;}
 div.time {
@@ -134,7 +129,6 @@ img.panelicons:active {
 #welcome {
 	padding: 30px;
 	font-size: 24pt;
-	text-align: center;
-	text-shadow: 0 0 2px rgba(0,0,0,.4)}
+	text-align: center;}
 #hidden {
 	display: none;}

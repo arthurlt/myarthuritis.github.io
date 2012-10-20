@@ -10,15 +10,10 @@
 		<script type="text/javascript" async src="js/first.js"></script>
 		<script type="text/javascript" async src="js/third.js"></script>
 	</head>
-	<body onload="startTime(); cssStart();" onkeydown="keyPress(event);">
+	<body onload="onLoad();" onkeydown="keyPress(event);">
 		<div id="panel">
-			<div id="social">
-				<div id="plusone">
-					<div class="g-plusone" data-size="medium" data-annotation="none"></div>
-				</div>
-					<div id="tweet">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
-				</div>
+			<div id="name">
+				<p>Arthur Tucker</p>
 			</div>
 			<div id="jsdebug"></div>
 			<div class="time">
@@ -46,9 +41,11 @@
 			document.getElementById("warning").innerHTML='<a href="http://www.browserchoice.eu/">You are using Microsoft Internet Explorer 9 or less, this site will not display correctly. Update or switch to a more standards complient browser.</a>';
 		</script><![endif]-->
 		<script type="text/javascript">
+			startTime();
 			document.getElementById('main').className = "full";
-			function cssStart() {
-			document.getElementById('panel').style.top = '0';
+			setTimeout("document.getElementById('panel').style.top = '0';",750);
+			function onLoad() {
+			
 			}
 			function keyPress(e) {
 			var debugtog = document.getElementById('jsdebug')
