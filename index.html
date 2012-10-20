@@ -34,15 +34,15 @@
 		<div id="main">
 			<p id="welcome">Hello! and thanks for stopping by. I'm currently rewriting the site to make it more practical and I should be done soon. Things may change or be unstable around here while I test new features. Thanks for your patience.</p>
 		</div>
-		<!--[if IE]><script type="text/javascript">
-			showWarning('<a href="http://www.browserchoice.eu/">You are using MS IE 9 or less, this site will not display correctly. Update or switch to a more standards complient browser.</a>')
-		</script><![endif]-->
 		<script type="text/javascript">
 			document.getElementById('main').className = "full";
 			setTimeout("document.getElementById('panel').style.top = '0'; startTime();",750);
 		</script>
 		<script type="text/javascript" async src="js/first.js"></script>
 		<script type="text/javascript" async src="js/third.js"></script>
+		<!--[if IE]><script type="text/javascript">
+			showWarning('<a href="http://www.browserchoice.eu/">You are using MS IE 9 or less, this site will not display correctly. Update or switch to a more standards complient browser.</a>')
+		</script><![endif]-->
 		<div id="hidden">
 			<audio id="chime" src="content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
 			<img src="content/img/logo.png" height="0" width="0">

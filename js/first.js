@@ -32,16 +32,14 @@ function startTime() {
 	}
 
 function checkMinute(m){
-	if (m<10)
-		{
+	if (m<10) {
 		m="0" + m;
 		}
 	return m;
 	}
 
 function checkHour(h) {
-	if (h<10)
-		{
+	if (h<10) {
 		h="0" + h;
 		}
 	return h;
@@ -49,18 +47,14 @@ function checkHour(h) {
 
 var chimes = 0
 function hourChime(hour,minute) {
-	if (hour==00)
-	{
-	if (minute==00)
-		{
-		if (chimes<6)
-		{
-		document.getElementById('chime').play();
+	if (hour==00) {
+	if (minute==00) {
+		if (chimes<6) {
+			document.getElementById('chime').play();
+			}
 		}
-		}
-		else
-		{
-		chimes = 0
+		else {
+			chimes = 0
 		}
 	}
 	document.getElementById("jsdebug").innerHTML="chimed "+chimes+" times";
