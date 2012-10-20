@@ -5,7 +5,7 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple114.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple72.png">
 		<link rel="apple-touch-icon-precomposed" href="img/apple57.png">
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700|Pontano+Sans' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700|Cabin:600|Pontano+Sans' rel='stylesheet' type='text/css'>
 		<link href='style.css' rel='stylesheet' type='text/css'>
 		<script type="text/javascript" async src="js/first.js"></script>
 		<script type="text/javascript" async src="js/third.js"></script>
@@ -34,11 +34,10 @@
 		</div>
 		<div id="warning"></div>
 		<div id="main">
-        	<p id="welcome">Hello! and thanks for stopping by. I'm currently rewriting the site to make it more practical and I should be done soon. Things may change or be unstable around here while I test new features. Thanks for your patience.</p>
+			<p id="welcome">Hello! and thanks for stopping by. I'm currently rewriting the site to make it more practical and I should be done soon. Things may change or be unstable around here while I test new features. Thanks for your patience.</p>
 		</div>
 		<!--[if IE]><script type="text/javascript">
-			document.getElementById('warning').style.display = "block";
-			document.getElementById("warning").innerHTML='<a href="http://www.browserchoice.eu/">You are using Microsoft Internet Explorer 9 or less, this site will not display correctly. Update or switch to a more standards complient browser.</a>';
+			showWarning('<a href="http://www.browserchoice.eu/">You are using MS IE 9 or less, this site will not display correctly. Update or switch to a more standards complient browser.</a>')
 		</script><![endif]-->
 		<script type="text/javascript">
 			document.getElementById('main').className = "full";

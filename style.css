@@ -13,20 +13,21 @@ a img {
 	border: none;}
 /*End*/
 #panel {
-	font-family: 'Droid Sans', sans-serif;
 	height: 28px;
 	width: 100%;
 	min-width: 801px;
 	position: fixed;
 	top: -28px;
-	line-height: 28px;
 	color: white;
+	font-size: 12px;
+	line-height: 28px;
+	font-family: 'Droid Sans', sans-serif;
 	background-color: rgba(0,0,0,0.7);
 	z-index: 999;
-	transition: top .65s ease;
-	-moz-transition: top .65s ease;
-	-webkit-transition: top .65s ease-out;
-	-o-transition: top .65s ease;
+	transition: top .5s ease;
+	-moz-transition: top .5s ease;
+	-webkit-transition: top .5s ease-out;
+	-o-transition: top .5s ease;
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -35,19 +36,16 @@ a img {
 #name {
 	height: 28px;
 	position: absolute;
-	font-size: 9pt;
 	padding: 0 10px;}
 #jsdebug:before {
 	content: "jsdebug: ";}
 #jsdebug {
 	height: 28px;
 	position: absolute;
-	font-size: 9pt;
 	left: 110px;
 	display: none;}
 div.time {
 	color: white;
-	font-size: 9pt;
 	width: 120px;
 	height: 28px;
 	line-height: 28px;
@@ -94,9 +92,13 @@ img.panelicons:active {
 #dropbox {}
 #warning {
 	height: 20px;
+	width: 100%;
+	top: 0;
+	position: absolute;
 	display: none;
 	background-color: red;
 	padding: 28px 0 0;
+	font-family: 'Droid Sans', sans-serif;
 	color: white;
 	text-align: center;
 	font-size: 11pt;}
