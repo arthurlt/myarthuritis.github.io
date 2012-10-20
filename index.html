@@ -35,12 +35,13 @@
 				<img class="panelicons" id="power" src="img/panel/power.svg"/>
 			</div>
 		</div>
-		<div id="iewarning"><a href="http://www.browserchoice.eu/">You're using Microsoft Internet Explorer 9 or less, this site won't display correctly. Update or switch to a more standards complient browser.</a></div>
+		<div id="iewarning"></div>
 		<div id="main">
         	<p id="welcome">Hello! and thanks for stopping by. I'm currently rewriting the site to make it more practical and I should be done soon. Things may change or be unstable around here while I test new features. Thanks for your patience.</p>
 		</div>
 		<!--[if IE]><script type="text/javascript">
 			document.getElementById('iewarning').style.display = "block";
+			document.getElementById("iewarning").innerHTML='<a href="http://www.browserchoice.eu/">You are using Microsoft Internet Explorer 9 or less, this site will not display correctly. Update or switch to a more standards complient browser.</a>';
 		</script><![endif]-->
 		<script type="text/javascript">
 			document.getElementById('main').className = "full";
