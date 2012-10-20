@@ -1,18 +1,18 @@
 function startTime() {
   var today = new Date();
-  var hour = today.getHours();
-  var minute = today.getMinutes();
+  var hour = checkHour(today.getHours());
+  var minute = checkMinute(today.getMinutes());
   var date = today.getDate();
-  var day = today.getDay();
-  var thismonth = today.getMonth();
-  var weekday = new Array(7);
-    weekday[0]="Sun";
-    weekday[1]="Mon";
-    weekday[2]="Tue";
-    weekday[3]="Wed";
-    weekday[4]="Thu";
-    weekday[5]="Fri";
-    weekday[6]="Sat";
+  var dayi = today.getDay();
+  var monthi = today.getMonth();
+  var day = new Array(7);
+    day[0]="Sun";
+    day[1]="Mon";
+    day[2]="Tue";
+    day[3]="Wed";
+    day[4]="Thu";
+    day[5]="Fri";
+    day[6]="Sat";
   var month = new Array(13)
     month[0]="Jan";
     month[1]="Feb";
@@ -26,10 +26,7 @@ function startTime() {
     month[9]="Oct";
     month[10]="Nov";
     month[11]="Dec";
-    month[12]="test";
-  minute = checkMinute(minute);
-  hour = checkHour(hour);
-  document.getElementById('time').innerHTML=(weekday[day])+" "+(month[thismonth])+"  "+date+" "+hour+":"+minute;
+  document.getElementById('time').innerHTML=(day[dayi])+" "+(month[monthi])+"  "+date+" "+hour+":"+minute;
   hourChime(hour,minute);
   setTimeout('startTime();',1000);
   }
