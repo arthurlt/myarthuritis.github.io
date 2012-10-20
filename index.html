@@ -5,8 +5,10 @@
 		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple114.png">
 		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple72.png">
 		<link rel="apple-touch-icon-precomposed" href="img/apple57.png">
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700|Pontano+Sans' rel='stylesheet' type='text/css'>
 		<link href='style.css' rel='stylesheet' type='text/css'>
+		<script type="text/javascript" async src="js/first.js"></script>
+		<script type="text/javascript" async src="js/third.js"></script>
 	</head>
 	<body onload="startTime(); cssStart();" onkeydown="keyPress(event);">
 		<div id="panel">
@@ -71,11 +73,9 @@
 			}
 			}
 		</script>
-		<script type="text/javascript" async src="js/third.js"></script>
-		<script type="text/javascript" async src="js/first.js"></script>
 		<div id="hidden">
-			<audio id="chime" src="content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
-			<img src="content/img/logo.png">
+			<audio id="chime" src="content/audio/clock.wav" preload="none" autobuffer="false" onended="chimes++;"></audio>
+			<img src="content/img/logo.png" height="0" width="0">
 		</div>
 	</body>
 </html>

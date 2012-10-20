@@ -6,9 +6,6 @@ HTML {
 	font-family: 'Droid Sans', sans-serif;
 	background: url('img/back.png');
 	min-width: 801px;}
-body {
-	width: 100%;
-	height: 100%;}
 a {
 	text-decoration: none;}
 /*Fix blue border around image links in IE*/
@@ -108,8 +105,6 @@ img.panelicons:active {
 	color: white;
 	text-align: center;
 	font-size: 11pt;}
-#warning a {
-	text-decoration: none;}
 #warning a:link {
 	color: white;}
 #warning a:visited {
