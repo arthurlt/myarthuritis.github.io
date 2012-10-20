@@ -41,34 +41,8 @@
 			document.getElementById("warning").innerHTML='<a href="http://www.browserchoice.eu/">You are using Microsoft Internet Explorer 9 or less, this site will not display correctly. Update or switch to a more standards complient browser.</a>';
 		</script><![endif]-->
 		<script type="text/javascript">
-			startTime();
 			document.getElementById('main').className = "full";
-			setTimeout("document.getElementById('panel').style.top = '0';",750);
-			function onLoad() {
-			
-			}
-			function keyPress(e) {
-			var debugtog = document.getElementById('jsdebug')
-			if (debugtog.style.display == 'block') {
-			  debugtog.style.display = 'none';
-			}
-			else {
-			  debugtog.style.display = 'block';
-			}
-			}
-			var mutepressed = 0;
-			function muteAudio() {
-			if (mutepressed==0) {
-			  document.getElementById('chime').muted = true;
-			  document.getElementById("speaker").src="img/panel/mute-red.svg";
-			  mutepressed=1;
-			}
-			else {
-			  document.getElementById('chime').muted = false;
-			  document.getElementById("speaker").src = "img/panel/high.svg";
-			  mutepressed=0;
-			}
-			}
+			setTimeout("document.getElementById('panel').style.top = '0'; startTime();",750);
 		</script>
 		<div id="hidden">
 			<audio id="chime" src="content/audio/clock.wav" preload="none" autobuffer="false" onended="chimes++;"></audio>

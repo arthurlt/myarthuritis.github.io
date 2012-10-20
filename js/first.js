@@ -50,9 +50,6 @@ function checkHour(h) {
   return h;
   }
 
-//function startEE(hour,minute) {
-//  setTimeout('hourChime(hour,minute);',60000);
-//  }
 var chimes = 0
 function hourChime(hour,minute) {
   if (hour==00)
@@ -71,3 +68,30 @@ function hourChime(hour,minute) {
   }
   document.getElementById("jsdebug").innerHTML="chimed "+chimes+" times";
   }
+
+function onLoad() { //starts on body load
+
+}
+function keyPress(e) { //toggles jsdebug
+var debugtog = document.getElementById('jsdebug')
+if (debugtog.style.display == 'block') {
+  debugtog.style.display = 'none';
+}
+else {
+  debugtog.style.display = 'block';
+}
+}
+
+var mutepressed = 0;
+function muteAudio() { //toggles mute
+if (mutepressed==0) {
+  document.getElementById('chime').muted = true;
+  document.getElementById("speaker").src="img/panel/mute-red.svg";
+  mutepressed=1;
+}
+else {
+  document.getElementById('chime').muted = false;
+  document.getElementById("speaker").src = "img/panel/high.svg";
+  mutepressed=0;
+}
+}
