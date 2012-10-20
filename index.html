@@ -18,25 +18,24 @@
 					<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
 				</div>
 			</div>
+			<div id="jsdebug"></div>
 			<div class="time">
 				<div id="time"></div>
 			</div>
 			<div id="panelicons">
-				<img class="panelicons" id="power" src="img/panel/power.svg"/>
+				<a href="http://db.tt/FFgst2x" target="blank">
+					<img class="panelicons" id="dropbox" src="img/panel/dropbox.svg"/>
+				</a>
+				<img class="panelicons" id="network" src="img/panel/wired.svg"/>
+				<img class="panelicons" id="avatar" src="img/panel/avatar.svg"/>
+				<img class="panelicons" id="speaker" src="img/panel/high.svg" onclick="muteAudio()"/>
 				<a href="mailto:arthurlt@gmail.com">
 					<img class="panelicons" id="mail" src="img/panel/mail.svg"/>
 				</a>
-				<img class="panelicons" id="speaker" src="img/panel/high.svg" onclick="muteAudio()"/>
-				<img class="panelicons" id="avatar" src="img/panel/avatar.svg"/>
-				<img class="panelicons" id="network" src="img/panel/wired.svg"/>
-					<a href="http://db.tt/FFgst2x" target="blank">
-				<img class="panelicons" id="dropbox" src="img/panel/dropbox.svg"/>
-				</a>
+				<img class="panelicons" id="power" src="img/panel/power.svg"/>
 			</div>
 		</div>
 		<div id="iewarning"><a href="http://www.browserchoice.eu/">You're using Microsoft Internet Explorer 9 or less, this site won't display correctly. Update or switch to a more standards complient browser.</a></div>
-		<div id="jsdebug"></div>
-		<img id="hlogo" src="content/img/logo.png">
 		<div id="main">
         	<p id="welcome">Hello! and thanks for stopping by. I'm currently rewriting the site to make it more practical and I should be done soon. Things may change or be unstable around here while I test new features. Thanks for your patience.</p>
 		</div>
@@ -70,7 +69,6 @@
 			  mutepressed=0;
 			}
 			}
-			
 		</script>
 		<script type="text/javascript" async src="js/tweet.js"></script>
 		<script type="text/javascript" async src="js/plusone.js"></script>
@@ -79,6 +77,7 @@
 		<script type="text/javascript" async src="js/nothing.js"></script>
 		<div id="hidden">
 			<audio id="chime" src="content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
+			<img src="content/img/logo.png">
 		</div>
 	</body>
 </html>
