@@ -51,23 +51,23 @@
 			function keyPress(e) {
 			var debugtog = document.getElementById('jsdebug')
 			if (debugtog.style.display == 'block') {
-				debugtog.style.display = 'none';
+			  debugtog.style.display = 'none';
 			}
 			else {
-				debugtog.style.display = 'block';
+			  debugtog.style.display = 'block';
 			}
 			}
 			var mutepressed = 0;
 			function muteAudio() {
 			if (mutepressed==0) {
-				document.getElementById('chime').muted = true;
-				document.getElementById("speaker").src="img/panel/mute-red.svg";
-				mutepressed=1;
+			  document.getElementById('chime').muted = true;
+			  document.getElementById("speaker").src="img/panel/mute-red.svg";
+			  mutepressed=1;
 			}
 			else {
-				document.getElementById('chime').muted = false;
-				document.getElementById("speaker").src = "img/panel/high.svg";
-				mutepressed=0;
+			  document.getElementById('chime').muted = false;
+			  document.getElementById("speaker").src = "img/panel/high.svg";
+			  mutepressed=0;
 			}
 			}
 			
