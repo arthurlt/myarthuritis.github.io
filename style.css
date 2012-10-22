@@ -3,11 +3,28 @@
 	margin: 0;
 	padding: 0;}
 HTML {
-	font-family: 'Pontano Sans', sans-serif;
 	background: url('img/back.png');
-	min-width: 801px;}
+	min-width: 800px;
+	font-family: 'Pontano Sans', sans-serif;}
 a {
+	color: black;
 	text-decoration: none;}
+a:hover {
+	color: black;
+	cursor:pointer;
+	text-decoration: underline;}
+a:visited {
+	color: black;
+	cursor:pointer;}
+a:active {
+	color: black;
+	cursor:pointer;}
+li:before {
+	content:"- ";
+	font-weight: bold;}
+ul {
+	list-style-type: none;
+	text-indent: 0;}
 /*Fix blue border around image links in IE*/
 a img {
 	border: none;}
@@ -15,7 +32,7 @@ a img {
 #panel {
 	height: 28px;
 	width: 100%;
-	min-width: 801px;
+	min-width: 800px;
 	position: fixed;
 	top: -28px;
 	color: white;
@@ -94,7 +111,7 @@ img.panelicons:active {
 	height: 20px;
 	width: 100%;
 	top: 0;
-	position: absolute;
+	position: fixed;
 	display: none;
 	background-color: red;
 	padding: 28px 0 0;
@@ -110,8 +127,9 @@ img.panelicons:active {
 	text-decoration: underline;}
 #main {
 	/*height: 1000px;*/
-	width: 750px;
+	width: 720px;
 	margin: 38px auto;
+	padding: 30px;
 	background-color: white;
 	border-radius: 6px;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
@@ -128,9 +146,23 @@ img.panelicons:active {
 	-moz-transform: scale(1,1);
 	-webkit-transform: scale(1,1);
 	-o-transform: scale(1,1);}
-#welcome {
-	padding: 30px;
-	font-size: 24pt;
-	text-align: center;}
+h3 {
+	font-family: 'Cabin', sans-serif;
+	font-size: 20px;}
+.details {
+	padding: 12px;
+	font-size: 16px;
+	text-indent: 24px;
+	text-align: justify;}
+#top {
+	padding: 12px;}
+p.li-head {
+	padding: 0 10px;
+	font-weight: bold;}
+ul.details {
+	font-size: 16px;
+	padding: 0 12px 12px;}
+#bottom {
+	padding: 0 12px 12px;}
 #hidden {
 	display: none;}
