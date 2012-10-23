@@ -61,8 +61,8 @@ function hourChime(hour,minute) {
 	}
 
 function onLoad() { //starts on body load
-
 }
+
 function keyPress(e) { //toggles jsdebug
 var debugtog = document.getElementById('jsdebug')
 if (debugtog.style.display == 'block') {

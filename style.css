@@ -38,7 +38,7 @@ a img {
 	line-height: 28px;
 	font-family: 'Droid Sans', sans-serif;
 	background-color: rgba(0,0,0,0.7);
-	z-index: 999;
+	z-index: 1;
 	transition: top .5s ease;
 	-moz-transition: top .5s ease;
 	-webkit-transition: top .5s ease-out;
@@ -70,7 +70,7 @@ div.time {
 	height: 28px;
 	position: absolute;
 	top: 0;
-	right: 0;}
+	right: 7px;}
 img.panelicons {
 	height: 22px;
 	width: 22px;
@@ -130,9 +130,9 @@ a.imglink {
 	width: 152px;
 	background-color: white;
 	position: fixed;
-	right: 19px;
+	right: 26px;
 	display: none;
-	z-index: 1001;
+	z-index: 2;
 	border-radius: 6px;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
 	transition: all .15s ease;
