@@ -103,12 +103,11 @@ function socialTog() {
 if (socialpressed==0) {
 	s.style.display = "block";
 	setTimeout('s.className = "full";',1);
-	//document.getElementById('social').className = "full";
 	socialpressed=1;
 }
 else {
 	s.className = "hidden";
-	setTimeout('s.style.display = "none";',250);
+	setTimeout('s.style.display = "none";',150);
 	socialpressed=0;
 }
 }

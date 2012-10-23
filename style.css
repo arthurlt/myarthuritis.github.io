@@ -128,25 +128,25 @@ img.panelicons:active {
 #warning a:hover {
 	text-decoration: underline;}
 #social {
-	height: 100px;
+	height: 48px;
 	width: 152px;
 	background-color: white;
 	position: fixed;
-	right: 50px;
+	right: 19px;
 	display: none;
+	z-index: 1001;
 	border-radius: 6px;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
-	transition: all .25s ease;
-	-moz-transition: all .25s ease;
-	-webkit-transition: all .25s ease-out;
-	-o-transition: all .25s ease;}
+	transition: all .15s ease;
+	-moz-transition: all .15s ease;
+	-webkit-transition: all .15s ease-out;
+	-o-transition: all .15s ease;}
 #social.hidden {
-	transform: scale(0,.5);
-	-moz-transform: scale(.5,.5);
+	transform: scale(0,0);
+	-moz-transform: scale(0,0);
 	-webkit-transform: scale(0,0);
-	-o-transform: scale(.5,.5);}
+	-o-transform: scale(0,0);}
 #social.full {
-	z-index: 1001;
 	transform: scale(1,1);
 	-moz-transform: scale(1,1);
 	-webkit-transform: scale(1,1);
@@ -158,6 +158,31 @@ img.panelicons:active {
 	border-left: 10px solid transparent;
 	border-right: 10px solid transparent;
 	border-bottom: 10px solid white;}
+img.socialicons {
+	height: 32px;
+	width: 32px;
+	padding: 8px;
+	-webkit-transition: all 0.05s ease-out;
+	-moz-transition: all 0.05s ease;
+	-ms-transition: all 0.05s ease;
+	-o-transition: all 0.05s ease;
+	transition: all 0.05s ease;}
+img.socialicons:hover {
+	height: 36px;
+	width: 36px;
+	padding: 6px;
+	text-decoration: none;}
+img.sociallicons:active {
+	height: 28px;
+	width: 28px;
+	padding: 10px;
+	text-decoration: none;}
+#google {
+}
+#twitter {
+}
+#email {
+}
 #main {
 	/*height: 1000px;*/
 	width: 720px;
