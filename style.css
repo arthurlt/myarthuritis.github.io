@@ -154,15 +154,11 @@ h3 {
 	font-size: 16px;
 	text-indent: 24px;
 	text-align: justify;}
-#top {
-	padding: 12px;}
 p.li-head {
 	padding: 0 10px;
 	font-weight: bold;}
 ul.details {
 	font-size: 16px;
-	padding: 0 12px 12px;}
-#bottom {
 	padding: 0 12px 12px;}
 #hidden {
 	display: none;}
