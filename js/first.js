@@ -96,3 +96,19 @@ function hideWarning() {
 	document.getElementById('main').style.marginTop = "38px";
 	document.getElementById('warning').style.display = "none";
 }
+
+var socialpressed = 0;
+var s = document.getElementById("social");
+function socialTog() {
+if (socialpressed==0) {
+	s.style.display = "block";
+	setTimeout('s.className = "full";',1);
+	//document.getElementById('social').className = "full";
+	socialpressed=1;
+}
+else {
+	s.className = "hidden";
+	setTimeout('s.style.display = "none";',250);
+	socialpressed=0;
+}
+}
