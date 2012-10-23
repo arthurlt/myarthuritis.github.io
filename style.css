@@ -8,17 +8,15 @@ HTML {
 	font-family: 'Pontano Sans', sans-serif;}
 a {
 	color: black;
+	cursor: pointer;
 	text-decoration: none;}
 a:hover {
 	color: black;
-	cursor:pointer;
 	text-decoration: underline;}
 a:visited {
-	color: black;
-	cursor:pointer;}
+	color: black;}
 a:active {
-	color: black;
-	cursor:pointer;}
+	color: black;}
 li:before {
 	content:"- ";
 	font-weight: bold;}
@@ -77,6 +75,7 @@ img.panelicons {
 	height: 22px;
 	width: 22px;
 	padding: 3px;
+	cursor: pointer;
 	-webkit-transition: all 0.05s ease-out;
 	-moz-transition: all 0.05s ease;
 	-ms-transition: all 0.05s ease;
@@ -92,8 +91,6 @@ img.panelicons:active {
 	width: 18px;
 	padding: 5px;
 	text-decoration: none;}
-#power {}
-#mail {}
 #speaker {}
 #avatar {
 	height: 18px;
@@ -107,8 +104,9 @@ img.panelicons:active {
 	height: 14px;
 	width: 14px;
 	padding: 7px;}
-#network {}
 #dropbox {}
+a.imglink {
+	text-decoration: none;}
 #warning {
 	height: 20px;
 	width: 100%;
@@ -162,6 +160,7 @@ img.socialicons {
 	height: 32px;
 	width: 32px;
 	padding: 8px;
+	cursor: pointer;
 	-webkit-transition: all 0.05s ease-out;
 	-moz-transition: all 0.05s ease;
 	-ms-transition: all 0.05s ease;
@@ -172,19 +171,12 @@ img.socialicons:hover {
 	width: 36px;
 	padding: 6px;
 	text-decoration: none;}
-img.sociallicons:active {
+img.socialicons:active {
 	height: 28px;
 	width: 28px;
 	padding: 10px;
 	text-decoration: none;}
-#google {
-}
-#twitter {
-}
-#email {
-}
 #main {
-	/*height: 1000px;*/
 	width: 720px;
 	margin: 38px auto;
 	padding: 30px;
