@@ -113,7 +113,7 @@ a.imglink {
 	top: 0;
 	position: fixed;
 	display: none;
-	background-color: red;
+	background-color: rgba(230, 0, 0, 0.95);
 	padding: 28px 0 0;
 	font-family: 'Droid Sans', sans-serif;
 	color: white;
