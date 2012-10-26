@@ -206,7 +206,7 @@ img.socialicons:active {
 #logo {
 	height: 128px;
 	width: 128px;
-	margin: 0 0 -10px;
+	margin: 0 0 -10px 10px;
 	float: right;}
 h3 {
 	font-family: 'Cabin', sans-serif;
