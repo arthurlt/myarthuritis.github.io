@@ -119,7 +119,12 @@ a.imglink {
 	color: white;
 	text-align: center;
 	font-size: 11pt;
-	z-index: 1;}
+	z-index: 1;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	-o-user-select: none;
+	user-select: none;}
 #warning a:link {
 	color: white;}
 #warning a:visited {
@@ -198,6 +203,11 @@ img.socialicons:active {
 	-moz-transform: scale(1,1);
 	-webkit-transform: scale(1,1);
 	-o-transform: scale(1,1);}
+#logo {
+	height: 128px;
+	width: 128px;
+	margin: 0 0 -10px;
+	float: right;}
 h3 {
 	font-family: 'Cabin', sans-serif;
 	font-size: 20px;}
