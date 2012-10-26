@@ -57,12 +57,16 @@
 			</ul>
 			<p class="details">And many more smaller projects!</p>
 			<h3>About This Site:</h3>
-			<p class="details"><em>Working on...</em> I originally made this site as a proof-of-concept remake the the elementary OS Luna desktop using web technologies. I decided that it wasn't what I needed and rewrote the entire thing, but I only kept the Wingpanel (the panel along the top). <strong>It's still under a lot of work and anything is subject to change.</strong></p>
+			<p class="details"><em>Working on...</em> I originally made this site as a proof-of-concept remake the the elementary OS Luna desktop using web technologies. I decided that it wasn't what I needed and rewrote the entire thing, but I only kept the Wingpanel (the panel along the top). <strong>It's still under work and anything is subject to change.</strong></p>
 		</div>
 		<script type="text/javascript">
 			var dev = 0;
-			if (window.location.hash == '#dev') {
+			hashCheck();
+			function hashCheck() {
+			if (window.location.hash=='#dev') {
 			dev = 1;
+			}
+			setTimeout('hashCheck();',1000);
 			}
 			document.getElementById('main').className = "full";
 			setTimeout("document.getElementById('panel').style.top = '0'; startTime();",750);
