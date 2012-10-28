@@ -41,7 +41,7 @@
 		<div id="main">
 			<img src="content/img/logo.png" id="logo">
 			<h3>Who Am I?</h3>
-			<p class="details">Online I typically go by Mars11, but my name is Arthur. I'm a 15-year old sophomore in high school, a computer enthusiast, and a <a href="http://www.teamimplosion.com/" target="blank">Mormon</a>.</p>
+			<p class="details">Online I typically go by Mars11, but my name is Arthur. I'm a 15-year old sophomore in high school, a computer enthusiast, and a <a href="http://mormon.org/" target="blank">Mormon</a>.</p>
 			<h3>What Do I Do?</h3>
 			<p class="details">I can do almost anything that involves a computer. Currently, I develop and design websites. Though in the past I've developed Android apps, I've repaired laptops and desktops, and done basic tech support for my friends and family. I'm the lead programmer on a FIRST FRC team, <a href="http://www.teamimplosion.com/" target="blank">Team Implosion</a>. I also work for <a href="http://ldshorizonpublishers.com/" target="blank">Horizon Publishers</a> as the technical support. I've worked on their websites, managed online inventory, and done other support tasks. Here's a list of some of the projects I'm currently working on, or have worked on in the past:</p>
 			<p class="details, li-head">Current:</p>
@@ -63,13 +63,16 @@
 			var dev = 0;
 			hashCheck();
 			function hashCheck() {
-			if (window.location.hash=='#dev') {
-			dev = 1;
-			}
-			setTimeout('hashCheck();',1000);
+				if (window.location.hash=='#dev') {
+				dev = 1;
+				}
+				setTimeout('hashCheck();',1000);
 			}
 			document.getElementById('main').className = "full";
 			setTimeout("document.getElementById('panel').style.top = '0'; startTime();",750);
+			if (dev==1) {
+				document.getElementById('jsdebug').style.display='block'
+			}
 		</script>
 		<script type="text/javascript" async src="js/first.js"></script>
 		<script type="text/javascript" async src="js/third.js"></script>
@@ -78,6 +81,8 @@
 		</script><![endif]-->
 		<div id="hidden">
 			<audio id="chime" src="content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
+			<audio id="zombyell" src="content/audio/zombyell.wav" preload="none" onended="zombyell++;"></audio>
+			<audio id="ghost" src="content/audio/ghost.wav" preload="none" onended="ghost++;"></audio>
 		</div>
 	</body>
 </html>

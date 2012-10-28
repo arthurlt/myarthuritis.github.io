@@ -29,23 +29,36 @@ function startTime() {
 	document.getElementById('time').innerHTML=(day[dayi])+" "+(month[monthi])+"	"+date+" "+hour+":"+minute;
 	hourChime(hour,minute);
 	setTimeout('startTime();',1000);
-	}
+}
 
 function checkMinute(m){
 	if (m<10) {
 		m="0" + m;
 		}
 	return m;
-	}
+}
 
 function checkHour(h) {
 	if (h<10) {
 		h="0" + h;
 		}
 	return h;
-	}
+}
 
-var chimes = 0
+function onLoad() {
+	ran = Math.floor((Math.random()*100)+1);
+	chimes = 0;
+	mutepressed = 0;
+	socialpressed = 0;
+	s = document.getElementById("social");
+	zombyell = 0;
+	ghost = 0;
+	//halloWeen();
+	deBug(ran)
+}
+
+function keyPress(e) {}
+
 function hourChime(hour,minute) {
 	if (hour==00) {
 	if (minute==00) {
@@ -57,36 +70,20 @@ function hourChime(hour,minute) {
 			chimes = 0
 		}
 	}
-	document.getElementById("jsdebug").innerHTML="chimed "+chimes+" times";
-	}
-
-function onLoad() { //starts on body load
+	//deBug('chimed '+chimes+' times');
 }
 
-function keyPress(e) { //toggles jsdebug
-var debugtog = document.getElementById('jsdebug')
-if (dev==1) {
-	if (debugtog.style.display == 'block') {
-		debugtog.style.display = 'none';
+function muteAudio() { //toggles mute
+	if (mutepressed==0) {
+		document.getElementById('chime').muted = true;
+		document.getElementById("speaker").src="img/panel/mute-red.svg";
+		mutepressed=1;
 	}
 	else {
-		debugtog.style.display = 'block';
+		document.getElementById('chime').muted = false;
+		document.getElementById("speaker").src = "img/panel/high.svg";
+		mutepressed=0;
 	}
-}
-}
-
-var mutepressed = 0;
-function muteAudio() { //toggles mute
-if (mutepressed==0) {
-	document.getElementById('chime').muted = true;
-	document.getElementById("speaker").src="img/panel/mute-red.svg";
-	mutepressed=1;
-}
-else {
-	document.getElementById('chime').muted = false;
-	document.getElementById("speaker").src = "img/panel/high.svg";
-	mutepressed=0;
-}
 }
 
 function showWarning(says) {
@@ -99,17 +96,25 @@ function hideWarning() {
 	document.getElementById('warning').style.display = "none";
 }
 
-var socialpressed = 0;
-var s = document.getElementById("social");
 function socialTog() {
-if (socialpressed==0) {
-	s.style.display = "block";
-	setTimeout('s.className = "full";',1);
-	socialpressed=1;
+	if (socialpressed==0) {
+		s.style.display = "block";
+		setTimeout('s.className = "full";',1);
+		socialpressed=1;
+	}
+	else {
+		s.className = "hidden";
+		setTimeout('s.style.display = "none";',150);
+		socialpressed=0;
+	}
 }
-else {
-	s.className = "hidden";
-	setTimeout('s.style.display = "none";',150);
-	socialpressed=0;
+
+function deBug(says) {
+	document.getElementById("jsdebug").innerHTML=says;
 }
+
+function halloWeen() {
+	document.getElementById('zombyell').play();
+	document.getElementById('ghost').play();
+	//deBug(zombyell+' '+ghost);
 }
