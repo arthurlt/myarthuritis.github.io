@@ -110,6 +110,9 @@ function socialTog() {
 }
 
 function deBug(says) {
+	if (dev==1) {
+		document.getElementById('jsdebug').style.display='block'
+	}
 	document.getElementById("jsdebug").innerHTML=says;
 }
 
