@@ -29,7 +29,7 @@ function startTime() {
 	day = (day[dayi]);
 	month = (month[monthi]);
 	document.getElementById('time').innerHTML=day+" "+month+"	"+date+" "+hour+":"+minute;
-	setTimeout('halloWeen(month,date,minute);', 100000);
+	halloWeen(month,date,minute);
 	hourChime(hour,minute);
 	setTimeout('startTime();',1000);
 }
