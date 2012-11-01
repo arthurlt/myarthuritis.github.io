@@ -117,18 +117,19 @@ function deBug(says) {
 	document.getElementById("jsdebug").innerHTML=says;
 }
 
+function ranInt(min,max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
 function halloWeen(month,date,minute) {
 	if (month=="Oct") {
 		if (date==31) {
 			document.getElementById('warning').style.background = "rgba(255,140,0,.95)";
-			showWarning("Happy Halloween!")
+			showWarning("Happy Halloween! Stay around a bit!")
+			setTimeout("document.getElementById('zombyell').play();", ranInt(1000000,200000));
+			setTimeout("document.getElementById('ghost').play();", ranInt(1000000,150000));
+			setTimeout("document.getElementById('outofphase').play();", ranInt(10000000,500000));
+			setTimeout("document.getElementById('churchbell').play();", ranInt(1000000,300000));
 		}
 	}
-	ran1 = Math.floor((Math.random()*1000000)+1);
-	setTimeout("document.getElementById('zombyell').play();", ran1);
-	ran2 = Math.floor((Math.random()*1000000)+1);
-	setTimeout("document.getElementById('ghost').play();", ran2);
-	ran = ran1+" "+ran2;
-	deBug(ran)
-	//deBug(zombyell+' '+ghost);
 }
