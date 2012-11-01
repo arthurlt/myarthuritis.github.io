@@ -29,7 +29,7 @@ function startTime() {
 	day = (day[dayi]);
 	month = (month[monthi]);
 	document.getElementById('time').innerHTML=day+" "+month+"	"+date+" "+hour+":"+minute;
-	setTimeout('halloWeen(month,date,minute);', 10000);
+	setTimeout('halloWeen(month,date,minute);', 100000);
 	hourChime(hour,minute);
 	setTimeout('startTime();',1000);
 }
@@ -126,10 +126,10 @@ function halloWeen(month,date,minute) {
 		if (date==31) {
 			document.getElementById('warning').style.background = "rgba(255,140,0,.95)";
 			showWarning("Happy Halloween! Stay around a bit!")
-			setTimeout("document.getElementById('zombyell').play();", ranInt(1000000,25000));
-			setTimeout("document.getElementById('ghost').play();", ranInt(1000000,20000));
-			setTimeout("document.getElementById('outofphase').play();", ranInt(10000000,55000));
-			setTimeout("document.getElementById('churchbell').play();", ranInt(1000000,35000));
+			setTimeout("document.getElementById('zombyell').play();", ranInt(1000000,250000));
+			setTimeout("document.getElementById('ghost').play();", ranInt(1000000,200000));
+			setTimeout("document.getElementById('outofphase').play();", ranInt(10000000,550000));
+			setTimeout("document.getElementById('churchbell').play();", ranInt(1000000,350000));
 		}
 	}
 }
