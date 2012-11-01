@@ -29,7 +29,7 @@ function startTime() {
 	day = (day[dayi]);
 	month = (month[monthi]);
 	document.getElementById('time').innerHTML=day+" "+month+"	"+date+" "+hour+":"+minute;
-	halloWeen(month,date);
+	halloWeen(month,date,minute);
 	hourChime(hour,minute);
 	setTimeout('startTime();',1000);
 }
@@ -49,7 +49,6 @@ function checkHour(h) {
 }
 
 function onLoad() {
-	ran = Math.floor((Math.random()*100)+1);
 	chimes = 0;
 	mutepressed = 0;
 	socialpressed = 0;
@@ -57,7 +56,6 @@ function onLoad() {
 	zombyell = 0;
 	ghost = 0;
 	//halloWeen();
-	deBug(ran)
 }
 
 function keyPress(e) {}
@@ -119,14 +117,18 @@ function deBug(says) {
 	document.getElementById("jsdebug").innerHTML=says;
 }
 
-function halloWeen(month,date) {
+function halloWeen(month,date,minute) {
 	if (month=="Oct") {
 		if (date==31) {
 			document.getElementById('warning').style.background = "rgba(255,140,0,.95)";
 			showWarning("Happy Halloween!")
 		}
 	}
-	//document.getElementById('zombyell').play();
-	//document.getElementById('ghost').play();
+	ran1 = Math.floor((Math.random()*1000000)+1);
+	setTimeout("document.getElementById('zombyell').play();", ran1);
+	ran2 = Math.floor((Math.random()*1000000)+1);
+	setTimeout("document.getElementById('ghost').play();", ran2);
+	ran = ran1+" "+ran2;
+	deBug(ran)
 	//deBug(zombyell+' '+ghost);
 }
