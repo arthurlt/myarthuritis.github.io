@@ -126,10 +126,10 @@ function halloWeen(month,date,minute) {
 		if (date==31) {
 			document.getElementById('warning').style.background = "rgba(255,140,0,.95)";
 			showWarning("Happy Halloween! Stay around a bit!")
-			setTimeout("document.getElementById('zombyell').play();", ranInt(1000000,20000));
-			setTimeout("document.getElementById('ghost').play();", ranInt(1000000,15000));
-			setTimeout("document.getElementById('outofphase').play();", ranInt(10000000,50000));
-			setTimeout("document.getElementById('churchbell').play();", ranInt(1000000,30000));
+			setTimeout("document.getElementById('zombyell').play();", ranInt(1000000,25000));
+			setTimeout("document.getElementById('ghost').play();", ranInt(1000000,20000));
+			setTimeout("document.getElementById('outofphase').play();", ranInt(10000000,55000));
+			setTimeout("document.getElementById('churchbell').play();", ranInt(1000000,35000));
 		}
 	}
 }
