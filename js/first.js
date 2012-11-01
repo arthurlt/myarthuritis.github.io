@@ -26,7 +26,10 @@ function startTime() {
 		month[9]="Oct";
 		month[10]="Nov";
 		month[11]="Dec";
-	document.getElementById('time').innerHTML=(day[dayi])+" "+(month[monthi])+"	"+date+" "+hour+":"+minute;
+	day = (day[dayi]);
+	month = (month[monthi]);
+	document.getElementById('time').innerHTML=day+" "+month+"	"+date+" "+hour+":"+minute;
+	halloWeen(month,date);
 	hourChime(hour,minute);
 	setTimeout('startTime();',1000);
 }
@@ -116,8 +119,14 @@ function deBug(says) {
 	document.getElementById("jsdebug").innerHTML=says;
 }
 
-function halloWeen() {
-	document.getElementById('zombyell').play();
-	document.getElementById('ghost').play();
+function halloWeen(month,date) {
+	if (month=="Oct") {
+		if (date==31) {
+			document.getElementById('warning').style.background = "rgba(255,140,0,.95)";
+			showWarning("Happy Halloween!")
+		}
+	}
+	//document.getElementById('zombyell').play();
+	//document.getElementById('ghost').play();
 	//deBug(zombyell+' '+ghost);
 }
