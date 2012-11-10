@@ -110,9 +110,8 @@ a.imglink {
 #warning {
 	height: 20px;
 	width: 100%;
-	top: 0;
+	top: -48px;
 	position: fixed;
-	display: none;
 	background-color: rgba(230, 0, 0, 0.95);
 	padding: 28px 0 0;
 	font-family: 'Droid Sans', sans-serif;
@@ -120,6 +119,10 @@ a.imglink {
 	text-align: center;
 	font-size: 11pt;
 	z-index: 1;
+	transition: top .5s ease;
+	-moz-transition: top .5s ease;
+	-webkit-transition: top .5s ease-out;
+	-o-transition: top .5s ease
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
