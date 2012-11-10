@@ -87,15 +87,15 @@ function muteAudio() { //toggles mute
 	}
 }
 
-function showWarning(says,color) {
+function showNotify(says,color) {
 	document.getElementById('main').style.marginTop = "58px";
-	document.getElementById('warning').style.background = color;
-	document.getElementById('warning').style.top = "0";
-	document.getElementById("warning").innerHTML = says;
+	document.getElementById('notify').style.background = color;
+	document.getElementById('notify').style.top = "0";
+	document.getElementById("notify").innerHTML = says;
 }
-function hideWarning() {
+function hideNotify() {
 	document.getElementById('main').style.marginTop = "38px";
-	document.getElementById('warning').style.top = "-48px";
+	document.getElementById('notify').style.top = "-48px";
 }
 
 function socialTog() {
@@ -125,7 +125,7 @@ function ranInt(min,max) {
 function holidayCheck(month,date,hour,minute) {
 	if (month=="Oct") { //Halloween
 		if (date==31) {
-			showWarning("Happy Halloween! Stay around a bit!","rgba(255,140,0,.95)")
+			showNotify("Happy Halloween! Stay around a bit!","rgba(255,140,0,.95)")
 			setTimeout("document.getElementById('zombyell').play();", ranInt(1000000,300000));
 			setTimeout("document.getElementById('ghost').play();", ranInt(1000000,200000));
 			setTimeout("document.getElementById('outofphase').play();", ranInt(10000000,600000));
@@ -134,7 +134,7 @@ function holidayCheck(month,date,hour,minute) {
 	}
 	if (month=="Dec") { //Christmas
 		if (date==25) {
-			showWarning("Merry Christmas!");
+			showNotify("Merry Christmas!");
 			if (hour==00) {
 				if (minute==00) {
 					//play Santa's sleigh
