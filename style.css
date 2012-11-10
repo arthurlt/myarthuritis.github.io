@@ -107,7 +107,7 @@ img.panelicons:active {
 #dropbox {}
 a.imglink {
 	text-decoration: none;}
-#warning {
+#notify {
 	height: 20px;
 	width: 100%;
 	top: -48px;
@@ -128,11 +128,11 @@ a.imglink {
 	-ms-user-select: none;
 	-o-user-select: none;
 	user-select: none;}
-#warning a:link {
+#notify a:link {
 	color: white;}
-#warning a:visited {
+#notify a:visited {
 	color: white;}
-#warning a:hover {
+#notify a:hover {
 	text-decoration: underline;}
 #social {
 	height: 48px;
