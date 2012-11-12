@@ -125,18 +125,18 @@ function holidayCheck(month,date,hour,minute) {
 		setTimeout("document.getElementById('churchbell').play();", ranInt(1000000,400000));
 	}
 	if (month=="Nov" && date==11) { //Vetrans Day
-		if (notifycolor==0 || notifycolor==1) {
+		if (notifycolor==0 || notifycolor==1 || notifycolor==2) {
 			showNotify("Honoring all who served. Veterans Day","rgba(204,0,0,.95)");
 			notifycolor++;
 		}
 		else {
-			if (notifycolor==2 || notifycolor==3) {
+			if (notifycolor==3 || notifycolor==4 || notifycolor==5) {
 				document.getElementById('notify').style.background = "rgba(255,255,255,.95)"; 
 				document.getElementById('notify').style.color = "black";
 				notifycolor++;
 			}
 			else {
-				if (notifycolor==4) {
+				if (notifycolor==6 || notifycolor==7) {
 					document.getElementById('notify').style.background = "rgba(0,0,128,.95)";
 					document.getElementById('notify').style.color = "white";
 					notifycolor++;
