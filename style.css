@@ -60,7 +60,6 @@ a img {
 	left: 110px;
 	display: none;}
 div.time {
-	color: white;
 	width: 120px;
 	height: 28px;
 	line-height: 28px;
@@ -119,10 +118,10 @@ a.imglink {
 	text-align: center;
 	font-size: 11pt;
 	z-index: 1;
-	transition: top .5s ease;
-	-moz-transition: top .5s ease;
-	-webkit-transition: top .5s ease-out;
-	-o-transition: top .5s ease
+	transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-webkit-transition: all .5s ease-out;
+	-o-transition: all .5s ease
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
