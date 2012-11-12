@@ -49,12 +49,6 @@ function checkHour(h) {
 }
 
 function onLoad() {
-	chimes = 0;
-	mutepressed = 0;
-	socialpressed = 0;
-	s = document.getElementById("social");
-	zombyell = 0;
-	ghost = 0;
 	//halloWeen();
 }
 
@@ -87,7 +81,7 @@ function muteAudio() { //toggles mute
 	}
 }
 
-function showNotify(says,color) {
+function showNotify(says,color,size) {
 	document.getElementById('main').style.marginTop = "58px";
 	document.getElementById('notify').style.background = color;
 	document.getElementById('notify').style.top = "0";
@@ -123,22 +117,41 @@ function ranInt(min,max) {
 }
 
 function holidayCheck(month,date,hour,minute) {
-	if (month=="Oct") { //Halloween
-		if (date==31) {
-			showNotify("Happy Halloween! Stay around a bit!","rgba(255,140,0,.95)")
-			setTimeout("document.getElementById('zombyell').play();", ranInt(1000000,300000));
-			setTimeout("document.getElementById('ghost').play();", ranInt(1000000,200000));
-			setTimeout("document.getElementById('outofphase').play();", ranInt(10000000,600000));
-			setTimeout("document.getElementById('churchbell').play();", ranInt(1000000,400000));
+	if (month=="Oct" && date==31) { //Halloween
+		showNotify("Happy Halloween! Stay around a bit!","rgba(255,140,0,.95)");
+		setTimeout("document.getElementById('zombyell').play();", ranInt(1000000,300000));
+		setTimeout("document.getElementById('ghost').play();", ranInt(1000000,200000));
+		setTimeout("document.getElementById('outofphase').play();", ranInt(10000000,600000));
+		setTimeout("document.getElementById('churchbell').play();", ranInt(1000000,400000));
+	}
+	if (month=="Nov" && date==11) { //Vetrans Day
+		if (notifycolor==0 || notifycolor==1) {
+			showNotify("Honoring all who served. Vetrans Day","rgba(204,0,0,.95)");
+			notifycolor++;
+		}
+		else {
+			if (notifycolor==2 || notifycolor==3) {
+				document.getElementById('notify').style.background = "rgba(255,255,255,.95)"; 
+				document.getElementById('notify').style.color = "black";
+				notifycolor++;
+			}
+			else {
+				if (notifycolor==4) {
+					document.getElementById('notify').style.background = "rgba(0,0,128,.95)";
+					document.getElementById('notify').style.color = "white";
+					notifycolor++;
+				}
+				else {
+					notifycolor=0;
+				}
+			}
 		}
 	}
-	if (month=="Dec") { //Christmas
-		if (date==25) {
-			showNotify("Merry Christmas!");
-			if (hour==00) {
-				if (minute==00) {
-					//play Santa's sleigh
-				}
+	if (month=="Dec" && date==25) { //Christmas
+		showNotify("Merry Christmas!");
+		if (hour==00) {
+			if (minute==00) {
+				//play Santa's sleigh
 			}
 		}
 	}
