@@ -126,7 +126,7 @@ function holidayCheck(month,date,hour,minute) {
 	}
 	if (month=="Nov" && date==11) { //Vetrans Day
 		if (notifycolor==0 || notifycolor==1) {
-			showNotify("Honoring all who served. Vetrans Day","rgba(204,0,0,.95)");
+			showNotify("Honoring all who served. Veterans Day","rgba(204,0,0,.95)");
 			notifycolor++;
 		}
 		else {
