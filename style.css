@@ -116,7 +116,8 @@ a.imglink {
 	font-family: 'Droid Sans', sans-serif;
 	color: white;
 	text-align: center;
-	font-size: 11pt;
+	line-height: 20px;
+	font-size: 15px;
 	z-index: 1;
 	transition: all .5s ease;
 	-moz-transition: all .5s ease;
