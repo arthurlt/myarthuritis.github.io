@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="IE10 Test Drive Demo" />
+    <meta name="t_omni_demopage" content="1" />
+    <title>Let It Snow</title>
+    <link rel="Stylesheet" href="./css/default.css" />
+    <link rel="shortcut icon" href="http://mars11.com/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple72.png">
+    <link rel="apple-touch-icon-precomposed" href="/img/apple57.png">
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700|Cabin:600|Pontano+Sans' rel='stylesheet' type='text/css'>
+    <link href='/style.css' rel='stylesheet' type='text/css'>    
+</head>
+<body onload="onLoad();" onkeydown="keyPress(event);">
+    <div id="sceneContainer" class="">
+        <canvas id="backgroundGradient"></canvas>
+            <canvas id="snowflakesCanvas"></canvas>
+        </div>
+        <div id="systemInformation" class="si">
+            Snowflakes:
+            <select id="siSnowflakes">
+                <option value="100" selected="selected">100</option>
+            </select>
+            <span id="siSnowflakesCount"></span>
+            <br>
+            Window size: <span id="siResolution"></span>
+        </div>
+        <div id="systemInformationFps" class="si">
+            Current fps: <span id="siFps">...</span>
+        </div>  
+    </div>
+    <div id="panel">
+        <div id="name">
+            <p>Arthur Tucker</p>
+        </div>
+        <div id="jsdebug"></div>
+        <div class="time">
+            <div id="time"></div>
+        </div>
+        <div id="panelicons">
+            <a href="http://db.tt/FFgst2x" target="blank" class="imglink">
+                <img src="/img/panel/dropbox.svg" id="dropbox" class="panelicons"/>
+            </a>
+            <img src="/img/panel/avatar.svg" id="avatar" class="panelicons" onclick="socialTog()"/>
+            <img src="/img/panel/high.svg" id="speaker" class="panelicons" onclick="muteAudio()"/>
+        </div>
+    </div>
+    <div id="notify"></div>
+    <div id="social" class="hidden">
+        <div id="social-triangle"></div>
+            <a href="http://plus.google.com/111629734323967418199" target="blank" class="imglink">
+                <img src="/img/social/google.png" class="socialicons"/>
+            </a>
+            <a href="http://twitter.com/#/Arthur_Mars11" target="blank" class="imglink">
+                <img src="/img/social/twitter.png" class="socialicons"/>
+            </a>
+            <a href="mailto:arthurlt@gmail.com" class="imglink">
+                <img src="/img/social/gmail.png" class="socialicons"/>
+            </a>
+    </div>
+    <div id="main">
+        <img src="/content/img/logo.png" id="logo">
+        <h3>Who Am I?</h3>
+        <p class="details">Online I typically go by Mars11, but my name is Arthur. I'm a 15-year old sophomore in high school, a computer enthusiast, and a <a href="http://mormon.org/" target="blank">Mormon</a>.</p>
+        <h3>What Do I Do?</h3>
+        <p class="details">I can do almost anything that involves a computer. Currently, I develop and design websites. Though in the past I've developed Android apps, I've repaired laptops and desktops, and done basic tech support for my friends and family. I'm the lead programmer on a FIRST FRC team, <a href="http://www.teamimplosion.com/" target="blank">Team Implosion</a>. I also work for <a href="http://ldshorizonpublishers.com/" target="blank">Horizon Publishers</a> as the technical support. I've worked on their websites, managed online inventory, and done other support tasks. Here's a list of some of the projects I'm currently working on, or have worked on in the past:</p>
+        <p class="details, li-head">Current:</p>
+        <ul class="details">
+            <li><a href="http://elementaryos.org/" target="blank">The elementary Project website</a></li>
+            <li><a href="http://choralsingingaids.com/" target="blank">Choral Singing Aids website</a> - for <a href="http://ldshorizonpublishers.com/" target="blank">Horizon Publishers</a></li>
+            <li>My Site (this)</li>
+            <li><a href="projects/" target="blank">Web Projects (incomplete)</a></li>
+        </ul>
+        <p class="details, li-head">Complete:</p>
+        <ul class="details">
+            <li><a href="https://play.google.com/store/apps/details?id=com.archerllc.funmeeting&feature" target="blank">Fun Meeting Android app</a> - for Archer LLC</li>
+            <li>Several Misc. Shell Scripts</li>
+        </ul>
+        <p class="details">And many more smaller projects!</p>
+        <h3>About This Site:</h3>
+        <p class="details">I originally made this site as a proof-of-concept remake the the elementary OS Luna desktop using web technologies. I decided that it wasn't what I needed and rewrote the entire thing, but I only kept the Wingpanel (the panel along the top). <strong>It's still under work and anything is subject to change.</strong></p>
+    </div>
+    <div id="hidden">
+    <audio id="chime" src="/content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
+    <audio id="zombyell" src="/content/audio/zombyell.wav" preload="none" onended="zombyell++;"></audio>
+    <audio id="ghost" src="/content/audio/ghost.wav" preload="none" onended="ghost++;"></audio>
+    <audio id="outofphase" src="/content/audio/outofphase.wav" preload="none" onended="outofphase++;"></audio>
+    <audio id="churchbell" src="/content/audio/churchbell.wav" preload="none" onended="churchbell++;"></audio>
+    </div>
+    <!-- common libraries -->
+    <script type="text/javascript" src="js/classes.js"></script>
+    <script type="text/javascript" src="js/touch.js"></script>
+    <script type="text/javascript" src="js/animation.js"></script>
+    <script type="text/javascript" src="js/gfx.js"></script>
+    <!-- stars and snowflakes -->
+    <script type="text/javascript" src="js/snowflakes.js"></script>
+    <!-- system information -->
+    <script type="text/javascript" src="js/systemInformation.js"></script>
+    <!-- gradient animation -->
+    <script type="text/javascript" src="js/gradient.js"></script>
+    <!-- UI and initialization code -->
+    <script type="text/javascript" src="js/default.js"></script>
+    <!-- testdrive standard -->
+    <script type="text/javascript">
+        function globalVariable() {
+            dev = 0;
+            chimes = 0;
+            mutepressed = 0;
+            socialpressed = 0;
+            notifycolor = 0;
+            s = document.getElementById("social");
+            zombyell = 0;
+            ghost = 0;
+        }
+        globalVariable();
+        hashCheck();
+        function hashCheck() {
+            if (window.location.hash=='#dev') {
+            dev = 1;
+            }
+            setTimeout('hashCheck();',1000);
+        }
+
+        document.getElementById('main').className = "full";
+        setTimeout("document.getElementById('panel').style.top = '0'; startTime();",750);
+    </script>
+    <script type="text/javascript" async src="/js/first.js"></script>
+    <script type="text/javascript" async src="/js/third.js"></script>
+    <!--[if IE]><script type="text/javascript">
+        showNotify('<a href="http://www.browserchoice.eu/">You are using MS IE 9 or less, this site will not display correctly. Update or switch to a more standards complient browser.</a>')
+    </script><![endif]-->
+</body>
+</html>
