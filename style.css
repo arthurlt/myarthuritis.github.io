@@ -80,11 +80,11 @@ img.panelicons {
 	-ms-transition: all 0.05s ease;
 	-o-transition: all 0.05s ease;
 	transition: all 0.05s ease;}
-img.panelicons:hover {
+/*img.panelicons:hover {
 	height: 26px;
 	width: 26px;
 	padding: 1px;
-	text-decoration: none;}
+	text-decoration: none;}*/
 img.panelicons:active {
 	height: 18px;
 	width: 18px;
@@ -95,10 +95,10 @@ img.panelicons:active {
 	height: 18px;
 	width: 18px;
 	padding: 5px;}
-#avatar:hover {
+/*#avatar:hover {
 	height: 22px;
 	width: 22px;
-	padding: 3px;}
+	padding: 3px;}*/
 #avatar:active {
 	height: 14px;
 	width: 14px;
@@ -176,11 +176,11 @@ img.socialicons {
 	-ms-transition: all 0.05s ease;
 	-o-transition: all 0.05s ease;
 	transition: all 0.05s ease;}
-img.socialicons:hover {
+/*img.socialicons:hover {
 	height: 36px;
 	width: 36px;
 	padding: 6px;
-	text-decoration: none;}
+	text-decoration: none;}*/
 img.socialicons:active {
 	height: 28px;
 	width: 28px;

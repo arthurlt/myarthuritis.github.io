@@ -71,12 +71,12 @@ function hourChime(hour,minute) {
 function muteAudio() { //toggles mute
 	if (mutepressed==0) {
 		document.getElementById('chime').muted = true;
-		document.getElementById("speaker").src="img/panel/mute-red.svg";
+		document.getElementById("speaker").src="/img/panel/mute-red.svg";
 		mutepressed=1;
 	}
 	else {
 		document.getElementById('chime').muted = false;
-		document.getElementById("speaker").src = "img/panel/high.svg";
+		document.getElementById("speaker").src = "/img/panel/high.svg";
 		mutepressed=0;
 	}
 }
@@ -125,23 +125,23 @@ function holidayCheck(month,date,hour,minute) {
 		setTimeout("document.getElementById('churchbell').play();", ranInt(1000000,400000));
 	}
 	if (month=="Nov" && date==11) { //Vetrans Day
-		if (notifycolor==0 || notifycolor==1 || notifycolor==2) {
+		if (notifycolor==0 || notifycolor==1 || notifycolor==2) { //red for 3 seconds
 			showNotify("Honoring all who served. Veterans Day","rgba(204,0,0,.95)");
 			notifycolor++;
 		}
 		else {
-			if (notifycolor==3 || notifycolor==4 || notifycolor==5) {
+			if (notifycolor==3 || notifycolor==4 || notifycolor==5) { //white for 3 seconds changes text color to black
 				document.getElementById('notify').style.background = "rgba(255,255,255,.95)"; 
 				document.getElementById('notify').style.color = "black";
 				notifycolor++;
 			}
 			else {
-				if (notifycolor==6 || notifycolor==7) {
+				if (notifycolor==6 || notifycolor==7 || notifycolor==8) { //blue for 3 seconds changes text back to white
 					document.getElementById('notify').style.background = "rgba(0,0,128,.95)";
 					document.getElementById('notify').style.color = "white";
 					notifycolor++;
 				}
-				else {
+				else { //after cycling through colors switches back to red
 					notifycolor=0;
 				}
 			}
