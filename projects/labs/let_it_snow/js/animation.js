@@ -62,22 +62,6 @@ Animation = (function () {
         var duration = (endDate - startDate);
         avgTime += duration;
 
-        // we count fps every trackFrames frame
-        frameCounter++;
-        if (frameCounter >= trackFrames) {
-            avgTime = avgTime / trackFrames;
-            var avgFps = Math.floor(1000 / avgTime);
-            if (avgFps > 60) avgFps = 60;
-
-            // update fps information and snowflake count if dynamic
-            SystemInformation.post({
-                fps: avgFps,
-                snowflakes: (Snowflakes.dynamicSnowflakesCount) ? Snowflakes.count() : ""
-            });
-
-            avgTime = 0;
-            frameCounter = 0;
-        }
     }
 
     // playback control: play, pause, toggle

@@ -18,18 +18,6 @@
         <canvas id="backgroundGradient"></canvas>
             <canvas id="snowflakesCanvas"></canvas>
         </div>
-        <div id="systemInformation" class="si">
-            Snowflakes:
-            <select id="siSnowflakes">
-                <option value="100" selected="selected">100</option>
-            </select>
-            <span id="siSnowflakesCount"></span>
-            <br>
-            Window size: <span id="siResolution"></span>
-        </div>
-        <div id="systemInformationFps" class="si">
-            Current fps: <span id="siFps">...</span>
-        </div>  
     </div>
     <div id="panel">
         <div id="name">
@@ -89,17 +77,9 @@
     <audio id="outofphase" src="/content/audio/outofphase.wav" preload="none" onended="outofphase++;"></audio>
     <audio id="churchbell" src="/content/audio/churchbell.wav" preload="none" onended="churchbell++;"></audio>
     </div>
-    <!-- common libraries -->
-    <script type="text/javascript" src="js/classes.js"></script>
-    <script type="text/javascript" src="js/touch.js"></script>
     <script type="text/javascript" src="js/animation.js"></script>
-    <script type="text/javascript" src="js/gfx.js"></script>
     <!-- stars and snowflakes -->
     <script type="text/javascript" src="js/snowflakes.js"></script>
-    <!-- system information -->
-    <script type="text/javascript" src="js/systemInformation.js"></script>
-    <!-- gradient animation -->
-    <script type="text/javascript" src="js/gradient.js"></script>
     <!-- UI and initialization code -->
     <script type="text/javascript" src="js/default.js"></script>
     <!-- testdrive standard -->

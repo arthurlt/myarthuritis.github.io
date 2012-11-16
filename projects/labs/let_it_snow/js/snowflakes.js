@@ -62,13 +62,6 @@ Snowflakes = (function () {
     // don't set value immidietly change gradually by this amount
     var speedFactorDelta = 0.05;
 
-    // snow heap
-    var snowHeap = document.getElementById("snowHeap");
-    var heapSizeIncrement = 0.00006;
-    var minHeapSize = 0.10;
-    var maxHeapSize = 0.15;
-    var heapSize = minHeapSize;
-
     // create number of snowflakes adding if required (or regenerate from scratch)
     function generate(number, add) {
         // initialize sprite
@@ -146,20 +139,8 @@ Snowflakes = (function () {
         }
     }
 
-    // check if snowflake is within bounds of postcard
-    function isWithinPostcard(x, y) {
-        return true;
-    }
-
-    // grow the snowHeap
-    function progressHeapSize() {
-        if (heapSize >= maxHeapSize) return;
-        heapSize += heapSizeIncrement * speedFactor;
-    }
-
     // help snowflakes fall
     function advanceSnowFlakes() {
-        progressHeapSize();
         for (var ii = 0; ii < snowflakes.length; ii++) {
             var sf = snowflakes[ii];
             // we obey the gravity, 'cause it's the law
@@ -198,29 +179,9 @@ Snowflakes = (function () {
                 resetNotLanding = true;
             };
             if (resetNotLanding) { sf.nl = false; }
-
-            // try probable landing
-            if (!sf.nl && isWithinPostcard(sf.x, sf.y)) {
-                // if within postcard - try if it should land
-                var chance = Math.random();
-                sf.nl = true;
-            }
         }
     }
-
-    // not using, but it allows to increase/decrease speed based on fps
-    // in essence - visual feedback on fps value
-    function adjustSpeedFactor() {
-        if (++currentSpeedCorrectionFrame === speedCorrectionFrames) {
-            var lastFps = SystemInformation.getLastFps();
-            var targetSpeedFactor = (lastFps * (maxSpeedFactor - minSpeedFactor) / 60) + minSpeedFactor;
-            speedFactor += (targetSpeedFactor < speedFactor) ? -speedFactorDelta : speedFactorDelta;
-            if (speedFactor > maxSpeedFactor) { speedFactor = maxSpeedFactor; }
-            if (speedFactor < minSpeedFactor) { speedFactor = minSpeedFactor; }
-            currentSpeedCorrectionFrame = 0;
-        }
-    }
-
+    
     function renderFrame(context) {
         // fall down one iteration            
         advanceSnowFlakes();
