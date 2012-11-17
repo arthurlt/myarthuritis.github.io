@@ -3,9 +3,13 @@
 	margin: 0;
 	padding: 0;}
 HTML {
-	background: url('img/back.png');
+	background: url('/img/back.png');
 	min-width: 800px;
-	font-family: 'Pontano Sans', sans-serif;}
+	font-family: 'Pontano Sans', sans-serif;
+    content-zooming: none;
+    -ms-content-zooming: none;
+    -webkit-content-zooming: none;
+    -moz-content-zooming: none;}
 a {
 	color: black;
 	cursor: pointer;
@@ -27,6 +31,13 @@ ul {
 a img {
 	border: none;}
 /*End*/
+canvas#themecanvas {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    -ms-touch-action: none; }
 #panel {
 	height: 28px;
 	width: 100%;
@@ -141,20 +152,24 @@ a.imglink {
 	position: fixed;
 	top: 35px;
 	right: 26px;
-	display: none;
 	z-index: 3;
-	border-radius: 6px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 15px;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
 	transition: all .15s ease;
 	-moz-transition: all .15s ease;
 	-webkit-transition: all .15s ease-out;
 	-o-transition: all .15s ease;}
 #social.hidden {
+	display: none;
 	transform: scale(0,0);
 	-moz-transform: scale(0,0);
 	-webkit-transform: scale(0,0);
 	-o-transform: scale(0,0);}
 #social.full {
+	display: block;
 	transform: scale(1,1);
 	-moz-transform: scale(1,1);
 	-webkit-transform: scale(1,1);
@@ -188,10 +203,11 @@ img.socialicons:active {
 	text-decoration: none;}
 #main {
 	width: 720px;
-	margin: 38px auto;
+	margin: 38px auto 0;
 	padding: 30px;
 	background-color: white;
-	border-radius: 6px;
+	border-top-left-radius: 2px;
+	border-top-right-radius: 35px;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
 	transform: scale(.5,.5);
 	-moz-transform: scale(.5,.5);
