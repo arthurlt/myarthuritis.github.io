@@ -1,63 +1,83 @@
 <!DOCTYPE html>
 	<head>
-		<title>Arthur (Mars11)'s Website</title>
+		<title>Whoops, something went wrong. :(</title>
+		<meta name="description" content="Whoops, something went wrong. :(" />
 		<link rel="shortcut icon" href="http://mars11.com/favicon.ico" />
-		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple114.png">
-		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple72.png">
-		<link rel="apple-touch-icon-precomposed" href="img/apple57.png">
-		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700' rel='stylesheet' type='text/css'>
-		<link href='style.css' rel='stylesheet' type='text/css'>
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple114.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple72.png">
+		<link rel="apple-touch-icon-precomposed" href="/img/apple57.png">
+		<link href='http://fonts.googleapis.com/css?family=Droid+Sans:700|Cabin:600|Pontano+Sans' rel='stylesheet' type='text/css'>
+		<link href='/css/style.css' rel='stylesheet' type='text/css'>
 	</head>
-	<body onload="startTime(); cssStart();">
+	<body onload="onLoad();" onkeydown="keyPress(event);">
+		<canvas id="themecanvas"></canvas>
 		<div id="panel">
-			<div id="social">
-				<div id="plusone">
-					<div class="g-plusone" data-size="medium" data-annotation="none"></div>
-				</div>
-					<div id="tweet">
-					<a href="https://twitter.com/share" class="twitter-share-button" data-count="none">Tweet</a>
-				</div>
+			<div id="name">
+				<p>Arthur Tucker</p>
 			</div>
+			<div id="jsdebug"></div>
 			<div class="time">
 				<div id="time"></div>
 			</div>
 			<div id="panelicons">
-				<img class="panelicons" src="img/panel/power.svg"/>
-				<a href="mailto:arthurlt@gmail.com" target="blank">
-					<img class="panelicons" src="img/panel/mail.svg"/>
+				<a href="http://db.tt/FFgst2x" target="blank" class="imglink">
+					<img src="/img/panel/dropbox.svg" id="dropbox" class="panelicons"/>
 				</a>
-				<img class="panelicons" src="img/panel/high.svg"/>
-				<img class="panelicons" id="avatar" src="img/panel/avatar.svg"/>
-				<img class="panelicons" src="img/panel/wired.svg"/>
-				<a href="http://db.tt/FFgst2x" target="blank">
-				<img class="panelicons" id="dropbox" src="img/panel/dropbox.svg"/>
-				</a>
+				<img src="/img/panel/avatar.svg" id="avatar" class="panelicons" onclick="socialTog()"/>
+				<img src="/img/panel/high.svg" id="speaker" class="panelicons" onclick="muteAudio()"/>
 			</div>
 		</div>
-		<div id="iewarning"><a href="http://www.browserchoice.eu/">You're using Microsoft Internet Explorer 9 or less, this site won't display correctly. Update or switch to a more standards complient browser.</a></div>
-		<div id="jsdebug"></div>
-		<img id="hlogo" src="content/img/logo.png">
-		<div id="main">
-        	<p id="welcome">Whoops!</p>
-        	<p id="welcome">Something went wrong, please try again.</p>
+		<div id="notify"></div>
+		<div id="social" class="hidden">
+			<div id="social-triangle"></div>
+				<a href="http://plus.google.com/111629734323967418199" target="blank" class="imglink">
+					<img src="/img/social/google.png" class="socialicons"/>
+				</a>
+				<a href="http://twitter.com/#/Arthur_Mars11" target="blank" class="imglink">
+					<img src="/img/social/twitter.png" class="socialicons"/>
+				</a>
+				<a href="mailto:arthurlt@gmail.com" class="imglink">
+					<img src="/img/social/gmail.png" class="socialicons"/>
+				</a>
 		</div>
-		<!--[if IE]><script type="text/javascript">
-			document.getElementById('iewarning').style.display = "block";
-		</script><![endif]-->
+		<div id="main">
+			<h3>Whoops, something went wrong. Please check the URL to make sure it was entered correctly.</h3>
+		</div>
+		<script type="text/javascript" src="/js/snowflake.js"></script>
 		<script type="text/javascript">
-			function cssStart() 
-			{
-			document.getElementById('main').className = "full";
-			setTimeout("document.getElementById('panel').style.top = '0';",750);
+			function globalVariable() {
+				dev = 0;
+				chimes = 0;
+				mutepressed = 0;
+				socialpressed = 0;
+				notifycolor = 0;
+				s = document.getElementById("social");
+				zombyell = 0;
+				ghost = 0;
 			}
+			globalVariable();
+			hashCheck();
+			function hashCheck() {
+				if (window.location.hash=='#dev') {
+				dev = 1;
+				}
+				setTimeout('hashCheck();',1000);
+			}
+
+			document.getElementById('main').className = "full";
+			setTimeout("document.getElementById('panel').style.top = '0'; startTime();",750);
 		</script>
-		<script type="text/javascript" src="js/tweet.js"></script>
-		<script type="text/javascript" src="js/plusone.js"></script>
-		<script type="text/javascript" src="js/analytics.js"></script>
-		<script type="text/javascript" src="js/time.js"></script>
-		<script type="text/javascript" src="js/nothing.js"></script>
+		<script type="text/javascript" async src="/js/first.js"></script>
+		<script type="text/javascript" async src="/js/third.js"></script>
+		<!--[if IE]><script type="text/javascript">
+			showNotify('<a href="http://www.browserchoice.eu/">You are using MS IE 9 or less, this site will not display correctly. Update or switch to a more standards complient browser.</a>')
+		</script><![endif]-->
 		<div id="hidden">
-			<audio id="chime" src="content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
+			<audio id="chime" src="/content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
+			<audio id="zombyell" src="/content/audio/zombyell.wav" preload="none" onended="zombyell++;"></audio>
+			<audio id="ghost" src="/content/audio/ghost.wav" preload="none" onended="ghost++;"></audio>
+			<audio id="outofphase" src="/content/audio/outofphase.wav" preload="none" onended="outofphase++;"></audio>
+			<audio id="churchbell" src="/content/audio/churchbell.wav" preload="none" onended="churchbell++;"></audio>
 		</div>
 	</body>
 </html>
