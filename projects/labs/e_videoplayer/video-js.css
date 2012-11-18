@@ -17,7 +17,7 @@ REQUIRED STYLES (be careful overriding)
   /* Centering on my test page */
   margin: 32px auto;
 
-  background-color: #000; position: relative; padding: 0;
+  background-color: #000; position: relative; padding: 0; overflow: hidden;
 
   /* Start with 10px for base font size so other dimensions can be em based and easily calculable. */
   font-size: 10px;
@@ -103,24 +103,22 @@ body.vjs-full-window {
 
 /* Fading sytles, used to fade control bar. */
 .vjs-fade-in {
-  visibility: visible !important; /* Needed to make sure things hide in older browsers too. */
-  opacity: 1 !important;
+  bottom: 0 !important; /* Needed to make sure things hide in older browsers too. */
 
-  -webkit-transition: visibility 0s linear 0s, opacity 0.3s linear;
-  -moz-transition: visibility 0s linear 0s, opacity 0.3s linear;
-  -ms-transition: visibility 0s linear 0s, opacity 0.3s linear;
-  -o-transition: visibility 0s linear 0s, opacity 0.3s linear;
-  transition: visibility 0s linear 0s, opacity 0.3s linear;
+  -webkit-transition: bottom .2s ease-out;
+  -moz-transition: bottom .2s ease;
+  -ms-transition: bottom .2s ease;
+  -o-transition: bottom .2s ease;
+  transition: bottom .2s ease;
 }
 .vjs-fade-out {
-  visibility: hidden !important;
-  opacity: 0 !important;
+  bottom: -30px !important;
 
-  -webkit-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
-  -moz-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
-  -ms-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
-  -o-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
-  transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -webkit-transition: bottom 1.5s ease-out 1.5s;
+  -moz-transition: bottom 1.5s ease 1.5s;
+  -ms-transition: bottom 1.5s ease 1.5s;
+  -o-transition: bottom 1.5s ease 1.5s;
+  transition: bottom 1.5s ease 1.5s;
 }
 
 /* DEFAULT SKIN (override in another file to create new skins)
@@ -136,7 +134,7 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
   margin: 0; padding: 0; /* Controls are absolutely position, so no padding necessary */
   height: 3em; /* Including any margin you want above or below control items */
   color: #fff; 
-  border-top: 1px solid #404040;
+  /*border-top: 1px solid #404040;*/
 
   /* CSS Gradient */
   /* Can use the Ultimate CSS Gradient Generator: http://www.colorzilla.com/gradient-editor/ */
@@ -152,8 +150,7 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 
   /* Start hidden and with 0 opacity. Opacity is used to fade in modern browsers. */
   /* Can't use display block to hide initially because widths of slider handles aren't calculated and avaialbe for positioning correctly. */
-  visibility: hidden;
-  opacity: 0;
+  bottom: 0;
 }
 
 /* General styles for individual controls. */
@@ -163,13 +160,10 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
   text-align: center;
   margin: 0;
   padding: 0;
-  height: 2.6em;
-  width: 2.6em;
 }
 
 .vjs-default-skin .vjs-control:focus {
   outline: 0;
-/*  background-color: #555;*/
 }
 
 /* Hide control text visually, but have it available for screenreaders: h5bp.com/v */
@@ -187,19 +181,24 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 /* Play/Pause
 -------------------------------------------------------------------------------- */
 .vjs-default-skin .vjs-play-control {
-  width: 5em;
   cursor: pointer !important; }
 /* Play Icon */
 .vjs-default-skin.vjs-paused .vjs-play-control div {
-  width: 15px;
-  height: 17px;
-  background: url('video-js.png');
-  margin: 0.5em auto 0; }
+  width: 16px;
+  height: 16px;
+  background: url('controls/play.png');
+  margin: .6em 1.3em .8em; }
+.vjs-default-skin.vjs-paused .vjs-play-control:hover div{
+  background: url('controls/play-hover.png');
+}
 .vjs-default-skin.vjs-playing .vjs-play-control div {
-  width: 15px;
-  height: 17px;
-  background: url('video-js.png');
-  margin: 0.5em auto 0; }
+  width: 16px;
+  height: 16px;
+  background: url('controls/pause.png');
+  margin: .6em 1.3em .8em; }
+.vjs-default-skin.vjs-playing .vjs-play-control:hover div{
+  background: url('controls/pause-hover.png');
+}
 
 /* Rewind
 -------------------------------------------------------------------------------- */
@@ -215,25 +214,27 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 /* Volume/Mute
 -------------------------------------------------------------------------------- */
 .vjs-default-skin .vjs-mute-control {
-  width: 3.8em;
+  width: 3em;
   cursor: pointer !important;
-  float: right; }
+  float: right;
+  margin: .1em 0; }
 .vjs-default-skin .vjs-mute-control div {
-  width: 22px;
+  width: 16px;
   height: 16px;
-  background: url('video-js.png') -75px -25px;
+  background: url('controls/high.png');
   margin: 0.5em auto 0; }
 .vjs-default-skin .vjs-mute-control.vjs-vol-0 div {
-  background: url('video-js.png') 0 -25px; }
+  background: url('controls/mute.png'); }
 .vjs-default-skin .vjs-mute-control.vjs-vol-1 div {
-  background: url('video-js.png') -25px -25px; }
+  background: url('controls/low.png'); }
 .vjs-default-skin .vjs-mute-control.vjs-vol-2 div {
-  background: url('video-js.png') -50px -25px; }
+  background: url('controls/medium.png'); }
 
 
 .vjs-default-skin .vjs-volume-control {
   width: 5em;
-  float: right; }
+  float: right;
+  margin: .1em 0; }
 .vjs-default-skin .vjs-volume-bar {
   position: relative;
   width: 5em;
@@ -282,94 +283,53 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 -------------------------------------------------------------------------------- */
 .vjs-default-skin div.vjs-progress-control {
   position: absolute;
-  left: 4.8em; right: 4.8em; /* Leave room for time displays. */
-  height: 1.0em; width: auto;
-  top: -1.3em; /* Set above the rest of the controls. And leave room for 2px of borders (progress bottom and controls top). */
-  border-bottom: 1px solid #1F1F1F;
-  border-top: 1px solid #222;
+  left: 6.8em; right: 15.8em; /* Leave room for time displays. */
+  height: .4em; width: auto;
+  top: 1.1em; /* Set above the rest of the controls. And leave room for 2px of borders (progress bottom and controls top). */
+  border: 1px solid #1F1F1F;
+  -moz-border-radius: 0.6em; -webkit-border-radius: 0.6em; border-radius: 0.6em;
 
   /* CSS Gradient */
-  background: #333;
-  background: -moz-linear-gradient(top, #222, #333);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#333));
-  background: -webkit-linear-gradient(top, #222, #333);
-  background: -o-linear-gradient(top, #333, #222);
-  background: -ms-linear-gradient(top, #333, #222);
-  background: linear-gradient(top, #333, #222);
-
-
-  /* 1px top shadow */
-/*  -webkit-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15); box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15);*/
+  background: transparent;
 }
 
 /* Box containing play and load progresses. Also acts as seek scrubber. */
 .vjs-default-skin .vjs-progress-holder {
   position: relative; cursor: pointer !important; /*overflow: hidden;*/
   padding: 0; margin: 0; /* Placement within the progress control item */
-  height: 1.0em;
-  -moz-border-radius: 0.6em; -webkit-border-radius: 0.6em; border-radius: 0.6em;
+  height: .4em;
 
-  /* CSS Gradient */
-  background: #111;
-  background: -moz-linear-gradient(top, #111, #262626);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#111), to(#262626));
-  background: -webkit-linear-gradient(top, #111, #262626);
-  background: -o-linear-gradient(top, #111, #262626);
-  background: -ms-linear-gradient(top, #111, #262626);
-  background: linear-gradient(top, #111, #262626);
+  background: #1F1F1F;
 }
 .vjs-default-skin .vjs-progress-holder .vjs-play-progress,
 .vjs-default-skin .vjs-progress-holder .vjs-load-progress { /* Progress Bars */
-  position: absolute; display: block; height: 1.0em; margin: 0; padding: 0;
-  left: 0; top: 0; /*Needed for IE6*/
+  position: absolute;
+  display: block;
+  height: .4em;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0; /*Needed for IE6*/
   -moz-border-radius: 0.6em; -webkit-border-radius: 0.6em; border-radius: 0.6em;
-
-  /*width: 0;*/
 }
 
 .vjs-default-skin .vjs-play-progress {
   /* CSS Gradient. */
   background: #fff; /* Old browsers */
-  background: -moz-linear-gradient(top, #fff 0%, #d6d6d6 50%, #fff 100%);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%,#fff), color-stop(50%,#d6d6d6), color-stop(100%,#fff));
-  background: -webkit-linear-gradient(top, #fff 0%,#d6d6d6 50%,#fff 100%);
-  background: -o-linear-gradient(top, #fff 0%,#d6d6d6 50%,#fff 100%);
-  background: -ms-linear-gradient(top, #fff 0%,#d6d6d6 50%,#fff 100%);
-  background: linear-gradient(top, #fff 0%,#d6d6d6 50%,#fff 100%);
 
   background: #efefef;
-  background: -moz-linear-gradient(top, #efefef 0%, #f5f5f5 50%, #dbdbdb 50%, #f1f1f1 100%);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, color-stop(0%,#efefef), color-stop(50%,#f5f5f5), color-stop(50%,#dbdbdb), color-stop(100%,#f1f1f1));
-  background: -webkit-linear-gradient(top, #efefef 0%,#f5f5f5 50%,#dbdbdb 50%,#f1f1f1 100%);
-  background: -o-linear-gradient(top, #efefef 0%,#f5f5f5 50%,#dbdbdb 50%,#f1f1f1 100%);
-  background: -ms-linear-gradient(top, #efefef 0%,#f5f5f5 50%,#dbdbdb 50%,#f1f1f1 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#efefef', endColorstr='#f1f1f1',GradientType=0 );
-  background: linear-gradient(top, #efefef 0%,#f5f5f5 50%,#dbdbdb 50%,#f1f1f1 100%);
 }
 .vjs-default-skin .vjs-load-progress {
   opacity: 0.8;
 
   /* CSS Gradient */
   background: #666;
-  background: -moz-linear-gradient(top, #666, #333);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#666), to(#333));
-  background: -webkit-linear-gradient(top, #666, #333);
-  background: -o-linear-gradient(top, #666, #333);
-  background: -ms-linear-gradient(top, #666, #333);
-  background: linear-gradient(top, #666, #333);
 }
 
 .vjs-default-skin div.vjs-seek-handle {
   position: absolute;
   width: 16px; height: 16px; /* Match img pixles */
-  margin-top: -0.3em;
   left: 0; top: 0; /*Needed for IE6*/
-
-  background: url('video-js.png') 0 -50px;
-  /* CSS Curved Corners. Needed to make shadows curved. */
-  -moz-border-radius: 0.8em; -webkit-border-radius: 0.8em; border-radius: 0.8em;
-  /* CSS Shadows */
-  -webkit-box-shadow: 0 2px 4px 0 #000; -moz-box-shadow: 0 2px 4px 0 #000; box-shadow: 0 2px 4px 0 #000;
 }
 /* Time Display
 -------------------------------------------------------------------------------- */
@@ -377,10 +337,7 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
   position: absolute;
   right: 0;
   height: 1.0em; width: 4.8em;
-  top: -1.3em;
-  border-bottom: 1px solid #1F1F1F;
-  border-top: 1px solid #222;
-  background-color: #333;
+  top: 1em;
 
   font-size: 1em;
   line-height: 1.0em;
@@ -388,26 +345,17 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
   font-family: Helvetica,
   Arial, sans-serif;
 
-  background: #333;
-  background: -moz-linear-gradient(top, #222, #333);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#333));
-  background: -webkit-linear-gradient(top, #222, #333);
-  background: -o-linear-gradient(top, #333, #222);
-  background: -ms-linear-gradient(top, #333, #222);
-  background: linear-gradient(top, #333, #222);
-
-  /* 1px top shadow */
-/*  -webkit-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15); -moz-box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15); box-shadow: 0px -1px 0px 0px rgba(0, 0, 0, 0.15);*/
+  background: transparent;
 }
 
 .vjs-default-skin .vjs-current-time {
-  left: 0; }
+  left: 2.4em; }
 
 .vjs-default-skin .vjs-duration {
   right: 0;
   display: none; }
 .vjs-default-skin .vjs-remaining-time {
-  right: 0; }
+  right: 11em; }
 
 .vjs-time-divider {
   display:none; }
@@ -433,11 +381,14 @@ so you can upgrade to newer versions easier. You can remove all these styles by 
 .vjs-default-skin .vjs-fullscreen-control div {
   width: 16px;
   height: 16px;
-  background: url('video-js.png') -50px 0;
-  margin: 0.5em auto 0; }
+  background: url('controls/max.png');
+  margin: 0.6em 1.3em .8em; }
 
+.vjs-default-skin .vjs-fullscreen-control:hover div {
+  background: url('controls/max-hover.png');
+}
 .vjs-default-skin.vjs-fullscreen .vjs-fullscreen-control div {
-  background: url('video-js.png') -75px 0; }
+  background: url('video-js.png'); }
 
 
 /* Big Play Button (at start)
