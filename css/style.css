@@ -208,6 +208,8 @@ img.socialicons:active {
 	background-color: white;
 	border-top-left-radius: 2px;
 	border-top-right-radius: 35px;
+	border-bottom-left-radius: 2px;
+	border-bottom-right-radius: 2px;
 	box-shadow: 0 10px 40px rgba(0, 0, 0, .4);
 	transform: scale(.5,.5);
 	-moz-transform: scale(.5,.5);

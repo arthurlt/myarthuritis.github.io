@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<title>Patience is a virtue | Welcome</title>
+<style>
+	@import url(http://fonts.googleapis.com/css?family=Nobile:400,700);
+
+	body {
+		font-family: 'Nobile', sans-serif;
+		color: #CCC;
+		padding: 15em 2em;
+	}
+
+	#main {
+		margin: 0 auto 2em auto;
+		text-align: center;
+	}
+
+	h1 {
+		font-weight: 400;
+		font-size: 22px;
+	}
+</style>
+<script>
+function init() {
+	var h1 = document.getElementById('js'), delay = 2000;
+
+	setTimeout(function() {
+		h1.innerHTML = "This is taking a bit longer than planned. Stand by, please.";
+
+		setTimeout(function() {
+			h1.innerHTML = "Thank you for your patience.";
+
+			setTimeout(function() {
+				h1.innerHTML = "It is much appreciated.";
+
+				setTimeout(function() {
+					h1.innerHTML = "Just a little longer.";
+
+					setTimeout(function() {
+						h1.innerHTML = "Eeerh...";
+
+						setTimeout(function() {
+							h1.innerHTML = "So... how was your day so far ?";
+
+							setTimeout(function() {
+								h1.innerHTML = "We really apologize, this is seriously taking much longer than usual.";
+
+								setTimeout(function() {
+									h1.innerHTML = "You're still here ?";
+
+									setTimeout(function() {
+										h1.innerHTML = "You seriously have nothing better to do ?";
+
+										setTimeout(function() {
+											h1.innerHTML = "Well, we admire your patience.";
+
+											setTimeout(function() {
+												h1.innerHTML = "No, really.";
+
+												setTimeout(function() {
+													h1.innerHTML = "As they say, 'Patience is a virtue'.";
+
+													setTimeout(function() {
+														h1.innerHTML = "You know that you've been staring at this page for " + Math.round(((13 * delay) / 1000) / 60) + " minutes, right ?";
+
+														setTimeout(function() {
+															h1.innerHTML = "That's not freaking you out ?";
+
+															setTimeout(function() {
+																h1.innerHTML = "No ? Well, in that case...";
+
+																setTimeout(function() {
+																	window.location.href = 'http://cs6255.userapi.com/u3136196/docs/c0992244e55e/jump.gif';
+																}, delay);
+															}, delay);
+														}, delay);
+													}, delay);
+												}, delay);
+											}, delay);
+										}, delay);
+									}, delay);
+								}, delay);
+							}, delay);
+						}, delay);
+					}, delay);
+				}, delay);
+			}, delay);
+		}, delay);
+	}, delay);
+}
+</script>
+</head>
+
+<body onload="init()">
+  <div id="main">
+    <h1 id="js">Loading, please wait</h1>
+    <p><img src="loader.gif" /></p>
+  </div>
+</body>
+</html>

@@ -148,7 +148,7 @@ function holidayCheck(month,date,hour,minute) {
 		}
 	}
 	if (month=="Nov" || month=="Dec" || month=="Jan") {
-		Animation.start();
+		//Animation.start();
 	}
 	if (month=="Dec" && date==25) { //Christmas
 		showNotify("Merry Christmas!");

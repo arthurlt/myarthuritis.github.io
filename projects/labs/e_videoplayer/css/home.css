@@ -1,0 +1,180 @@
+.home {
+	padding: 0 !important;
+}
+
+.home #jupiter {
+	width: 942px;
+	height: 613px;
+	background: url(../img/home/bg.png) no-repeat;
+	text-align: center;
+}
+
+.home #nomnom {
+	width: 942px;
+	height: 613px;
+	background: url(../img/special/nomnom.png) no-repeat;
+	text-align: center;
+	color: #FFF;
+	font-size: 38px;
+	line-height: 100px;
+}
+
+.home #nomnom  span {
+	clear: both;
+	display: inline-block;
+	width: 100%;
+	margin-top: -60px;
+	position: relative;
+	top: -60px;
+	font-size: 30px;
+}
+
+/*
+Interior
+*/
+
+.home #distroname {
+	width: 534px;
+	height: 102px;
+	background: url(../img/home/text_jupiter.png) no-repeat 0 20px;
+	margin: 0 auto;
+}
+
+.home #huge {
+	width: 445px;
+	height: 54px;
+	background: url(../img/home/text_huge.png) no-repeat 0 10px;
+	margin: 0 auto;
+}
+
+.home #selectbox {
+	width: 424px;
+	height: 194px;
+	background: url(../img/home/select_box.png);
+	margin: 80px auto 100px;
+	font-size: 18px;
+	color: white;
+}
+
+.home #col-left-sbox {
+	width: 182px;
+	float: left;
+	padding: 40px 0px 40px 40px;
+	text-align: left;
+}
+
+.home #col-right-sbox {
+	width: 122px;
+	float: left;
+	padding: 40px 30px;
+	text-align: left;
+}
+
+.home #selectbox h4 {
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.home .radio {
+	padding-left: 30px;
+	background: no-repeat url(../img/home/radio_unchecked.png) 0 11px;
+	height: 40px;
+	line-height: 40px;
+}
+
+.home .radio-checked {
+background-image: url(../img/home/radio_checked.png);
+}
+
+.home #jupiter p{
+	float: left;
+}
+
+.home #jupiter form {
+	float: left;
+	
+}
+
+.home .contain-all-buttons {
+	width: 460px;
+	margin: 0 auto;
+}
+
+.home #big_button_donate {
+	width: 222px;
+	height: 50px;
+	background: url(../img/home/big_button_sprite.png);
+	color: transparent;
+	text-transform: capitalize;
+	text-indent: -9999px;
+	cursor: pointer;
+	float: left;
+}
+
+.home #big_button_order {
+	width: 222px;
+	height: 50px;
+	background: url(../img/home/big_button_sprite.png) 444px 0;
+	color: transparent;
+	text-transform: capitalize;
+	text-indent: -9999px;
+	cursor: pointer;
+	float: left;
+	margin-left: 15px;
+}
+
+.home #big_button_download {
+	width: 222px;
+	height: 50px;
+	background: url(../img/home/big_button_sprite.png) 222px 0;
+	float: left;
+	margin-left: 15px;
+	text-decoration: none;
+	float: left;
+}
+
+.home #big_button_donate:hover {
+	background-position: 0 100px;
+}
+
+.home #big_button_order:hover {
+	background-position: 444px 100px;
+}
+
+.home #big_button_download:hover{
+	background-position: 222px 100px;
+}
+
+.home #big_button_donate:active {
+	background-position: 0 50px;
+}
+
+.home #big_button_order:active {
+	background-position: 444px 50px;
+}
+
+.home #big_button_download:active {
+	background-position: 222px 50px;
+}
+
+/*
+Let's pretty our editing tabs up :)
+*/
+
+.home ul.tabs.primary li a  {
+	background: none;
+	opacity: 0.8;
+	border-color: #666 !important;
+	color: #FFF;
+}
+
+.home ul.tabs.primary li a.active  {
+	background: #555 !important;
+	opacity: 0.8;
+	border-color: #666 !important;
+	color: #FFF;
+}
+
+.home ul.tabs.primary li a:hover {
+	background: #555;
+}
