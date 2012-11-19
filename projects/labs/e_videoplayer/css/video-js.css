@@ -99,22 +99,24 @@ body.vjs-full-window {
 
 /* Fading sytles, used to fade control bar. */
 .vjs-fade-in {
-  bottom: 0 !important;
+  visibility: visible !important; /* Needed to make sure things hide in older browsers too. */
+  opacity: 1 !important;
 
-  -webkit-transition: bottom .2s linear;
-  -moz-transition: bottom .2s ease;
-  -ms-transition: bottom .2s ease;
-  -o-transition: bottom .2s ease;
-  transition: bottom .2s ease;
+  -webkit-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  -moz-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  -ms-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  -o-transition: visibility 0s linear 0s, opacity 0.3s linear;
+  transition: visibility 0s linear 0s, opacity 0.3s linear;
 }
 .vjs-fade-out {
-  bottom: -30px !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
 
-  -webkit-transition: bottom 1.5s linear 1.5s;
-  -moz-transition: bottom 1.5s ease 1.5s;
-  -ms-transition: bottom 1.5s ease 1.5s;
-  -o-transition: bottom 1.5s ease 1.5s;
-  transition: bottom 1.5s ease 1.5s;
+  -webkit-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -moz-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -ms-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -o-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  transition: visibility 0s linear 1.5s,opacity 1.5s linear;
 }
 
 .vjs-default-skin .vjs-controls {
