@@ -44,7 +44,7 @@ body.vjs-full-window {
 .video-js.vjs-fullscreen {
   position: fixed;
   overflow: hidden;
-  z-index: 1000;
+  /*z-index: 1000;*/
   left: 0;
   top: 0;
   bottom: 0;
@@ -112,7 +112,7 @@ body.vjs-full-window {
   visibility: hidden !important;
   opacity: 0 !important;
 
-  -webkit-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
+  -webkit-transition: visibility 0s linear 150s,opacity 1.5s linear 150s;
   -moz-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
   -ms-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
   -o-transition: visibility 0s linear 1.5s,opacity 1.5s linear;
@@ -121,7 +121,7 @@ body.vjs-full-window {
 
 .vjs-default-skin .vjs-controls {
   position: absolute;
-  bottom: 0px; /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
+  bottom: 0; /* Distance from the bottom of the box/video. Keep 0. Use height to add more bottom margin. */
   left: 0;
   right: 0; /* 100% width of div */
   margin: 0;
@@ -179,7 +179,7 @@ body.vjs-full-window {
   width: 16px;
   height: 16px;
   background: url('/img/controls.png') 64px -16px;
-  margin: 6px 13px 8px; }
+  margin: 7px 10px; }
 .vjs-default-skin.vjs-paused .vjs-play-control:hover div{
   background: url('/img/controls.png') 48px -16px;
 }
@@ -187,7 +187,7 @@ body.vjs-full-window {
   width: 16px;
   height: 16px;
   background: url('/img/controls.png') 32px -16px;
-  margin: 6px 13px 8px; }
+  margin: 7px 10px; }
 .vjs-default-skin.vjs-playing .vjs-play-control:hover div{
   background: url('/img/controls.png') 16px -16px;
 }
@@ -207,14 +207,14 @@ body.vjs-full-window {
 -------------------------------------------------------------------------------- */
 .vjs-default-skin .vjs-mute-control {
   width: 30px;
+  height: 30px;
   cursor: pointer !important;
-  float: right;
-  margin: 1px 0; }
+  float: right; }
 .vjs-default-skin .vjs-mute-control div {
   width: 16px;
   height: 16px;
   background: url('/img/controls.png') 32px 0;
-  margin: 5px auto 0; }
+  margin: 7px auto; }
 .vjs-default-skin .vjs-mute-control.vjs-vol-0 div {
   background: url('/img/controls.png') 80px 0; }
 .vjs-default-skin .vjs-mute-control.vjs-vol-1 div {
@@ -225,24 +225,18 @@ body.vjs-full-window {
 
 .vjs-default-skin .vjs-volume-control {
   width: 50px;
-  float: right;
-  margin: 10px 0; }
+  height: 30px;
+  float: right; }
 .vjs-default-skin .vjs-volume-bar {
   position: relative;
   width: 50px;
   height: 6px;
-  margin: 1px auto 0;
+  margin: 12px auto;
   cursor: pointer !important;
 
-  -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+  border-radius: 3px;
 
-  background: #666;
-  background: -moz-linear-gradient(top, #333, #666);
-  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#333), to(#666));
-  background: -webkit-linear-gradient(top, #333, #666);
-  background: -o-linear-gradient(top, #333, #666);
-  background: -ms-linear-gradient(top, #333, #666);
-  background: linear-gradient(top, #333, #666);
+  background: #1F1F1F;
 }
 .vjs-default-skin .vjs-volume-level {
   position: absolute;
@@ -250,7 +244,7 @@ body.vjs-full-window {
   left: 0;
   height: 6px;
 
-  -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+  border-radius: 3px;
 
   background: #fff;
   background: -moz-linear-gradient(top, #fff, #ccc);
@@ -268,7 +262,7 @@ body.vjs-full-window {
   background: #ccc;
   left: 0;
   border: 1px solid #fff;
-  -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+  border-radius: 6px;
 }
 
 /* Progress
@@ -276,33 +270,26 @@ body.vjs-full-window {
 .vjs-default-skin div.vjs-progress-control {
   position: absolute;
   left: 68px; right: 158px; /* Leave room for time displays. */
-  height: 4px; width: auto;
-  top: 11px; /* Set above the rest of the controls. And leave room for 2px of borders (progress bottom and controls top). */
-  border: 1px solid #1F1F1F;
-  -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
-
-  /* CSS Gradient */
-  background: transparent;
-}
+  height: 6px; width: auto; }
 
 /* Box containing play and load progresses. Also acts as seek scrubber. */
 .vjs-default-skin .vjs-progress-holder {
   position: relative; cursor: pointer !important; /*overflow: hidden;*/
-  padding: 0; margin: 0; /* Placement within the progress control item */
-  height: 4px;
-
+  padding: 0; margin: 12px auto; /* Placement within the progress control item */
+  height: 6px;
   background: #1F1F1F;
+  border-radius: 3px;
 }
 .vjs-default-skin .vjs-progress-holder .vjs-play-progress,
 .vjs-default-skin .vjs-progress-holder .vjs-load-progress { /* Progress Bars */
   position: absolute;
   display: block;
-  height: 4px;
+  height: 6px;
   margin: 0;
   padding: 0;
   left: 0;
   top: 0; /*Needed for IE6*/
-  -moz-border-radius: 6px; -webkit-border-radius: 6px; border-radius: 6px;
+  border-radius: 3px;
 }
 
 .vjs-default-skin .vjs-play-progress {
@@ -310,6 +297,14 @@ body.vjs-full-window {
   background: #fff; /* Old browsers */
 
   background: #efefef;
+
+  background: #fff;
+  background: -moz-linear-gradient(top, #fff, #ccc);
+  background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ccc));
+  background: -webkit-linear-gradient(top, #fff, #ccc);
+  background: -o-linear-gradient(top, #fff, #ccc);
+  background: -ms-linear-gradient(top, #fff, #ccc);
+  background: linear-gradient(top, #fff, #ccc);
 }
 .vjs-default-skin .vjs-load-progress {
   opacity: 0.8;
@@ -320,19 +315,21 @@ body.vjs-full-window {
 
 .vjs-default-skin div.vjs-seek-handle {
   position: absolute;
-  width: 16px; height: 16px; /* Match img pixles */
-  left: 0; top: 0; /*Needed for IE6*/
+  width: 8px; height: 8px; /* Match img pixles */
+  left: 0; top: -2px; /*Needed for IE6*/
+  background: #ccc;
+  border: 1px solid #fff;
+  border-radius: 6px;
 }
 /* Time Display
 -------------------------------------------------------------------------------- */
 .vjs-default-skin .vjs-time-controls {
   position: absolute;
   right: 0;
-  height: 10px; width: 48px;
-  top: 10px;
-
+  height: 30px;
+  width: 48px;
   font-size: 10px;
-  line-height: 10px;
+  line-height: 30px;
   font-weight: normal;
   font-family: Helvetica,
   Arial, sans-serif;
@@ -367,14 +364,15 @@ body.vjs-full-window {
   float: right; }
 
 .vjs-default-skin .vjs-fullscreen-control {
-  width: 38px;
+  width: 36px;
+  height: 30px;
   cursor: pointer !important;
   float: right; }
 .vjs-default-skin .vjs-fullscreen-control div {
   width: 16px;
   height: 16px;
   background: url('/img/controls.png') 16px 0;
-  margin: 6px 13px 8px; }
+  margin: 7px 10px; }
 
 .vjs-default-skin .vjs-fullscreen-control:hover div {
   background: url('/img/controls.png') 80px -16px;
@@ -393,10 +391,11 @@ body.vjs-full-window {
   left: 50%;
   width: 66px;
   height: 76px;
-  margin: -33px 0 0 -38px;
+  margin: -38px 0 0 -33px;
   text-align: center;
   vertical-align: center;
   cursor: pointer !important;
+  outline: 0;
 }
 
 .vjs-default-skin div.vjs-big-play-button:hover {}
@@ -468,35 +467,35 @@ body.vjs-full-window {
 }
 /* Each circle */
 div.vjs-loading-spinner .ball1 { opacity: 0.12; position:absolute; left: 20px; top: 0px; width: 13px; height: 13px; background: #fff;
-  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+  border-radius: 13px; border: 1px solid #ccc; }
 
 div.vjs-loading-spinner .ball2 { opacity: 0.25; position:absolute; left: 34px; top: 6px; width: 13px; height: 13px; background: #fff;
-  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+  border-radius: 13px; border: 1px solid #ccc; }
 
 div.vjs-loading-spinner .ball3 { opacity: 0.37; position:absolute; left: 40px; top: 20px; width: 13px; height: 13px; background: #fff;
-  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+  border-radius: 13px; border: 1px solid #ccc; }
 
 div.vjs-loading-spinner .ball4 { opacity: 0.50; position:absolute; left: 34px; top: 34px; width: 13px; height: 13px; background: #fff;
-  border-radius: 10px; -webkit-border-radius: 10px; -moz-border-radius: 15px; border: 1px solid #ccc; }
+  border-radius: 10px; border: 1px solid #ccc; }
 
 div.vjs-loading-spinner .ball5 { opacity: 0.62; position:absolute; left: 20px; top: 40px; width: 13px; height: 13px; background: #fff;
-  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+  border-radius: 13px; border: 1px solid #ccc; }
 
 div.vjs-loading-spinner .ball6 { opacity: 0.75; position:absolute; left: 6px; top: 34px; width: 13px; height: 13px; background: #fff;
-  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+  border-radius: 13px; border: 1px solid #ccc; }
 
 div.vjs-loading-spinner .ball7 { opacity: 0.87; position:absolute; left: 0px; top: 20px; width: 13px; height: 13px; background: #fff;
-  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+  border-radius: 13px; border: 1px solid #ccc; }
 
 div.vjs-loading-spinner .ball8 { opacity: 1.00; position:absolute; left: 6px; top: 6px; width: 13px; height: 13px; background: #fff;
-  border-radius: 13px; -webkit-border-radius: 13px; -moz-border-radius: 13px; border: 1px solid #ccc; }
+  border-radius: 13px; border: 1px solid #ccc; }
 
 /* Menu Buttons (Captions/Subtitles/etc.)
 -------------------------------------------------------------------------------- */
 .vjs-default-skin .vjs-menu-button {
   float: right; margin: 2px 5px 0 0; padding: 0; width: 30px; height: 20px; cursor: pointer !important;
 
-  border: 1px solid #111; -moz-border-radius: 3px; -webkit-border-radius: 3px; border-radius: 3px;
+  border: 1px solid #111; border-radius: 3px;
 
   background: #4d4d4d;
   background: -moz-linear-gradient(top,  #4d4d4d 0%, #3f3f3f 50%, #333333 50%, #252525 100%);
@@ -518,7 +517,7 @@ div.vjs-loading-spinner .ball8 { opacity: 1.00; position:absolute; left: 6px; to
   left: -35px; /* Width of menu - width of button / 2 */
   background-color: #111;
   border: 2px solid #333;
-  -moz-border-radius: 7px; -webkit-border-radius: 10px; border-radius: 5px;
+  border-radius: 10px;
   -webkit-box-shadow: 0 2px 4px 0 #000; -moz-box-shadow: 0 2px 4px 0 #000; box-shadow: 0 2px 4px 0 #000;
   overflow: auto;
 }

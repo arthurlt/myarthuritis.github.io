@@ -630,11 +630,15 @@ _V_.Component = _V_.Class.extend({
   fadeIn: function(){
     this.removeClass("vjs-fade-out");
     this.addClass("vjs-fade-in");
+    //testing
+    //this.addClass("vjs-fullscreen");
   },
 
   fadeOut: function(){
     this.removeClass("vjs-fade-in");
     this.addClass("vjs-fade-out");
+    //testing
+    //this.removeClass("vjs-fullscreen");
   },
 
   lockShowing: function(){
@@ -1111,7 +1115,7 @@ _V_.Slider = _V_.Component.extend({
     this.player.addEvent("controlsvisible", this.proxy(this.update));
 
     // This is actually to fix the volume handle position. http://twitter.com/#!/gerritvanaaken/status/159046254519787520
-    // this.player.one("timeupdate", this.proxy(this.update));
+    this.player.one("timeupdate", this.proxy(this.update));
 
     this.update();
   },
@@ -2714,7 +2718,6 @@ _V_.Player = _V_.Component.extend({
         if (this.isFullScreen == false) {
           _V_.removeEvent(document, requestFullScreen.eventName, arguments.callee);
         }
-
         this.triggerEvent("fullscreenchange");
       }));
 
@@ -2776,6 +2779,9 @@ _V_.Player = _V_.Component.extend({
 
     } else if (this.tech.supportsFullScreen()) {
      this.techCall("exitFullScreen");
+      //**Custom**//removing class
+      _V_.addClass("vjs-controls", "vjs-fullscreen");
+      //**End Custom**//
      this.triggerEvent("fullscreenchange");
 
     } else {
