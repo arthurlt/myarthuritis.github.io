@@ -243,5 +243,15 @@ p.li-head {
 ul.details {
 	font-size: 16px;
 	margin: 0 12px 12px;}
+/* Lights */
+div.lights {
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	margin: 30px 0 0 -30px;
+	background: red;
+	color: white;
+}
+
 #hidden {
 	display: none;}

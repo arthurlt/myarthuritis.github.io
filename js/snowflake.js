@@ -1,3 +1,4 @@
+// Microsoft's code, though cleaner and leaner
 // single animation loop and fps calculation
 Animation = (function () {
 

@@ -150,6 +150,9 @@ function holidayCheck(month,date,hour,minute) {
 	if (month=="Dec" || month=="Jan") {
 		Animation.start();
 	}
+	if (month=="Dec" && date==21) { //"The Last Day"
+		showNotify("BAD WOLF","rgba(0,0,128,.95)")
+	}
 	if (month=="Dec" && date==25) { //Christmas
 		showNotify("Merry Christmas!");
 		if (hour==00) {

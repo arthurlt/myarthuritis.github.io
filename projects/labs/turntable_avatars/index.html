@@ -2,13 +2,18 @@
 <html>
 <head>
     <meta name="description" content="Arthur Tucker; Web Developer, Computer Enthusiast, Mormon" />
-    <title>Let It Snow</title>
+    <title>Loading</title>
     <link rel="shortcut icon" href="http://mars11.com/favicon.ico" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/img/apple114.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/img/apple72.png">
     <link rel="apple-touch-icon-precomposed" href="/img/apple57.png">
     <link href='http://fonts.googleapis.com/css?family=Droid+Sans:700|Cabin:600|Pontano+Sans' rel='stylesheet' type='text/css'>
-    <link href='/css/style.css' rel='stylesheet' type='text/css'>    
+    <link href='/css/style.css' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+    #main img {
+        width: 100px;
+        padding: 10px;}
+    </style> 
 </head>
 <body onload="onLoad();" onkeydown="keyPress(event);">
     <canvas id="themecanvas"></canvas>
@@ -42,26 +47,6 @@
             </a>
     </div>
     <div id="main">
-        <img src="/content/img/logo.png" id="logo">
-        <h3>Who Am I?</h3>
-        <p class="details">Online I typically go by Mars11, but my name is Arthur. I'm a 15-year old sophomore in high school, a computer enthusiast, and a <a href="http://mormon.org/" target="blank">Mormon</a>.</p>
-        <h3>What Do I Do?</h3>
-        <p class="details">I can do almost anything that involves a computer. Currently, I develop and design websites. Though in the past I've developed Android apps, I've repaired laptops and desktops, and done basic tech support for my friends and family. I'm the lead programmer on a FIRST FRC team, <a href="http://www.teamimplosion.com/" target="blank">Team Implosion</a>. I also work for <a href="http://ldshorizonpublishers.com/" target="blank">Horizon Publishers</a> as the technical support. I've worked on their websites, managed online inventory, and done other support tasks. Here's a list of some of the projects I'm currently working on, or have worked on in the past:</p>
-        <p class="details, li-head">Current:</p>
-        <ul class="details">
-            <li><a href="http://dev.elementaryos.org/" target="blank">The elementary Project website</a></li>
-            <li><a href="http://choralsingingaids.com/" target="blank">Choral Singing Aids website</a> - for <a href="http://ldshorizonpublishers.com/" target="blank">Horizon Publishers</a></li>
-            <li>My Site (this)</li>
-            <li><a href="projects/" target="blank">Web Projects (incomplete)</a></li>
-        </ul>
-        <p class="details, li-head">Complete:</p>
-        <ul class="details">
-            <li><a href="https://play.google.com/store/apps/details?id=com.archerllc.funmeeting&feature" target="blank">Fun Meeting Android app</a> - for Archer LLC</li>
-            <li>Several Misc. Shell Scripts</li>
-        </ul>
-        <p class="details">And many more smaller projects!</p>
-        <h3>About This Site:</h3>
-        <p class="details">I originally made this site as a proof-of-concept remake the the elementary OS Luna desktop using web technologies. I decided that it wasn't what I needed and rewrote the entire thing, but I only kept the Wingpanel (the panel along the top). <strong>It's still under work and anything is subject to change.</strong></p>
     </div>
     <div id="hidden">
     <audio id="chime" src="/content/audio/clock.wav" preload="none" onended="chimes++;"></audio>
@@ -90,21 +75,12 @@
             }
             setTimeout('hashCheck();',1000);
         }
-        //remove this when done testing
-        Animation.start();
-        setTimeout('showNotify("Merry Christmas!");', 750);
-
-        var lights = document.createElement("div");
-        lights.className = "lights"
-        lights.innerHTML = "Hello";
-
-        document.getElementById("main").appendChild(lights);
-        //---------------------------------------------------------
         document.getElementById('main').className = "full";
         setTimeout("document.getElementById('panel').style.top = '0'; startTime();",750);
     </script>
     <script type="text/javascript" async src="/js/first.js"></script>
     <script type="text/javascript" async src="/js/third.js"></script>
+    <script type="text/javascript" async src="turntable.js"></script>
     <!--[if IE]><script type="text/javascript">
         showNotify('<a href="http://www.browserchoice.eu/">You are using MS IE 9 or less, this site will not display correctly. Update or switch to a more standards complient browser.</a>')
     </script><![endif]-->
