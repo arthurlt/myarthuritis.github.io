@@ -1,3 +1,19 @@
 HTML {
 	background: #1d1d1d;
+	width: 200%;
+}
+#main {
+	display: none;
+}
+#tiles {}
+.tile {}
+#tile1 {}
+/* Work on later */
+#panel {
+	display: none;
+}
+#notify {
+	height: 90px;
+	width: 385px;
+	top: -1000px;
 }
