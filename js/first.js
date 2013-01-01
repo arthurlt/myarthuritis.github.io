@@ -117,6 +117,9 @@ function ranInt(min,max) {
 }
 
 function holidayCheck(month,date,hour,minute) {
+	if (month=="Jan" && date==1) { //New Years Day
+		showNotify("Welcome to 2013!",  "rgba(0,0,128,.95)");
+	}
 	if (month=="Oct" && date==31) { //Halloween
 		showNotify("Happy Halloween! Stay around a bit!","rgba(255,140,0,.95)");
 		setTimeout("document.getElementById('zombyell').play();", ranInt(1000000,300000));
@@ -151,7 +154,7 @@ function holidayCheck(month,date,hour,minute) {
 		Animation.start();
 	}
 	if (month=="Dec" && date==21) { //"The Last Day"
-		showNotify("BAD WOLF","rgba(0,0,128,.95)")
+		showNotify("BAD WOLF","rgba(0,0,128,.95)");
 	}
 	if (month=="Dec" && date==25) { //Christmas
 		showNotify("Merry Christmas!");
