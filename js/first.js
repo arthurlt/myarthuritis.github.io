@@ -119,6 +119,9 @@ function ranInt(min,max) {
 function holidayCheck(month,date,hour,minute) {
 	if (month=="Jan" && date==1) { //New Years Day
 		showNotify("Welcome to 2013!",  "rgba(0,0,128,.95)");
+		if (hour==00 && minute==00) {
+			document.getElementById('fireworks').play();
+		}
 	}
 	if (month=="Oct" && date==31) { //Halloween
 		showNotify("Happy Halloween! Stay around a bit!","rgba(255,140,0,.95)");
