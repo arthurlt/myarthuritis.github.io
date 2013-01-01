@@ -1,5 +1,5 @@
-.htaccess
-.htpasswd
+*.sublime-project
+*.sublime-workspace
 .bash_history
 *.DS_Store
 Thumbs.db

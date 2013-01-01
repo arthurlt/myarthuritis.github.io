@@ -168,7 +168,7 @@ function holidayCheck(month,date,hour,minute) {
 		}
 	}
 	if (month=="Dec" && date==31) { //New Years Eve
-		uHour = 24 - hour;
+		uHour = 23 - hour;
 		uMin = 60 - minute;
 		showNotify(uHour+" hours and "+uMin+" minutes until 2013!", "rgba(0,0,128,.95)");
 	}
