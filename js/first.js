@@ -292,7 +292,7 @@ function holidayCheck()
 			}
 		}
 
-		if (month == "Feb" && date == 24) 
+		if (month == "May" && date == 13) 
 		{ //Cassi's wonderful birthday 
 			var age = (year-1997);
 			threeColors("green", "purple", "orange", "Happy "+ age + get.numberEnd(age) +" Birthday Cassi!");
