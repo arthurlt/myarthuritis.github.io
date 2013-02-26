@@ -20,7 +20,8 @@ var month 			= 0;
 //Three colors
 var firstcolor		= "green";
 var secondcolor		= "purple";
-var thirdcolor		= "orange";
+var thirdcolor		= "blue";
+var fourthcolor		= "orange";
 var notifysays		= "Hello, world!";
 var continueColorChange = true;
 
@@ -223,35 +224,41 @@ function count()
 	debug("times run..");
 }
 
-function threeColors(color1,color2,color3,says)
+function threeColors(color1,color2,color3,color4,says)
 {
 	showNotify(says);
 	if (notifycolor == 0 || notifycolor == 1 || notifycolor == 2) 
-	{ //red for 3 seconds
+	{ //color1 for 3 seconds
 		getID('notify').style.background = color1; 
 		notifycolor++;
 	}
 	else if (notifycolor == 3 || notifycolor == 4 || notifycolor == 5) 
-		{ //white for 3 seconds changes text color to black
-			getID('notify').style.background = color2; 
-			notifycolor++;
-		}
-		else if (notifycolor == 6 || notifycolor == 7 || notifycolor == 8) 
-			{ //blue for 3 seconds changes text back to white
-				getID('notify').style.background = color3;
-				notifycolor++;
-			}
-			else 
-			{ //after cycling through colors switches back to red
-				notifycolor = 0;
-			}
+	{ //color2 for 3 seconds
+		getID('notify').style.background = color2; 
+		notifycolor++;
+	}
+	else if (notifycolor == 6 || notifycolor == 7 || notifycolor == 8) 
+	{ //color3 for 3 seconds
+		getID('notify').style.background = color3;
+		notifycolor++;
+	}
+	else if (notifycolor == 9 || notifycolor == 10 || notifycolor == 11)
+	{ //color4 for 3 seconds
+		getID('notify').style.background = color4;
+		notifycolor++;
+	}
+	else 
+	{ //after cycling through colors switches back to color1
+		notifycolor = 0;
+	}
 	firstcolor = color1;
 	secondcolor = color2;
 	thirdcolor = color3;
+	fourthcolor = color4;
 	notifysays = says;
 	if (continueColorChange)
 	{
-		setTimeout("threeColors(firstcolor,secondcolor,thirdcolor,notifysays)",1000)
+		setTimeout("threeColors(firstcolor,secondcolor,thirdcolor,fourthcolor,notifysays)",1000)
 	}
 	else
 	{
@@ -278,7 +285,6 @@ function holidayCheck()
 			nextDate = date + 1;
 			
 			hideNotify();
-			continueColorChange = false;
 		}
 		firstCheckedDate = false;
 		debug("Current day: "+ currentDate +"  Next day: "+ nextDate);
@@ -292,20 +298,20 @@ function holidayCheck()
 			}
 		}
 
-		if (month == "May" && date == 13) 
+		if (month == "May" && date == 13 || window.location.hash=="#surprise") 
 		{ //Cassi's wonderful birthday 
 			var age = (year-1997);
-			threeColors("green", "purple", "orange", "Happy "+ age + get.numberEnd(age) +" Birthday Cassi!");
+			threeColors("rgba(80,200,120,.95)", "rgba(102,51,153,.95)", "rgba(16,35,114,.95)", "rgba(255,79,0,.95)", "Happy "+ age + get.numberEnd(age) +" Birthday Cassi!");
 		}
 
 		if (month == "Oct" && date == 31) 
 		{ //Halloween
-			showNotify("Happy Halloween! Stay around a bit!","rgba(255,140,0,.95)");
+			showNotify("Happy Halloween! Stay around a bit!", "rgba(255,140,0,.95)");
 		}
 
 		if (month == "Nov" && date == 11) 
 		{ //Vetrans Day
-			threeColors("rgba(204,0,0,.95)","rgba(255,255,255,.95)","rgba(0,0,128,.95)","Honoring all who served. Veterans Day");
+			threeColors("rgba(204,0,0,.95)", "rgba(255,255,255,.95)", "rgba(0,0,128,.95)", "Honoring all who served. Veterans Day");
 		}
 
 		if (month == "Dec" || month == "Jan" || month == "Feb") 
@@ -420,6 +426,7 @@ function showNotify(says,color,size) {
 function hideNotify() {
 	getID('main').style.marginTop = "38px";
 	getID('notify').style.top = "-48px";
+	continueColorChange = false;
 }
 
 pageInit();
