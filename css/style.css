@@ -271,7 +271,9 @@ h3 {}
 #skills {
 	min-height: 75px;}
 #interests {
-	min-height: 50px;}
+	min-height: 70px;}
+#examples {
+	min-height: 75px;}
 
 .details {
 	margin: 12px;
