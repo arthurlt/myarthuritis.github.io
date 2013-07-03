@@ -37,6 +37,7 @@ function pageInit()
 	setTimeout("getID('panel').style.top = '0';	pageLoop();",750);
 	//muteAudio();
 	socialTog();
+	scrollBot();
 	readVars();
 
 	currentDate = date;
@@ -437,6 +438,18 @@ function socialTog()
 			socialpressed = false;
 		}
 	}
+}
+
+function scrollBot()
+{
+	window.onscroll = function(ev) {
+		if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) 
+		{
+			s.style.display = "block";
+			setTimeout('s.className = "full";',1);
+			socialpressed = true;
+		}
+	};
 }
 
 function debug(says) 
