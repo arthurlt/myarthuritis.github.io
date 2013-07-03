@@ -4,36 +4,35 @@ var mute 			= false;
 var socialpressed	= false;
 var notifycolor 	= 0;
 var s 				= document.getElementById("social");
-var zombyell 		= 0;
-var ghost 			= 0;
 
 var plays			= 0;
 var skips			= 0;
+var audioElement 	= document.createElement('audio');
 
 //Time
-var hour 			= 0;
-var minute  		= 0;
-var date 			= 0;
+var hour			= 0;
+var minute			= 0;
+var date			= 0;
 var day 			= 0;
 var month 			= 0;
 
 //Three colors
-var firstcolor		= "green";
-var secondcolor		= "purple";
-var thirdcolor		= "blue";
-var fourthcolor		= "orange";
 var notifysays		= "Hello, world!";
+var firstcolor		= undefined;
+var secondcolor		= undefined;
+var thirdcolor		= undefined;
+var fourthcolor		= undefined;
 var continueColorChange = true;
 
 var currentDate		= 0;
 var nextDate		= 0;
 var firstCheckedDate= true;
-var checkedDate		= false;
+var checkedDate 	= false;
 function pageInit()
 {
 	getID('main').className = "full";
 	setTimeout("getID('panel').style.top = '0';	pageLoop();",750);
-	muteAudio();
+	//muteAudio();
 	socialTog();
 	readVars();
 
@@ -71,7 +70,7 @@ function clock()
 		{
 			if (chimes < 6) 
 			{
-				play('chime');
+				play('0');
 			}
 		}
 		else 
@@ -131,7 +130,7 @@ get = (function ()
 	{
 		var today = new Date();
 		var monthi = today.getMonth();
-		var month = new Array(13)
+		var month = new Array(11)
 			month[0]="Jan";
 			month[1]="Feb";
 			month[2]="Mar";
@@ -224,7 +223,7 @@ function count()
 	debug("times run..");
 }
 
-function threeColors(color1,color2,color3,color4,says)
+function threeColors(says,color1,color2,color3,color4)
 {
 	showNotify(says);
 	if (notifycolor == 0 || notifycolor == 1 || notifycolor == 2) 
@@ -237,12 +236,12 @@ function threeColors(color1,color2,color3,color4,says)
 		getID('notify').style.background = color2; 
 		notifycolor++;
 	}
-	else if (notifycolor == 6 || notifycolor == 7 || notifycolor == 8) 
+	else if (color3 && (notifycolor == 6 || notifycolor == 7 || notifycolor == 8)) 
 	{ //color3 for 3 seconds
 		getID('notify').style.background = color3;
 		notifycolor++;
 	}
-	else if (notifycolor == 9 || notifycolor == 10 || notifycolor == 11)
+	else if (color4 && (notifycolor == 9 || notifycolor == 10 || notifycolor == 11))
 	{ //color4 for 3 seconds
 		getID('notify').style.background = color4;
 		notifycolor++;
@@ -251,18 +250,25 @@ function threeColors(color1,color2,color3,color4,says)
 	{ //after cycling through colors switches back to color1
 		notifycolor = 0;
 	}
+
+	notifysays = says;
 	firstcolor = color1;
 	secondcolor = color2;
 	thirdcolor = color3;
 	fourthcolor = color4;
-	notifysays = says;
+
 	if (continueColorChange)
 	{
-		setTimeout("threeColors(firstcolor,secondcolor,thirdcolor,fourthcolor,notifysays)",1000)
+		setTimeout("threeColors(notifysays,firstcolor,secondcolor,thirdcolor,fourthcolor)",1000);
 	}
 	else
 	{
+		firstcolor = undefined;
+		secondcolor = undefined;
+		thirdcolor = undefined;
+		fourthcolor = undefined;
 		hideNotify();
+		continueColorChange = true;
 	}
 }
 
@@ -273,6 +279,7 @@ function holidayCheck()
 	{
 		if (currentDate == nextDate) 
 		{
+			continueColorChange = true;
 			checkedDate = false;
 		}
 	}
@@ -287,22 +294,29 @@ function holidayCheck()
 			hideNotify();
 		}
 		firstCheckedDate = false;
-		debug("Current day: "+ currentDate +"  Next day: "+ nextDate);
+		//debug("Current day: "+ currentDate +"  Next day: "+ nextDate);
 
 		if (month == "Jan" && date == 1) 
 		{ //New Years Day
-			showNotify("Welcome to 2013!",  "rgba(0,0,128,.95)");
+			showNotify("Welcome to "+year+"!",  "rgba(0,0,128,.95)");
 			if (hour == 00 && minute == 00) 
 			{
-				play('fireworks');
+				play('1');
 			}
 		}
 
-		if (month == "May" && date == 13 || window.location.hash=="#surprise") 
-		{ //Cassi's wonderful birthday 
-			var age = (year-1997);
-			threeColors("rgba(80,200,120,.95)", "rgba(102,51,153,.95)", "rgba(16,35,114,.95)", "rgba(255,79,0,.95)", "Happy "+ age + get.numberEnd(age) +" Birthday Cassi!");
-		}
+		//if (month == "May" && date == 13 || window.location.hash=="#surprise") 
+		//{ //Cassi's wonderful birthday 
+		//	var age = (year-1997);
+		//	if (month != "May" && date != 13)
+		//	{
+		//		threeColors("Happy "+ age + get.numberEnd(age) +" Non-Birthday Cassi.. :P (What are you doing on here?)", "rgba(80,200,120,.95)", "rgba(102,51,153,.95)", "rgba(16,35,114,.95)", "rgba(255,79,0,.95)");
+		//	}
+		//	else
+		//	{
+		//		threeColors("Happy "+ age + get.numberEnd(age) +" Birthday Cassi!", "rgba(80,200,120,.95)", "rgba(102,51,153,.95)", "rgba(16,35,114,.95)", "rgba(255,79,0,.95)");
+		//	}
+		//}
 
 		if (month == "Oct" && date == 31) 
 		{ //Halloween
@@ -311,7 +325,7 @@ function holidayCheck()
 
 		if (month == "Nov" && date == 11) 
 		{ //Vetrans Day
-			threeColors("rgba(204,0,0,.95)", "rgba(255,255,255,.95)", "rgba(0,0,128,.95)", "Honoring all who served. Veterans Day");
+			threeColors("Honoring all who served. Veterans Day", "rgba(204,0,0,.95)", "rgba(255,255,255,.95)", "rgba(0,0,128,.95)");
 		}
 
 		if (month == "Dec" || month == "Jan" || month == "Feb") 
@@ -331,23 +345,36 @@ function holidayCheck()
 		if (month == "Dec" && date == 25) 
 		{ //Christmas
 			showNotify("Merry Christmas!");
-			if (hour == 00) 
-			{
-				if (minute == 00) 
-				{
-					//play Santa's sleigh
-				}
-			}
 		}
 
 		if (month == "Dec" && date == 31) 
 		{ //New Years Eve
 			uHour = 23 - hour;
 			uMin = 60 - minute;
-			showNotify(uHour+" hours and "+uMin+" minutes until 2013!", "rgba(0,0,128,.95)");
+			showNotify(uHour+" hours and "+uMin+" minutes until "+(year+1)+"!", "rgba(0,0,128,.95)");
 		}
-
 	}
+}
+
+function showNotify(says,color,size) {
+	getID('main').style.marginTop = "58px";
+	getID('notify').style.background = color;
+	if (color == "white" || color == "rgba(255,255,255, 0.95)")
+	{
+		getID('notify').style.color = "black";
+	}
+	else
+	{
+		getID('notify').style.color = "white";
+	}
+	getID('notify').style.top = "0";
+	getID("notify").innerHTML = says;
+}
+
+function hideNotify() {
+	getID('main').style.marginTop = "38px";
+	getID('notify').style.top = "-48px";
+	continueColorChange = false;
 }
 
 function muteAudio()
@@ -367,11 +394,19 @@ function muteAudio()
 	}
 }
 
-function play(ID)
+function play(songNum)
 {
+	var songChoose = new Array(1)
+		songChoose[0]="clock";
+		songChoose[1]="fireworks";
+	var song = (songChoose[songNum]);
+	audioElement.setAttribute('src', ('/content/audio/'+song+'.wav'));
+
 	if (!mute)
 	{
-		getID(ID).play();
+		audioElement.play();
+		//audioElement.addEventListener('ended', (parseInt(song)++));
+		//debug(song);
 		plays++;
 		debug(plays+" plays.");
 	}
@@ -380,7 +415,6 @@ function play(ID)
 		skips++;
 		debug(skips+" skips.")
 	}
-	
 }
 
 function socialTog() 
@@ -405,28 +439,6 @@ function socialTog()
 function debug(says) 
 {
 	console.log(says);
-}
-
-
-
-function showNotify(says,color,size) {
-	getID('main').style.marginTop = "58px";
-	getID('notify').style.background = color;
-	if (color == "white" || color == "rgba(255,255,255, 0.95)")
-	{
-		getID('notify').style.color = "black";
-	}
-	else
-	{
-		getID('notify').style.color = "white";
-	}
-	getID('notify').style.top = "0";
-	getID("notify").innerHTML = says;
-}
-function hideNotify() {
-	getID('main').style.marginTop = "38px";
-	getID('notify').style.top = "-48px";
-	continueColorChange = false;
 }
 
 pageInit();

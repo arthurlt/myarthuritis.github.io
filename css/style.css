@@ -1,3 +1,4 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Sans:700|PT+Sans+Narrow:700|Pontano+Sans);
 * {
 	cursor:default;
 	margin: 0;
@@ -76,6 +77,11 @@ div.time {
 	line-height: 28px;
 	margin: 0 auto;
 	text-align: center;}
+#panelicons:before {
+	content: "Contact Me: ";
+	position: absolute;
+	width: 68px;
+	right: 35px;}
 #panelicons {
 	height: 28px;
 	position: absolute;
@@ -101,11 +107,10 @@ img.panelicons:active {
 	width: 18px;
 	padding: 5px;
 	text-decoration: none;}
-#speaker {}
 #avatar {
 	height: 18px;
 	width: 18px;
-	padding: 5px;}
+	padding: 5px 15px;}
 /*#avatar:hover {
 	height: 22px;
 	width: 22px;
@@ -113,8 +118,8 @@ img.panelicons:active {
 #avatar:active {
 	height: 14px;
 	width: 14px;
-	padding: 7px;}
-#dropbox {}
+	padding: 7px 17px;}
+#speaker {}
 a.imglink {
 	text-decoration: none;}
 #notify {
@@ -146,12 +151,12 @@ a.imglink {
 #notify a:hover {
 	text-decoration: underline;}
 #social {
-	height: 48px;
+	height: 72px;
 	width: 152px;
 	background-color: white;
 	position: fixed;
 	top: 35px;
-	right: 26px;
+	right: 5px;
 	z-index: 3;
 	border-top-left-radius: 2px;
 	border-top-right-radius: 15px;
@@ -184,7 +189,8 @@ a.imglink {
 img.socialicons {
 	height: 32px;
 	width: 32px;
-	padding: 8px;
+	margin: 0 13px 0;
+	padding: 8px 8px 0px;
 	cursor: pointer;
 	-webkit-transition: all 0.05s ease-out;
 	-moz-transition: all 0.05s ease;
@@ -199,8 +205,11 @@ img.socialicons {
 img.socialicons:active {
 	height: 28px;
 	width: 28px;
-	padding: 10px;
+	padding: 8px 10px 2px;
 	text-decoration: none;}
+#number {
+	text-align: center;
+	padding: 0px 8px 8px; }
 #main {
 	width: 720px;
 	margin: 38px auto 0;
