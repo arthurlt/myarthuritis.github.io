@@ -9,6 +9,9 @@ var plays			= 0;
 var skips			= 0;
 var audioElement 	= document.createElement('audio');
 
+var gplus			= "https://plus.google.com/111629734323967418199/about"
+var email			= "mailto:me@arthurtucker.me"
+
 //Time
 var hour			= 0;
 var minute			= 0;

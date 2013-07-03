@@ -233,14 +233,41 @@ img.socialicons:active {
 	-moz-transform: scale(1,1);
 	-webkit-transform: scale(1,1);
 	-o-transform: scale(1,1);}
+div.name {
+	padding: 0px 0px 30px;
+	clear: right;}
+h1 {
+	font-family: 'PT Sans Narrow', sans-serif;
+	font-size: 80px;}
 #logo {
 	height: 128px;
 	width: 128px;
 	margin: 0 0 -10px 10px;
 	float: right;}
-h3 {
-	font-family: 'Cabin', sans-serif;
-	font-size: 20px;}
+.left {
+	width: 180px;
+	padding: 0px 20px 0px 0px;
+	float: left;
+	text-align: right;
+	height: auto;}
+.right {
+	width: 500px;
+	float: right;
+	text-align: justify;
+	height: auto;}
+h3 {}
+#background {
+	min-height: 75px;}
+#expirence {
+	min-height: 550px;}
+#elementary {
+	padding: 0px 0px 20px;}
+#hp {
+	padding: 0px 0px 20px;}
+#frc {
+	padding: 0px 0px 20px;}
+#app {
+	padding: 0px 0px 20px;}
 .details {
 	margin: 12px;
 	font-size: 16px;
@@ -252,6 +279,8 @@ p.li-head {
 ul.details {
 	font-size: 16px;
 	margin: 0 12px 12px;}
+
+
 /* Lights */
 div.lights {
 	width: 100px;
@@ -259,8 +288,6 @@ div.lights {
 	position: absolute;
 	margin: 30px 0 0 -30px;
 	background: red;
-	color: white;
-}
-
+	color: white;}
 #hidden {
 	display: none;}
