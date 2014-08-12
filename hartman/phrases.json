@@ -1,0 +1,619 @@
+[
+  {
+    "red": [
+      {
+        "group": 1,
+        "phrase": "opinionated",
+        "definition": "conceitedly assertive and dogmatic in one's opinions"
+      },
+      {
+        "group": 2,
+        "phrase": "power-oriented",
+        "definition": ""
+      },
+      {
+        "group": 3,
+        "phrase": "dominant",
+        "definintion": ""
+      },
+      {
+        "group": 4,
+        "phrase": "self-serving",
+        "definintion": ""
+      },
+      {
+        "group": 5,
+        "phrase": "decisive",
+        "definintion": ""
+      },
+      {
+        "group": 6,
+        "phrase": "arrogant",
+        "definintion": ""
+      },
+      {
+        "group": 7,
+        "phrase": "assertive",
+        "definintion": ""
+      },
+      {
+        "group": 8,
+        "phrase": "bossy",
+        "definintion": ""
+      },
+      {
+        "group": 9,
+        "phrase": "action-oriented",
+        "definintion": ""
+      },
+      {
+        "group": 10,
+        "phrase": "critical of others",
+        "definintion": ""
+      },
+      {
+        "group": 11,
+        "phrase": "determined",
+        "definintion": ""
+      },
+      {
+        "group": 12,
+        "phrase": "demanding",
+        "definintion": ""
+      },
+      {
+        "group": 13,
+        "phrase": "resonsible",
+        "definintion": ""
+      },
+      {
+        "group": 14,
+        "phrase": "impatient",
+        "definintion": ""
+      },
+      {
+        "group": 15,
+        "phrase": "strong-willed",
+        "definintion": ""
+      },
+      {
+        "group": 16,
+        "phrase": "argumentative",
+        "definintion": ""
+      },
+      {
+        "group": 17,
+        "phrase": "independent",
+        "definintion": ""
+      },
+      {
+        "group": 18,
+        "phrase": "aggressive",
+        "definintion": ""
+      },
+      {
+        "group": 19,
+        "phrase": "powerful",
+        "definintion": ""
+      },
+      {
+        "group": 20,
+        "phrase": "insensitive",
+        "definintion": ""
+      },
+      {
+        "group": 21,
+        "phrase": "logical",
+        "definintion": ""
+      },
+      {
+        "group": 22,
+        "phrase": "always right",
+        "definintion": ""
+      },
+      {
+        "group": 23,
+        "phrase": "pragmatic",
+        "definintion": ""
+      },
+      {
+        "group": 24,
+        "phrase": "merciless",
+        "definintion": ""
+      },
+      {
+        "group": 25,
+        "phrase": "task-oriented",
+        "definintion": ""
+      },
+      {
+        "group": 26,
+        "phrase": "tactless",
+        "definintion": ""
+      },
+      {
+        "group": 27,
+        "phrase": "direct",
+        "definintion": ""
+      },
+      {
+        "group": 28,
+        "phrase": "calculating",
+        "definintion": ""
+      },
+      {
+        "group": 29,
+        "phrase": "confident",
+        "definintion": ""
+      },
+      {
+        "group": 30,
+        "phrase": "intimidating",
+        "definintion": ""
+      }
+      
+    ]
+  },
+  {
+    "blue": [
+      {
+        "group": 1,
+        "phrase": "nurturing",
+        "definition": "care for and encourage the growth or development of"
+      },
+      {
+        "group": 2,
+        "phrase": "perfectionist",
+        "definition": ""
+      },
+      {
+        "group": 3,
+        "phrase": "sympathetic",
+        "definintion": ""
+      },
+      {
+        "group": 4,
+        "phrase": "suspicious",
+        "definintion": ""
+      },
+      {
+        "group": 5,
+        "phrase": "loyal",
+        "definintion": ""
+      },
+      {
+        "group": 6,
+        "phrase": "worry prone",
+        "definintion": ""
+      },
+      {
+        "group": 7,
+        "phrase": "reliable",
+        "definintion": ""
+      },
+      {
+        "group": 8,
+        "phrase": "self-critical",
+        "definintion": ""
+      },
+      {
+        "group": 9,
+        "phrase": "analytical",
+        "definintion": ""
+      },
+      {
+        "group": 10,
+        "phrase": "overly sensitive",
+        "definintion": ""
+      },
+      {
+        "group": 11,
+        "phrase": "detail conscious",
+        "definintion": ""
+      },
+      {
+        "group": 12,
+        "phrase": "unforgiving",
+        "definintion": ""
+      },
+      {
+        "group": 13,
+        "phrase": "idealistic",
+        "definintion": ""
+      },
+      {
+        "group": 14,
+        "phrase": "moody",
+        "definintion": ""
+      },
+      {
+        "group": 15,
+        "phrase": "respectful",
+        "definintion": ""
+      },
+      {
+        "group": 16,
+        "phrase": "unrealistic",
+        "definintion": ""
+      },
+      {
+        "group": 17,
+        "phrase": "dependable",
+        "definintion": ""
+      },
+      {
+        "group": 18,
+        "phrase": "frequently depressed",
+        "definintion": ""
+      },
+      {
+        "group": 19,
+        "phrase": "deliberate",
+        "definintion": ""
+      },
+      {
+        "group": 20,
+        "phrase": "judgemental",
+        "definintion": ""
+      },
+      {
+        "group": 21,
+        "phrase": "emotional",
+        "definintion": ""
+      },
+      {
+        "group": 22,
+        "phrase": "guilt prone",
+        "definintion": ""
+      },
+      {
+        "group": 23,
+        "phrase": "well-behaved",
+        "definintion": ""
+      },
+      {
+        "group": 24,
+        "phrase": "thoughtful",
+        "definintion": ""
+      },
+      {
+        "group": 25,
+        "phrase": "sincere",
+        "definintion": ""
+      },
+      {
+        "group": 26,
+        "phrase": "hard to please",
+        "definintion": ""
+      },
+      {
+        "group": 27,
+        "phrase": "creative",
+        "definintion": ""
+      },
+      {
+        "group": 28,
+        "phrase": "self-righteous",
+        "definintion": ""
+      },
+      {
+        "group": 29,
+        "phrase": "disciplined",
+        "definintion": ""
+      },
+      {
+        "group": 30,
+        "phrase": "careful",
+        "definintion": ""
+      }
+    ]
+  },
+  {
+    "white": [
+      {
+        "group": 1,
+        "phrase": "inventive",
+        "definition": "having the ability to create or design new things or to think originally"
+      },
+      {
+        "group": 2,
+        "phrase": "indecisive",
+        "definition": ""
+      },
+            {
+        "group": 3,
+        "phrase": "tolerant",
+        "definintion": ""
+      },
+      {
+        "group": 4,
+        "phrase": "unsure",
+        "definintion": ""
+      },
+      {
+        "group": 5,
+        "phrase": "contented",
+        "definintion": ""
+      },
+      {
+        "group": 6,
+        "phrase": "silently stubborn",
+        "definintion": ""
+      },
+      {
+        "group": 7,
+        "phrase": "kind",
+        "definintion": ""
+      },
+      {
+        "group": 8,
+        "phrase": "reluctant",
+        "definintion": ""
+      },
+      {
+        "group": 9,
+        "phrase": "easygoing",
+        "definintion": ""
+      },
+      {
+        "group": 10,
+        "phrase": "shy",
+        "definintion": ""
+      },
+      {
+        "group": 11,
+        "phrase": "a good listener",
+        "definintion": ""
+      },
+      {
+        "group": 12,
+        "phrase": "unmotiviated",
+        "definintion": ""
+      },
+      {
+        "group": 13,
+        "phrase": "considerate",
+        "definintion": ""
+      },
+      {
+        "group": 14,
+        "phrase": "passive",
+        "definintion": ""
+      },
+      {
+        "group": 15,
+        "phrase": "patient",
+        "definintion": ""
+      },
+      {
+        "group": 16,
+        "phrase": "directionless",
+        "definintion": ""
+      },
+      {
+        "group": 17,
+        "phrase": "even-tempered",
+        "definintion": ""
+      },
+      {
+        "group": 18,
+        "phrase": "ambivalent",
+        "definintion": ""
+      },
+      {
+        "group": 19,
+        "phrase": "gentle",
+        "definintion": ""
+      },
+      {
+        "group": 20,
+        "phrase": "boring",
+        "definintion": ""
+      },
+      {
+        "group": 21,
+        "phrase": "agreeable",
+        "definintion": ""
+      },
+      {
+        "group": 22,
+        "phrase": "unenthusiastic",
+        "definintion": ""
+      },
+      {
+        "group": 23,
+        "phrase": "accepting",
+        "definintion": ""
+      },
+      {
+        "group": 24,
+        "phrase": "uninvolved",
+        "definintion": ""
+      },
+      {
+        "group": 25,
+        "phrase": "diplomatic",
+        "definintion": ""
+      },
+      {
+        "group": 26,
+        "phrase": "lazy",
+        "definintion": ""
+      },
+      {
+        "group": 27,
+        "phrase": "adaptable",
+        "definintion": ""
+      },
+      {
+        "group": 28,
+        "phrase": "self-depreciating",
+        "definintion": ""
+      },
+      {
+        "group": 29,
+        "phrase": "pleasent",
+        "definintion": ""
+      },
+      {
+        "group": 30,
+        "phrase": "unproductive",
+        "definintion": ""
+      }
+    ]
+  },
+  {
+    "yellow": [
+      {
+        "group": 1,
+        "phrase": "outgoing",
+        "definition": "friendly and socially confident"
+      },
+      {
+        "group": 2,
+        "phrase": "self-centered",
+        "definition": ""
+      },
+            {
+        "group": 3,
+        "phrase": "enthusiastic",
+        "definintion": ""
+      },
+      {
+        "group": 4,
+        "phrase": "naïve",
+        "definintion": ""
+      },
+      {
+        "group": 5,
+        "phrase": "playful",
+        "definintion": ""
+      },
+      {
+        "group": 6,
+        "phrase": "flighty",
+        "definintion": ""
+      },
+      {
+        "group": 7,
+        "phrase": "sociable",
+        "definintion": ""
+      },
+      {
+        "group": 8,
+        "phrase": "a teaser",
+        "definintion": ""
+      },
+      {
+        "group": 9,
+        "phrase": "carefree",
+        "definintion": ""
+      },
+      {
+        "group": 10,
+        "phrase": "obnoxious",
+        "definintion": ""
+      },
+      {
+        "group": 11,
+        "phrase": "a party person",
+        "definintion": ""
+      },
+      {
+        "group": 12,
+        "phrase": "vain",
+        "definintion": ""
+      },
+      {
+        "group": 13,
+        "phrase": "happy",
+        "definintion": ""
+      },
+      {
+        "group": 14,
+        "phrase": "impulsive",
+        "definintion": ""
+      },
+      {
+        "group": 15,
+        "phrase": "fun-loving",
+        "definintion": ""
+      },
+      {
+        "group": 16,
+        "phrase": "an interrpter",
+        "definintion": ""
+      },
+      {
+        "group": 17,
+        "phrase": "trusting",
+        "definintion": ""
+      },
+      {
+        "group": 18,
+        "phrase": "forgetful",
+        "definintion": ""
+      },
+      {
+        "group": 19,
+        "phrase": "optimisistic",
+        "definintion": ""
+      },
+      {
+        "group": 20,
+        "phrase": "undisciplined",
+        "definintion": ""
+      },
+      {
+        "group": 21,
+        "phrase": "popular",
+        "definintion": ""
+      },
+      {
+        "group": 22,
+        "phrase": "uncommitted",
+        "definintion": ""
+      },
+      {
+        "group": 23,
+        "phrase": "spontaneous",
+        "definintion": ""
+      },
+      {
+        "group": 24,
+        "phrase": "a show-off",
+        "definintion": ""
+      },
+      {
+        "group": 25,
+        "phrase": "lively",
+        "definintion": ""
+      },
+      {
+        "group": 26,
+        "phrase": "loud",
+        "definintion": ""
+      },
+      {
+        "group": 27,
+        "phrase": "a performer",
+        "definintion": ""
+      },
+      {
+        "group": 28,
+        "phrase": "disorganized",
+        "definintion": ""
+      },
+      {
+        "group": 29,
+        "phrase": "charismatic",
+        "definintion": ""
+      },
+      {
+        "group": 30,
+        "phrase": "afraid to fact facts",
+        "definintion": ""
+      }
+    ]
+  }
+]
